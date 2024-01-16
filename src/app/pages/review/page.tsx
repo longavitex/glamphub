@@ -20,7 +20,7 @@ const Review = () => {
                 <div className="container">
                     <div className="grid grid-cols-3 gap-[30px]">
                         {testimonialData.map(item => (
-                            <TestimonialItem data={item} />
+                            <TestimonialItem data={item} key={item.id} />
                         ))}
                     </div>
                 </div>

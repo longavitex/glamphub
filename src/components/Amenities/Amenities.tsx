@@ -33,7 +33,7 @@ const Amenities = () => {
                             <span className='icon-tent text-[60px]'></span>
                             <div>
                                 <div className="heading6 text-center">Variety of Tent Options</div>
-                                <div className="text-center text-variant1 mt-2">Spacious family tents to intimate, there's a perfect shelter for every adventurer.</div>
+                                <div className="text-center text-variant1 mt-2">Spacious family tents to intimate, there{String.raw`'s`} a perfect shelter for every adventurer.</div>
                             </div>
                         </div>
                         <div className="item flex flex-col items-center gap-7 h-full">
@@ -46,7 +46,7 @@ const Amenities = () => {
                         <div className="item flex flex-col items-center gap-7 h-full">
                             <span className='icon-mount text-[60px]'></span>
                             <div>
-                                <div className="heading6 text-center">Nature's Serenity</div>
+                                <div className="heading6 text-center">Nature{String.raw`'s`} Serenity</div>
                                 <div className="text-center text-variant1 mt-2">Welcoming peace and soothing sounds for ultimate relaxation and inner peace.</div>
                             </div>
                         </div>

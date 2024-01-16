@@ -121,7 +121,7 @@ const About = () => {
                     <div className="content-main bg-surface sm:py-10 py-8 lg:px-[60px] sm:px-10 px-8 rounded-[20px] sm:flex items-center justify-between">
                         <div className="left sm:w-3/5">
                             <div className="heading3">Join the Glamping Community</div>
-                            <div className="body2 text-variant1 sm:mt-4 mt-3">Stay engaged with the Glamping community through our events, contests, and exclusive offers. We're more than a platform</div>
+                            <div className="body2 text-variant1 sm:mt-4 mt-3">Stay engaged with the Glamping community through our events, contests, and exclusive offers. We{String.raw`'re`} more than a platform</div>
                         </div>
                         <div className="right flex-shrink-0 max-sm:mt-5">
                             <Link href={'/pages/contact'} className='button-main whitespace-nowrap'>Join us today!</Link>
