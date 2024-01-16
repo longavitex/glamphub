@@ -1,0 +1,320 @@
+/* Main color */
+:root {
+    --primary: #E05028;
+    --primary-hover: #c42e04;
+    --black: #382C28;
+    --variant1: #776E6B;
+    --variant2: #B4ABA8;
+    --white: #ffffff;
+    --outline: #E4E4E4;
+    --surface: #F8F8F8;
+    --red: #C72929;
+    --success: #37B853;
+    --yellow: #F4D118;
+    --line: #E9E9E9;
+}
+
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+    font-weight: 400;
+    overflow-x: hidden;
+    user-select: none;
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', sans-serif;
+}
+
+div,
+span,
+p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+select {
+    appearance: none;
+    outline: none;
+}
+
+.select-block {
+    position: relative;
+
+    >.arrow-down {
+        position: absolute;
+        top: 50%;
+        transform: translateY(calc(-50% - 1px));
+    }
+}
+
+input,
+textarea {
+    outline: none;
+    border: 1px solid transparent;
+    transition: border-color ease 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+}
+
+/* Main class used in Anvogue */
+.container {
+    max-width: 1322px !important;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 0 auto;
+}
+
+.bg-linear {
+    background: linear-gradient(238deg, #FAF8F1 0%, #F6F3EF 99.66%);
+}
+
+.box-shadow {
+    box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+}
+
+.heading1 {
+    font-size: 80px;
+    line-height: 88px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+}
+
+.heading2 {
+    font-size: 56px;
+    line-height: 68px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+}
+
+.heading3 {
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+}
+
+.heading4 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+}
+
+.heading5 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+}
+
+.heading6 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+}
+
+.text-title {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+}
+
+.text-button {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.28px;
+    font-family: 'Jost', sans-serif;
+}
+
+.text-button-sm {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+}
+
+.body2 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.caption1 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.caption2 {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.text-label {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.96px;
+    font-family: 'Jost', sans-serif;
+}
+
+.button-main {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 14px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all ease 0.4s;
+
+    &:hover {
+        background-color: #c42e04;
+
+        svg {
+            path {
+                fill: var(--black);
+            }
+        }
+    }
+}
+
+@media (max-width: 1023.99px) {
+    .heading1 {
+        font-size: 62px;
+        line-height: 74px;
+    }
+
+    .heading2 {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .heading3 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .heading4 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .heading5 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    html,
+    body,
+    div,
+    span,
+    p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .heading1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .heading2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .heading3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .heading4 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .heading5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .heading6 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .text-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .text-button {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .text-button-sm {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .body2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .caption1 {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .caption2 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .text-label {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .button-main {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 12px 20px;
+        border-radius: 6px;
+    }
+}
