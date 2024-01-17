@@ -18,6 +18,12 @@
         }
     }
 
+    &.line-primary {
+        &::before {
+            background-color: var(--primary);
+        }
+    }
+
     &.active,
     &:hover {
         &::before {

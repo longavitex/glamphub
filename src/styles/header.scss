@@ -2,6 +2,13 @@
     position: relative;
     z-index: 2;
 
+    &.fixed {
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation: animateHeader 0.4s linear;
+    }
+
     .menu-main {
         ul>li {
             >a {
@@ -70,5 +77,15 @@
                 width: 100%;
             }
         }
+    }
+}
+
+@keyframes animateHeader {
+    0% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }

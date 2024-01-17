@@ -10,6 +10,7 @@ import Footer from '@/components/Footer/Footer'
 import * as Icon from "phosphor-react";
 import Rate from '@/components/Other/Rate';
 import BlogItem from '@/components/Blog/BlogItem';
+import testimonialData from '@/data/Testimonial.json'
 
 const BlogDetail = () => {
     const searchParams = useSearchParams()
@@ -185,7 +186,7 @@ const BlogDetail = () => {
                                 <div className="heading flex items-center justify-between flex-wrap gap-4">
                                     <div className="heading4">03 Comments</div>
                                     <div className="right flex items-center gap-3">
-                                        <label htmlFor='select-filter' className="uppercase">Sort by:</label>
+                                        <label htmlFor='select-filter' className="">Sort by:</label>
                                         <div className="select-block relative">
                                             <select
                                                 id="select-filter"
@@ -205,178 +206,67 @@ const BlogDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="list-review mt-6">
-                                    <div className="item">
-                                        <div className="heading flex items-center justify-between">
+                                <div className="list-review">
+                                    {testimonialData.slice(0, 3).map(item => (
+                                        <div className="item mt-7" key={item.id}>
                                             <div className="user-infor flex gap-4">
-                                                <div className="avatar">
+                                                <div className="avatar w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0">
                                                     <Image
-                                                        src={'/images/avatar/can1.jpg'}
+                                                        src={item.avatar}
                                                         width={200}
                                                         height={200}
                                                         alt='img'
-                                                        className='w-[52px] aspect-square rounded-full'
+                                                        className='w-full h-full object-cover'
                                                     />
                                                 </div>
-                                                <div className="user">
+                                                <div className="user pb-7 border-b border-outline">
                                                     <div className="flex items-center gap-2">
-                                                        <div className="text-title">Tony Nguyen</div>
-                                                        <div className="span text-line">-</div>
-                                                        <Rate currentRate={5} classname='text-xs' />
+                                                        <div className="heading5">{item.name}</div>
+                                                        <Icon.CheckCircle weight='fill' className='text-success' />
                                                     </div>
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="text-secondary2">1 days ago</div>
-                                                        <div className="text-secondary2">-</div>
-                                                        <div className="text-secondary2"><span>Yellow</span> / <span>XL</span></div>
-                                                    </div>
+                                                    <div className="text-variant2 mt-1">{item.date}</div>
+                                                    <Rate currentRate={item.star} classname='text-base mt-2' />
+                                                    <div className="body2 mt-3">{item.description}</div>
+                                                    <Link href={'#form-review'} className="text-button text-variant1 mt-3 cursor-pointer inline-block duration-300 hover:text-black">Reply</Link>
                                                 </div>
-                                            </div>
-                                            <div className="more-action cursor-pointer">
-                                                <Icon.DotsThree size={24} weight='bold' />
                                             </div>
                                         </div>
-                                        <div className="mt-3">I can{String.raw`'t`} get enough of the fashion pieces from this brand. They have a great selection for every occasion and the prices are reasonable. The shipping is fast and the items always arrive in perfect condition.</div>
-                                        <div className="action flex justify-between mt-3">
-                                            <div className="left flex items-center gap-4">
-                                                <div className="like-btn flex items-center gap-1 cursor-pointer">
-                                                    <Icon.HandsClapping size={18} />
-                                                    <div className="text-button">20</div>
-                                                </div>
-                                                <div className="hide-rep-btn flex items-center gap-1 cursor-pointer">
-                                                    <Icon.Chat size={18} />
-                                                    <div className="text-button">Hide Replies</div>
-                                                </div>
-                                            </div>
-                                            <div className="right">
-                                                <div className="reply-btn text-button text-secondary">Reply</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="item md:mt-8 mt-5">
-                                        <div className="heading flex items-center justify-between">
-                                            <div className="user-infor flex gap-4">
-                                                <div className="avatar">
-                                                    <Image
-                                                        src={'/images/avatar/can2.jpg'}
-                                                        width={200}
-                                                        height={200}
-                                                        alt='img'
-                                                        className='w-[52px] aspect-square rounded-full'
-                                                    />
-                                                </div>
-                                                <div className="user">
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="text-title">Guy Hawkins</div>
-                                                        <div className="span text-line">-</div>
-                                                        <Rate currentRate={4} classname='text-xs' />
-                                                    </div>
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="text-secondary2">1 days ago</div>
-                                                        <div className="text-secondary2">-</div>
-                                                        <div className="text-secondary2"><span>Yellow</span> / <span>XL</span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="more-action cursor-pointer">
-                                                <Icon.DotsThree size={24} weight='bold' />
-                                            </div>
-                                        </div>
-                                        <div className="mt-3">I can{String.raw`'t`} get enough of the fashion pieces from this brand. They have a great selection for every occasion and the prices are reasonable. The shipping is fast and the items always arrive in perfect condition.</div>
-                                        <div className="action flex justify-between mt-3">
-                                            <div className="left flex items-center gap-4">
-                                                <div className="like-btn flex items-center gap-1 cursor-pointer">
-                                                    <Icon.HandsClapping size={18} />
-                                                    <div className="text-button">20</div>
-                                                </div>
-                                                <div className="hide-rep-btn flex items-center gap-1 cursor-pointer">
-                                                    <Icon.Chat size={18} />
-                                                    <div className="text-button">Hide Replies</div>
-                                                </div>
-                                            </div>
-                                            <div className="right">
-                                                <div className="reply-btn text-button text-secondary">Reply</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="item md:mt-8 mt-5">
-                                        <div className="heading flex items-center justify-between">
-                                            <div className="user-infor flex gap-4">
-                                                <div className="avatar">
-                                                    <Image
-                                                        src={'/images/avatar/can3.jpg'}
-                                                        width={200}
-                                                        height={200}
-                                                        alt='img'
-                                                        className='w-[52px] aspect-square rounded-full'
-                                                    />
-                                                </div>
-                                                <div className="user">
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="text-title">John Smith</div>
-                                                        <div className="span text-line">-</div>
-                                                        <Rate currentRate={5} classname='text-xs' />
-                                                    </div>
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="text-secondary2">1 days ago</div>
-                                                        <div className="text-secondary2">-</div>
-                                                        <div className="text-secondary2"><span>Yellow</span> / <span>XL</span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="more-action cursor-pointer">
-                                                <Icon.DotsThree size={24} weight='bold' />
-                                            </div>
-                                        </div>
-                                        <div className="mt-3">I can{String.raw`'t`} get enough of the fashion pieces from this brand. They have a great selection for every occasion and the prices are reasonable. The shipping is fast and the items always arrive in perfect condition.</div>
-                                        <div className="action flex justify-between mt-3">
-                                            <div className="left flex items-center gap-4">
-                                                <div className="like-btn flex items-center gap-1 cursor-pointer">
-                                                    <Icon.HandsClapping size={18} />
-                                                    <div className="text-button">20</div>
-                                                </div>
-                                                <div className="hide-rep-btn flex items-center gap-1 cursor-pointer">
-                                                    <Icon.Chat size={18} />
-                                                    <div className="text-button">Hide Replies</div>
-                                                </div>
-                                            </div>
-                                            <div className="right">
-                                                <div className="reply-btn text-button text-secondary">Reply</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
-                                <div id="form-review" className='form-review md:p-10 p-6 bg-surface rounded-xl md:mt-10 mt-6'>
+                                <div id="form-review" className='form-review md:pt-10 pt-6'>
                                     <div className="heading4">Leave A comment</div>
-                                    <form className="grid sm:grid-cols-2 gap-4 gap-y-5 md:mt-6 mt-3">
+                                    <form className="grid sm:grid-cols-2 gap-4 gap-y-5 md:mt-7 mt-3">
                                         <div className="name ">
-                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="text" placeholder="Your Name *" required />
+                                            <label htmlFor="username" className='text-variant1'>Name</label>
+                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg mt-3" id="username" type="text" placeholder="Your Name *" required />
                                         </div>
                                         <div className="mail ">
-                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="email" type="email" placeholder="Your Email *" required />
+                                            <label htmlFor="email" className='text-variant1'>Email</label>
+                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg mt-3" id="email" type="email" placeholder="Your Email *" required />
                                         </div>
-                                        <div className="col-span-full message">
-                                            <textarea className="border border-line px-4 py-3 w-full rounded-lg" id="message" name="message" placeholder="Your message *" required ></textarea>
+                                        <div className="col-span-full review">
+                                            <label htmlFor="review" className='text-variant1'>Review</label>
+                                            <textarea className="border border-line px-4 py-3 w-full rounded-lg mt-3" rows={3} id="review" name="review" placeholder="Write comment *" required ></textarea>
                                         </div>
                                         <div className="col-span-full flex items-start -mt-2 gap-2">
                                             <input type="checkbox" id="saveAccount" name="saveAccount" className='mt-1.5' />
-                                            <label className="" htmlFor="saveAccount">Save my name, email, and website in this browser for the next time I comment.</label>
+                                            <label className="" htmlFor="saveAccount">Save your name, email for the next time review</label>
                                         </div>
-                                        <div className="col-span-full sm:pt-3">
-                                            <button className='button-main bg-white text-black border border-black'>Submit Reviews</button>
+                                        <div className="col-span-full">
+                                            <button className='button-main'>Submit Reviews</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className='lg:py-20 md:py-14 py-10'>
+                    <div className='news-insight-block lg:py-20 md:py-14 py-10'>
                         <div className="heading3 text-center">News insight</div>
-                        <div className="list grid grid-cols-3 gap-[30px] md:mt-10 mt-6">
+                        <div className="list-blog grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px] md:mt-10 mt-6">
                             {blogData.slice(0, 3).map(item => (
                                 <BlogItem data={item} type='style-grid' key={item.id} />
                             ))}
                         </div>
-                        {/* <NewsInsight data={blogData} start={0} limit={3} /> */}
                     </div>
                 </div>
             </div>

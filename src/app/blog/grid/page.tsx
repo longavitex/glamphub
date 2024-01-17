@@ -11,7 +11,7 @@ import blogData from '@/data/Blog.json'
 import BlogItem from '@/components/Blog/BlogItem'
 import Footer from '@/components/Footer/Footer'
 
-const BlogDefault = () => {
+const BlogGrid = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const blogPerPage = 9;
     const offset = currentPage * blogPerPage;
@@ -58,4 +58,4 @@ const BlogDefault = () => {
     )
 }
 
-export default BlogDefault
+export default BlogGrid

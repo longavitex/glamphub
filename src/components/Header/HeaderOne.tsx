@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
@@ -8,11 +8,29 @@ import * as Icon from "phosphor-react";
 
 const HeaderOne = () => {
     const pathname = usePathname()
+    const [fixedHeader, setFixedHeader] = useState(false)
+    const [lastScrollPosition, setLastScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setFixedHeader(scrollPosition > 0 && scrollPosition < lastScrollPosition);
+            setLastScrollPosition(scrollPosition);
+        };
+
+        // Add event scroll when component mounted
+        window.addEventListener('scroll', handleScroll);
+
+        // Remove event scroll when component mounted
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollPosition]);
 
     return (
         <>
             <div id="header" className='header'>
-                <div className="header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-between">
+                <div className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-between ${fixedHeader ? 'fixed box-shadow' : ''}`}>
                     <Link href={'/'} className="logo">
                         <Image
                             src={'/images/logo.png'}
@@ -61,42 +79,42 @@ const HeaderOne = () => {
                                 <div className="sub-menu absolute bg-white">
                                     <ul>
                                         <li>
-                                            <Link href="/" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/' ? 'active' : ''}`}>
+                                            <Link href="/camp/topmap-grid" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/camp/topmap-grid' ? 'active' : ''}`}>
                                                 Find Topmap Grid
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/homepages/home2" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/homepages/home2' ? 'active' : ''}`}>
+                                            <Link href="/camp/topmap-list" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/camp/topmap-list' ? 'active' : ''}`}>
                                                 Find Topmap List
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/homepages/home3" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/homepages/home3' ? 'active' : ''}`}>
+                                            <Link href="/camp/filter-dropdown" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/camp/filter-dropdown' ? 'active' : ''}`}>
                                                 Filters Dropdown
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/' ? 'active' : ''}`}>
+                                            <Link href="/camp/filter-scroll" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/camp/filter-scroll' ? 'active' : ''}`}>
                                                 Filters Scrolls
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/homepages/home2" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/homepages/home2' ? 'active' : ''}`}>
+                                            <Link href="/camp/topmap-sidebar" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/camp/topmap-sidebar' ? 'active' : ''}`}>
                                                 Find Topmap Sidebar
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/homepages/home3" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/homepages/home3' ? 'active' : ''}`}>
+                                            <Link href="/camp/halfmap-grid" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/camp/halfmap-grid' ? 'active' : ''}`}>
+                                                Find Halfmap Grid
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/camp/halfmap-list" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/camp/halfmap-list' ? 'active' : ''}`}>
                                                 Find Halfmap List
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/homepages/home2" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/homepages/home2' ? 'active' : ''}`}>
-                                                Find Halfmap List
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/homepages/home3" className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${pathname === '/homepages/home3' ? 'active' : ''}`}>
+                                            <Link href="/camp/tent-detail" className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${pathname === '/camp/tent-detail' ? 'active' : ''}`}>
                                                 Tent Details
                                             </Link>
                                         </li>

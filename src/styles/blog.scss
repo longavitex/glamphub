@@ -40,6 +40,29 @@
                 }
             }
         }
+
+        .list-review {
+            .item {
+                &:last-child {
+                    .user {
+                        padding-bottom: 0;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.news-insight-block {
+    .list-blog {
+        @media (max-width: 1023.98px) and (min-width: 640px) {
+            .blog-item {
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
