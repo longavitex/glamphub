@@ -9,13 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mui/x-date-pickers": "^6.19.0",
-    "@mui/x-date-pickers-pro": "^6.19.0",
-    "dayjs": "^1.11.10",
     "next": "14.0.4",
     "phosphor-react": "^1.4.1",
     "react": "^18",
-    "react-dates": "^21.8.0",
+    "react-date-range": "^2.0.0-alpha.4",
     "react-dom": "^18",
     "react-paginate": "^8.2.0",
     "react-sticky-box": "^2.0.5",
@@ -25,7 +22,7 @@
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dates": "^21.8.6",
+    "@types/react-date-range": "^1.4.9",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",

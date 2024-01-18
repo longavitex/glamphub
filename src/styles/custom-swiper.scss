@@ -51,3 +51,66 @@
     background: var(--primary);
     border-color: var(--primary);
 }
+
+/* Slider - Swiper Navigation */
+// Cate home2
+.style-navigation {
+    position: relative;
+
+    .custom-swiper-button-prev,
+    .custom-swiper-button-next {
+        width: 44px;
+        height: 44px;
+        background-color: var(--white);
+        border-radius: 50%;
+        border: 1px solid var(--outline);
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+
+        &:hover {
+            background-color: var(--black);
+            color: var(--white);
+        }
+    }
+
+    .custom-swiper-button-prev {
+        left: -64px;
+    }
+
+    .custom-swiper-button-next {
+        right: -64px;
+    }
+
+    @media (max-width: 1460px) {
+
+        .custom-swiper-button-prev,
+        .custom-swiper-button-next {
+            width: 36px;
+            height: 36px;
+        }
+
+        .custom-swiper-button-prev {
+            left: -12px;
+        }
+
+        .custom-swiper-button-next {
+            right: -12px;
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        .custom-swiper-button-prev,
+        .custom-swiper-button-next {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

@@ -199,7 +199,7 @@ const HeaderOne = () => {
                                 <option value="FR">FR</option>
                                 <option value="GE">GE</option>
                             </select>
-                            <Icon.CaretDown className='text-base arrow-down right-0' />
+                            <Icon.CaretDown className='icon text-base right-0' />
                         </div>
                         <div className="menu-mobile-icon lg:hidden flex items-center ml-4">
                             <Icon.List className='sm:text-xl text-2xl text-black' weight='bold' />
