@@ -10,7 +10,7 @@ const TextHeading: React.FC<Props> = ({ title, subTitle }) => {
         <>
             <div className="heading flex flex-col items-center justify-center">
                 <div className="heading2 text-center">{title}</div>
-                <div className="body2 text-variant1 text-center mt-3">{subTitle}</div>
+                <div className="body2 text-variant1 text-center sm:mt-3 mt-2">{subTitle}</div>
             </div>
         </>
     )

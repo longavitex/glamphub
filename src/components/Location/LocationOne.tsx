@@ -1,0 +1,98 @@
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import TextHeading from '../TextHeading/TextHeading'
+
+const LocationOne = () => {
+    return (
+        <>
+            <div className="location-block lg:pt-20 md:pt-14 pt-10">
+                <div className="container">
+                    <TextHeading title='Locations on Glamping Hub' subTitle='Discover the Most Popular Places to Visit' />
+                    <div className="list-location grid lg:grid-cols-3 min-[370px]:grid-cols-2 md:gap-[30px] gap-y-7 gap-4 md:mt-10 mt-6">
+                        <div className="item hover-scale">
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/location/1.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='1.png'
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3">Africa</div>
+                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                        </div>
+                        <div className="item hover-scale">
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/location/2.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='2.png'
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3">Asia</div>
+                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                        </div>
+                        <div className="item hover-scale">
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/location/3.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='3.png'
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3">Europe</div>
+                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                        </div>
+                        <div className="item hover-scale">
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/location/4.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='4.png'
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3">North America</div>
+                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                        </div>
+                        <div className="item hover-scale">
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/location/5.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='5.png'
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3">Oceania</div>
+                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                        </div>
+                        <div className="item hover-scale">
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/location/6.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='6.png'
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3">South America</div>
+                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default LocationOne
