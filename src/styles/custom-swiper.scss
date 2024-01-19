@@ -113,4 +113,14 @@
             height: 32px;
         }
     }
+
+    &.style-three {
+        .custom-swiper-button-prev {
+            left: 0;
+        }
+
+        .custom-swiper-button-next {
+            right: 0;
+        }
+    }
 }

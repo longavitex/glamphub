@@ -1,0 +1,154 @@
+[
+    {
+        "id": "1",
+        "category": "cabin",
+        "continents": "africa",
+        "country": "sri lanka",
+        "name": "Zenith Dome Panoramic Getaway",
+        "image": "/images/tent/1.png",
+        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "rate": 4.2,
+        "price": 342,
+        "listImage": [
+            "/images/tent/1.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+    },
+    {
+        "id": "2",
+        "category": "tented cabins",
+        "continents": "asia",
+        "country": "campuchia",
+        "name": "Koh Rong Island, Preah Sihanouk Province, Cambodia",
+        "image": "/images/tent/2.png",
+        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "rate": 4.2,
+        "price": 342,
+        "listImage": [
+            "/images/tent/2.png",
+            "/images/tent/1.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+    },
+    {
+        "id": "3",
+        "category": "safari tents",
+        "continents": "europe",
+        "country": "sri lanka",
+        "name": "Zenith Dome Panoramic Getaway",
+        "image": "/images/tent/3.png",
+        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "rate": 4.2,
+        "price": 342,
+        "listImage": [
+            "/images/tent/3.png",
+            "/images/tent/1.png",
+            "/images/tent/2.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+    },
+    {
+        "id": "4",
+        "category": "cottages",
+        "continents": "north america",
+        "country": "sri lanka",
+        "name": "Zenith Dome Panoramic Getaway",
+        "image": "/images/tent/4.png",
+        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "rate": 4.2,
+        "price": 342,
+        "listImage": [
+            "/images/tent/4.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/1.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+    },
+    {
+        "id": "5",
+        "category": "tiny houses",
+        "continents": "oceania",
+        "country": "sri lanka",
+        "name": "Zenith Dome Panoramic Getaway",
+        "image": "/images/tent/5.png",
+        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "rate": 4.2,
+        "price": 342,
+        "listImage": [
+            "/images/tent/5.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/1.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+    },
+    {
+        "id": "6",
+        "category": "caravans",
+        "continents": "south america",
+        "country": "sri lanka",
+        "name": "Zenith Dome Panoramic Getaway",
+        "image": "/images/tent/6.png",
+        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "rate": 4.2,
+        "price": 342,
+        "listImage": [
+            "/images/tent/6.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+    },
+    {
+        "id": "7",
+        "category": "domes",
+        "continents": "africa",
+        "country": "sri lanka",
+        "name": "Zenith Dome Panoramic Getaway",
+        "image": "/images/tent/7.png",
+        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "rate": 4.2,
+        "price": 342,
+        "listImage": [
+            "/images/tent/7.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+    },
+    {
+        "id": "8",
+        "category": "log cabins",
+        "continents": "asia",
+        "country": "campuchia",
+        "name": "Koh Rong Island, Preah Sihanouk Province, Cambodia",
+        "image": "/images/tent/8.png",
+        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "rate": 4.2,
+        "price": 342,
+        "listImage": [
+            "/images/tent/8.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+    }
+]

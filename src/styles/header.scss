@@ -1,5 +1,6 @@
 .header-main {
     position: relative;
+    border-bottom: 1px solid var(--outline);
     z-index: 2;
 
     &.fixed {

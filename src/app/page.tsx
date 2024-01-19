@@ -6,6 +6,7 @@ import SliderOne from '@/components/Slider/SliderOne'
 import LocationOne from '@/components/Location/LocationOne'
 import CategoryOne from '@/components/Category/CategoryOne'
 import RecommendOne from '@/components/Recommend/RecommendOne'
+import tentData from '@/data/Tent.json'
 import BecomeHost from '@/components/BecomeHost/BecomeHost'
 import Amenities from '@/components/Amenities/Amenities'
 import Testimonial from '@/components/Testimonial/Testimonial'
@@ -16,16 +17,18 @@ import Footer from '@/components/Footer/Footer'
 const Home = () => {
   return (
     <>
-      <HeaderOne />
-      <SliderOne />
-      <LocationOne />
-      <CategoryOne />
-      <RecommendOne />
-      <BecomeHost />
-      <Amenities />
-      <Testimonial data={dataTestimonial} />
-      <News />
-      <Footer />
+      <div className="page-one overflow-x-hidden">
+        <HeaderOne />
+        <SliderOne />
+        <LocationOne />
+        <CategoryOne />
+        <RecommendOne data={tentData} />
+        <BecomeHost />
+        <Amenities />
+        <Testimonial data={dataTestimonial} />
+        <News />
+        <Footer />
+      </div>
     </>
   )
 }

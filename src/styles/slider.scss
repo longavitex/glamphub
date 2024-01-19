@@ -1,0 +1,21 @@
+.form-date-picker,
+.sub-menu-guest {
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.4s;
+    z-index: 3;
+
+    &.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.form-date-picker {
+    @media (max-width: 1024px) {
+        left: unset;
+        right: 0;
+    }
+}

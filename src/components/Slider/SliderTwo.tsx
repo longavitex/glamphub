@@ -1,48 +1,179 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from 'phosphor-react'
+import { addDays } from 'date-fns';
+import { DateRangePicker } from 'react-date-range';
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
-const SliderOne = () => {
+const SliderTwo = () => {
+    const [openDate, setOpenDate] = useState(false)
+    const [openGuest, setOpenGuest] = useState(false)
+    const [state, setState] = useState([
+        {
+            startDate: new Date(),
+            endDate: addDays(new Date(), 7),
+            key: 'selection'
+        }
+    ]);
+
+    const handleOpenDate = () => {
+        setOpenDate(!openDate)
+        setOpenGuest(false)
+    }
+
+    const handleOpenGuest = () => {
+        setOpenGuest(!openGuest)
+        setOpenDate(false)
+    }
+
+    // Check if the click event occurs outside the popup.
+    const handleClickOutsideDatePopup: EventListener = (event) => {
+        // Cast event.target to Element to use the closest method.
+        const targetElement = event.target as Element;
+
+        if (openDate && !targetElement.closest('.form-date-picker')) {
+            setOpenDate(false)
+        }
+    }
+
+    // Check if the click event occurs outside the popup.
+    const handleClickOutsideGuestPopup: EventListener = (event) => {
+        // Cast event.target to Element to use the closest method.
+        const targetElement = event.target as Element;
+
+        if (openGuest && !targetElement.closest('.sub-menu-guest')) {
+            setOpenGuest(false)
+        }
+    }
+
+    useEffect(() => {
+        // Add a global click event to track clicks outside the popup.
+        document.addEventListener('click', handleClickOutsideDatePopup);
+        document.addEventListener('click', handleClickOutsideGuestPopup);
+
+        // Cleanup to avoid memory leaks.
+        return () => {
+            document.removeEventListener('click', handleClickOutsideDatePopup);
+            document.removeEventListener('click', handleClickOutsideGuestPopup);
+        };
+    }, [openDate, openGuest])
 
     return (
         <>
             <div className="slider-block style-one relative h-[508px] pb-12">
                 <div className="bg-img w-full h-full">
-                    <Image
-                        src={'/images/slider/slider-home1.png'}
-                        width={4000}
-                        height={3000}
-                        alt='slider'
-                        className='w-full h-full object-cover'
-                    />
+                    <iframe className='h-full w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5146725494856!2d81.0526394758883!3d6.8287206931691555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46f60b1db5c65%3A0x443a9d8835153ea7!2sBoody&#39;s%20Camping%20Site!5e0!3m2!1svi!2s!4v1705656455097!5m2!1svi!2s" loading="lazy"></iframe>
                 </div>
-                {/* <div className="container relative -mt-[90px]">
+                <div className="container relative -mt-[90px]">
                     <div className="content">
                         <div className="form-search md:mt-10 mt-6 w-full">
                             <form className='bg-white rounded-lg p-5 flex max-md:flex-wrap items-center justify-between gap-5 relative box-shadow'>
-                                <div className="select-block w-full">
+                                <div className="select-block lg:w-full md:w-[48%] w-full">
                                     <Icon.MapPin className='icon text-xl left-5' />
                                     <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Search destination' />
                                 </div>
-                                <div className="select-block w-full">
-                                    <Icon.CalendarBlank className='icon text-xl left-5' />
-                                    <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="date" placeholder='Add Dates' />
+                                <div className="relative lg:w-full md:w-[48%] w-full">
+                                    <div className='select-block w-full' onClick={handleOpenDate}>
+                                        <Icon.CalendarBlank className='icon text-xl left-5' />
+                                        {/* <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Add Dates' /> */}
+                                        <input
+                                            className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
+                                            type="text"
+                                            placeholder='Add Dates'
+                                            value={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
+                                            readOnly // prevent user edit value
+                                        />
+                                    </div>
+                                    <DateRangePicker
+                                        className={`form-date-picker box-shadow md:border-t border-outline ${openDate ? 'open' : ''}`}
+                                        onChange={item => setState([item.selection])}
+                                        // showSelectionPreview={true}
+                                        moveRangeOnFirstSelection={false}
+                                        months={2}
+                                        ranges={state}
+                                        direction="horizontal"
+                                    />
                                 </div>
-                                <div className="select-block w-full">
-                                    <Icon.Users className='icon text-xl left-5' />
-                                    <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Add Guest' />
+                                <div className="relative lg:w-full md:w-[48%] w-full">
+                                    <div className="select-block w-full" onClick={handleOpenGuest}>
+                                        <Icon.Users className='icon text-xl left-5' />
+                                        <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Add Guest' />
+                                    </div>
+                                    <div className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full md:mt-5 mt-3 left-0 w-full box-shadow md:border-t border-outline ${openGuest ? 'open' : ''}`}>
+                                        <div className="item flex items-center justify-between pb-4 border-b border-outline">
+                                            <div className="left">
+                                                <p>Adults</p>
+                                                <div className="caption1 text-variant1">(12 Years+)</div>
+                                            </div>
+                                            <div className="right flex items-center gap-5">
+                                                <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                    <Icon.Minus weight='bold' />
+                                                </div>
+                                                <div className="text-title">2</div>
+                                                <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                    <Icon.Plus weight='bold' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="item flex items-center justify-between pb-4 pt-4 border-b border-outline">
+                                            <div className="left">
+                                                <p>Children</p>
+                                                <div className="caption1 text-variant1">(2-12 Years)</div>
+                                            </div>
+                                            <div className="right flex items-center gap-5">
+                                                <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                    <Icon.Minus weight='bold' />
+                                                </div>
+                                                <div className="text-title">2</div>
+                                                <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                    <Icon.Plus weight='bold' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="item flex items-center justify-between pb-4 pt-4 border-b border-outline">
+                                            <div className="left">
+                                                <p>Infants</p>
+                                                <div className="caption1 text-variant1">(0-2 Years)</div>
+                                            </div>
+                                            <div className="right flex items-center gap-5">
+                                                <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                    <Icon.Minus weight='bold' />
+                                                </div>
+                                                <div className="text-title">1</div>
+                                                <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                    <Icon.Plus weight='bold' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="item flex items-center justify-between pb-4 pt-4">
+                                            <div className="left">
+                                                <p>Pets</p>
+                                            </div>
+                                            <div className="right flex items-center gap-5">
+                                                <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                    <Icon.Minus weight='bold' />
+                                                </div>
+                                                <div className="text-title">0</div>
+                                                <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                    <Icon.Plus weight='bold' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="button-main w-full text-center">Done</div>
+                                    </div>
                                 </div>
-                                <div className="button-block flex-shrink-0 max-sm:w-full">
-                                    <button className='button-main max-sm:w-full'>Searching</button>
+                                <div className="button-block flex-shrink-0 max-lg:w-[48%] max-md:w-full">
+                                    <button className='button-main max-lg:w-full'>Searching</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </>
     )
 }
 
-export default SliderOne
+export default SliderTwo
