@@ -88,7 +88,7 @@ const SliderTwo = () => {
                                     </div>
                                     <DateRangePicker
                                         className={`form-date-picker box-shadow md:border-t border-outline ${openDate ? 'open' : ''}`}
-                                        onChange={item => setState([item.selection])}
+                                        onChange={item => setState([item.selection] as any)}
                                         // showSelectionPreview={true}
                                         moveRangeOnFirstSelection={false}
                                         months={2}
