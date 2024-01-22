@@ -7,17 +7,6 @@
                 .item {
                     position: relative;
 
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: -24px;
-                        width: 0;
-                        height: 2px;
-                        background-color: var(--primary);
-                        transition: all ease 0.4s;
-                    }
-
                     &:hover,
                     &.active {
                         span {
@@ -26,10 +15,6 @@
 
                         .text-title {
                             color: var(--black);
-                        }
-
-                        &::before {
-                            width: 100%;
                         }
                     }
                 }

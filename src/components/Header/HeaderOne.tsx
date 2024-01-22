@@ -72,7 +72,7 @@ const HeaderOne = () => {
                             <li className='h-full relative'>
                                 <Link
                                     href="##"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/camps/') ? 'active' : ''}`}
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/camp/') ? 'active' : ''}`}
                                 >
                                     Camps
                                 </Link>

@@ -77,7 +77,7 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
             <div className="slider-block style-one relative h-[508px] pb-12">
                 <div className="bg-img w-full h-full">
                     {/* <iframe className='h-full w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5146725494856!2d81.0526394758883!3d6.8287206931691555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46f60b1db5c65%3A0x443a9d8835153ea7!2sBoody&#39;s%20Camping%20Site!5e0!3m2!1svi!2s!4v1705656455097!5m2!1svi!2s" loading="lazy"></iframe> */}
-                    <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+                    <LoadScript googleMapsApiKey="AIzaSyAlqPjtwBIJDycOHLBIu7GV9SnkOATwbDs">
                         <GoogleMap mapContainerStyle={mapStyles} center={defaultCenter} zoom={10}>
                             {hotels.map((hotel) => (
                                 <Marker
@@ -90,10 +90,10 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                         </GoogleMap>
                     </LoadScript>
                 </div>
-                <div className="container relative -mt-[90px]">
+                <div className="container relative lg:-mt-[90px] -mt-[124px]">
                     <div className="content">
                         <div className="form-search md:mt-10 mt-6 w-full">
-                            <form className='bg-white rounded-lg p-5 flex max-md:flex-wrap items-center justify-between gap-5 relative box-shadow'>
+                            <form className='bg-white rounded-lg p-5 flex max-lg:flex-wrap items-center justify-between gap-5 relative box-shadow'>
                                 <div className="select-block lg:w-full md:w-[48%] w-full">
                                     <Icon.MapPin className='icon text-xl left-5' />
                                     <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Search destination' />

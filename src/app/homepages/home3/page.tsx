@@ -11,7 +11,7 @@ import 'swiper/css/bundle';
 import TentItem from '@/components/Tent/TentItem'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { TentType } from '@/type/TentType';
-
+import { motion } from 'framer-motion'
 
 const HomeThree = () => {
   const mapStyles = {
@@ -69,110 +69,146 @@ const HomeThree = () => {
           >
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'cabin' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'cabin' ? 'active' : ''}`}
                 onClick={() => handleCategory('cabin')}
               >
                 <span className='icon-cabin text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Cabin</div>
+                {activeCategory === 'cabin' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'tented cabins' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'tented cabins' ? 'active' : ''}`}
                 onClick={() => handleCategory('tented cabins')}
               >
                 <span className='icon-tented-cabin text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Tented Cabins</div>
+                {activeCategory === 'tented cabins' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'safari tents' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'safari tents' ? 'active' : ''}`}
                 onClick={() => handleCategory('safari tents')}
               >
                 <span className='icon-safari-tent text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Safari Tents</div>
+                {activeCategory === 'safari tents' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'cottages' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'cottages' ? 'active' : ''}`}
                 onClick={() => handleCategory('cottages')}
               >
                 <span className='icon-cottages text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Cottages</div>
+                {activeCategory === 'cottages' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'tiny houses' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'tiny houses' ? 'active' : ''}`}
                 onClick={() => handleCategory('tiny houses')}
               >
                 <span className='icon-tiny-house text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Tiny Houses</div>
+                {activeCategory === 'tiny houses' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'caravans' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'caravans' ? 'active' : ''}`}
                 onClick={() => handleCategory('caravans')}
               >
                 <span className='icon-cravan text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Caravans</div>
+                {activeCategory === 'caravans' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'domes' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'domes' ? 'active' : ''}`}
                 onClick={() => handleCategory('domes')}
               >
                 <span className='icon-domes text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Domes</div>
+                {activeCategory === 'domes' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'log cabins' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'log cabins' ? 'active' : ''}`}
                 onClick={() => handleCategory('log cabins')}
               >
                 <span className='icon-log-cabin text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Log Cabins</div>
+                {activeCategory === 'log cabins' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'yurts' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'yurts' ? 'active' : ''}`}
                 onClick={() => handleCategory('yurts')}
               >
                 <span className='icon-yurt text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Yurts</div>
+                {activeCategory === 'yurts' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'bell tents' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'bell tents' ? 'active' : ''}`}
                 onClick={() => handleCategory('bell tents')}
               >
                 <span className='icon-bell-tent text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Bell Tents</div>
+                {activeCategory === 'bell tents' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'tree houses' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'tree houses' ? 'active' : ''}`}
                 onClick={() => handleCategory('tree houses')}
               >
                 <span className='icon-cottages text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Tree Houses</div>
+                {activeCategory === 'tree houses' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer ${activeCategory === 'containers' ? 'active' : ''}`}
+                className={`item flex flex-col items-center rounded-xl duration-300 cursor-pointer relative ${activeCategory === 'containers' ? 'active' : ''}`}
                 onClick={() => handleCategory('containers')}
               >
                 <span className='icon-container text-4xl text-variant1 duration-300'></span>
                 <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Containers</div>
+                {activeCategory === 'containers' && (
+                  <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                )}
               </div>
             </SwiperSlide>
           </Swiper>
@@ -192,7 +228,7 @@ const HomeThree = () => {
         </div>
         <div className="right basis-5/12 h-full">
           {/* <iframe className='h-full w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5146725494856!2d81.0526394758883!3d6.8287206931691555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46f60b1db5c65%3A0x443a9d8835153ea7!2sBoody&#39;s%20Camping%20Site!5e0!3m2!1svi!2s!4v1705656455097!5m2!1svi!2s" loading="lazy"></iframe> */}
-          <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+          <LoadScript googleMapsApiKey="AIzaSyAlqPjtwBIJDycOHLBIu7GV9SnkOATwbDs">
             <GoogleMap mapContainerStyle={mapStyles} center={defaultCenter} zoom={10}>
               {tentData.map((hotel) => (
                 <Marker
