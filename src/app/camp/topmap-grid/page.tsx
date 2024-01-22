@@ -7,24 +7,35 @@ import Footer from '@/components/Footer/Footer'
 import tentData from '@/data/Tent.json'
 import { TentType } from '@/type/TentType'
 import TentItem from '@/components/Tent/TentItem'
-import * as Icon from 'phosphor-react'
 import HandlePagination from '@/components/Other/HandlePagination'
+import * as Icon from 'phosphor-react'
+import Slider from 'rc-slider'
+import 'rc-slider/assets/index.css'
+
+type Service = string;
+type Amenities = string;
+type Activities = string;
+type Terrain = string;
 
 const TopMapGrid = () => {
-  const [showOnlySale, setShowOnlySale] = useState(false)
+  const [openSidebar, setOpenSidebar] = useState(false)
   const [sortOption, setSortOption] = useState('');
-  // const [type, setType] = useState<string | null | undefined>(dataType)
-  const [size, setSize] = useState<string | null>()
-  const [color, setColor] = useState<string | null>()
-  const [brand, setBrand] = useState<string | null>()
-  const [priceRange, setPriceRange] = useState<{ min: number; max: number }>({ min: 0, max: 100 });
+  const [service, setService] = useState<Service[]>([])
+  const [amenities, setAmenities] = useState<Amenities[]>([])
+  const [activities, setActivities] = useState<Activities[]>([])
+  const [terrain, setTerrain] = useState<Terrain[]>([])
+  const [priceRange, setPriceRange] = useState<{ min: number; max: number }>({ min: 0, max: 500 });
   const [currentPage, setCurrentPage] = useState(0);
   const [tentPerPage, setTentPerPage] = useState<number>(8);
   const tentsPerPage = tentPerPage;
   const offset = currentPage * tentsPerPage;
 
-  const handleTentPerPage = (option: number) => {
-    setTentPerPage(option);
+  const handleOpenSidebar = () => {
+    setOpenSidebar(!openSidebar)
+  }
+
+  const handleTentPerPage = (page: number) => {
+    setTentPerPage(page);
     setCurrentPage(0);
   };
 
@@ -33,16 +44,6 @@ const TopMapGrid = () => {
     setCurrentPage(0);
   };
 
-  // const handleType = (type: string | null) => {
-  //   setType((prevType) => (prevType === type ? null : type))
-  //   setCurrentPage(0);
-  // }
-
-  const handleSize = (size: string) => {
-    setSize((prevSize) => (prevSize === size ? null : size))
-    setCurrentPage(0);
-  }
-
   const handlePriceChange = (values: number | number[]) => {
     if (Array.isArray(values)) {
       setPriceRange({ min: values[0], max: values[1] });
@@ -50,117 +51,127 @@ const TopMapGrid = () => {
     }
   };
 
-  const handleColor = (color: string) => {
-    setColor((prevColor) => (prevColor === color ? null : color))
-    setCurrentPage(0);
-  }
+  const handleService = (item: Service) => {
+    // check service selected
+    const isSelected = service.includes(item);
 
-  const handleBrand = (brand: string) => {
-    setBrand((prevBrand) => (prevBrand === brand ? null : brand));
-    setCurrentPage(0);
-  }
+    // If selected, remove from list
+    // else, add to list
+    if (isSelected) {
+      setService(service.filter((service) => service !== item));
+    } else {
+      setService([...service, item]);
+    }
+  };
 
+  const handleAmenities = (item: Amenities) => {
+    // check amenities selected
+    const isSelected = amenities.includes(item);
+
+    // If selected, remove from list
+    // else, add to list
+    if (isSelected) {
+      setAmenities(amenities.filter((amenities) => amenities !== item));
+    } else {
+      setAmenities([...amenities, item]);
+    }
+  };
+
+  const handleActivities = (item: Activities) => {
+    // check activities selected
+    const isSelected = activities.includes(item);
+
+    // If selected, remove from list
+    // else, add to list
+    if (isSelected) {
+      setActivities(activities.filter((activities) => activities !== item));
+    } else {
+      setActivities([...activities, item]);
+    }
+  };
+
+  const handleTerrain = (item: Terrain) => {
+    // check terrain selected
+    const isSelected = terrain.includes(item);
+
+    // If selected, remove from list
+    // else, add to list
+    if (isSelected) {
+      setTerrain(terrain.filter((terrain) => terrain !== item));
+    } else {
+      setTerrain([...terrain, item]);
+    }
+  };
 
   // Filter tent
   let filteredData = tentData.filter(tent => {
-    let isShowOnlySaleMatched = true;
+    let isPriceRangeMatched = true;
+    if (priceRange.min !== 0 || priceRange.max !== 500) {
+      isPriceRangeMatched = tent.price >= priceRange.min && tent.price <= priceRange.max;
+    }
 
-    // let isDatagenderMatched = true;
+    let isDataServiceMatched = true;
+    if (service.length > 0) {
+      isDataServiceMatched = service.every(item => tent.services.includes(item))
+    }
 
-    // let isDataCategoryMatched = true;
-    // if (category) {
-    //   isDataCategoryMatched = tent.category === category
-    // }
+    let isDataAmenitiesMatched = true;
+    if (amenities.length > 0) {
+      isDataAmenitiesMatched = amenities.every(item => tent.amenities.includes(item))
+    }
 
-    // let isDataTypeMatched = true;
-    // if (dataType) {
-    //   isDataTypeMatched = tent.type === dataType
-    // }
+    let isDataActivitiesMatched = true;
+    if (activities.length > 0) {
+      isDataActivitiesMatched = activities.every(item => tent.activities.includes(item))
+    }
 
-    // let isTypeMatched = true;
-    // if (type) {
-    //   dataType = type
-    //   isTypeMatched = tent.type === type;
-    // }
+    let isDataTerrainMatched = true;
+    if (terrain.length > 0) {
+      isDataTerrainMatched = terrain.every(item => tent.terrain.includes(item))
+    }
 
-    // let isSizeMatched = true;
-    // if (size) {
-    //   isSizeMatched = tent.sizes.includes(size)
-    // }
-
-    // let isPriceRangeMatched = true;
-    // if (priceRange.min !== 0 || priceRange.max !== 100) {
-    //   isPriceRangeMatched = tent.price >= priceRange.min && tent.price <= priceRange.max;
-    // }
-
-    // let isColorMatched = true;
-    // if (color) {
-    //   isColorMatched = tent.variation.some(item => item.color === color)
-    // }
-
-    // let isBrandMatched = true;
-    // if (brand) {
-    //   isBrandMatched = tent.brand === brand;
-    // }
-
-    return isShowOnlySaleMatched
+    return isPriceRangeMatched && isDataServiceMatched && isDataAmenitiesMatched && isDataActivitiesMatched && isDataTerrainMatched
   })
 
 
   // Create a copy array filtered to sort
   let sortedData = [...filteredData];
 
-  // if (sortOption === 'soldQuantityHighToLow') {
-  //   filteredData = sortedData.sort((a, b) => b.sold - a.sold)
-  // }
+  if (sortOption === 'starHighToLow') {
+    filteredData = sortedData.sort((a, b) => b.rate - a.rate)
+  }
 
-  // if (sortOption === 'discountHighToLow') {
-  //   filteredData = sortedData
-  //     .sort((a, b) => (
-  //       (Math.floor(100 - ((b.price / b.originPrice) * 100))) - (Math.floor(100 - ((a.price / a.originPrice) * 100)))
-  //     ))
-  // }
+  if (sortOption === 'priceHighToLow') {
+    filteredData = sortedData.sort((a, b) => b.price - a.price)
+  }
 
-  // if (sortOption === 'priceHighToLow') {
-  //   filteredData = sortedData.sort((a, b) => b.price - a.price)
-  // }
+  if (sortOption === 'priceLowToHigh') {
+    filteredData = sortedData.sort((a, b) => a.price - b.price)
+  }
 
-  // if (sortOption === 'priceLowToHigh') {
-  //   filteredData = sortedData.sort((a, b) => a.price - b.price)
-  // }
-
-  // const totalTents = filteredData.length
-  // const selectedType = type
-  // const selectedSize = size
-  // const selectedColor = color
-  // const selectedBrand = brand
-
-
-  // if (filteredData.length === 0) {
-  //   filteredData = [{
-  //     id: 'no-data',
-  //     category: 'no-data',
-  //     type: 'no-data',
-  //     name: 'no-data',
-  //     gender: 'no-data',
-  //     new: false,
-  //     sale: false,
-  //     rate: 0,
-  //     price: 0,
-  //     originPrice: 0,
-  //     brand: 'no-data',
-  //     sold: 0,
-  //     quantity: 0,
-  //     quantityPurchase: 0,
-  //     sizes: [],
-  //     variation: [],
-  //     thumbImage: [],
-  //     images: [],
-  //     description: 'no-data',
-  //     action: 'no-data',
-  //     slug: 'no-data'
-  //   }];
-  // }
+  if (filteredData.length === 0) {
+    filteredData = [{
+      id: 'no-data',
+      category: 'no-data',
+      name: 'no-data',
+      continents: 'no-data',
+      country: 'no-data',
+      location: 'no-data',
+      locationMap: {
+        lat: 0,
+        lng: 0
+      },
+      rate: 0,
+      price: 0,
+      listImage: [],
+      image: 'no-data',
+      description: 'no-data',
+      services: [],
+      amenities: [],
+      activities: [],
+      terrain: [],
+    }];
+  }
 
 
   // Find page number base on filteredData
@@ -184,7 +195,6 @@ const TopMapGrid = () => {
     setCurrentPage(selected);
   };
 
-
   return (
     <>
       <HeaderOne />
@@ -194,7 +204,10 @@ const TopMapGrid = () => {
           <div className="heading flex items-center justify-between gap-6 flex-wrap">
             <div className="left flex items-center sm:gap-5 gap-3 max-sm:flex-wrap">
               <div className="flex items-center gap-3">
-                <div className="show-filter-btn flex items-center gap-2 sm:px-4 px-3 py-2.5 border border-outline rounded-lg cursor-pointer duration-300 hover:bg-black hover:text-white">
+                <div
+                  className="show-filter-sidebar flex items-center gap-2 sm:px-4 px-3 py-2.5 border border-outline rounded-lg cursor-pointer duration-300 hover:bg-black hover:text-white"
+                  onClick={handleOpenSidebar}
+                >
                   <Icon.SlidersHorizontal className='text-xl' />
                   <p>Show Filters</p>
                 </div>
@@ -202,7 +215,7 @@ const TopMapGrid = () => {
                 <Icon.Rows className='text-3xl cursor-pointer text-variant2 duration-300 hover:text-black' />
               </div>
               <div className="line w-px h-7 bg-outline max-[400px]:hidden"></div>
-              <div className="body2">Showing 1-{tentPerPage} of {currentTents.length}</div>
+              <div className="body2">Showing {filteredData[0].id === 'no-data' ? 0 : offset + 1}-{filteredData[0].id === 'no-data' ? 0 : offset + currentTents.length} of {filteredData[0].id === 'no-data' ? 0 : filteredData.length}</div>
             </div>
             <div className="right flex items-center gap-3">
               <div className="select-block relative">
@@ -251,6 +264,131 @@ const TopMapGrid = () => {
               <HandlePagination pageCount={pageCount} onPageChange={handlePageChange} />
             </div>
           )}
+        </div>
+      </div>
+
+      <div
+        className={`sidebar-filter ${openSidebar ? 'open' : ''}`}
+        onClick={handleOpenSidebar}
+      >
+        <div className="sidebar-main" onClick={(e) => { e.stopPropagation() }}>
+          <div className="filter-price">
+            <div className="heading6">Price Range</div>
+            <Slider
+              range
+              defaultValue={[0, 500]}
+              min={0}
+              max={500}
+              onChange={handlePriceChange}
+              className='mt-4'
+            />
+            <div className="price-block flex items-center justify-between flex-wrap mt-3">
+              <div className="min flex items-center gap-1">
+                <div>Min price:</div>
+                <div className='price-min text-button'>$
+                  <span>{priceRange.min}</span>
+                </div>
+              </div>
+              <div className="max flex items-center gap-1">
+                <div>Max price:</div>
+                <div className='price-max text-button'>$
+                  <span>{priceRange.max}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="filter-service mt-7">
+            <div className="heading6">Services</div>
+            <div className="list-service flex flex-col gap-3 mt-3">
+              {['reception desk', 'pet allowed', 'tour guide', 'breakfast', 'currency exchange', 'self-service laundry', 'cooking service.', 'relaxation service.', 'cleaning service'].map((item, index) => (
+                <div key={index} className="service-item flex items-center justify-between">
+                  <div className="left flex items-center cursor-pointer">
+                    <div className="block-input">
+                      <input
+                        type="checkbox"
+                        name={item}
+                        id={item}
+                        checked={service.includes(item)}
+                        onChange={() => handleService(item)}
+                      />
+                      <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                    </div>
+                    <label htmlFor={item} className="service-name capitalize pl-2 cursor-pointer">{item}</label>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="filter-amenities mt-7">
+            <div className="heading6">Amenities</div>
+            <div className="list-amenities flex flex-col gap-3 mt-3">
+              {['parking', 'wifi', 'tv', 'toilet', 'bathtub', 'campfire', 'picnic table', 'trash', 'cooking equipment', 'refrigerator', 'microwave', 'dishwasher', 'coffee maker'].map((item, index) => (
+                <div key={index} className="amenities-item flex items-center justify-between">
+                  <div className="left flex items-center cursor-pointer">
+                    <div className="block-input">
+                      <input
+                        type="checkbox"
+                        name={item}
+                        id={item}
+                        checked={amenities.includes(item)}
+                        onChange={() => handleAmenities(item)}
+                      />
+                      <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                    </div>
+                    <label htmlFor={item} className="amenities-name capitalize pl-2 cursor-pointer">{item}</label>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="filter-activities mt-7">
+            <div className="heading6">Activities</div>
+            <div className="list-activities flex flex-col gap-3 mt-3">
+              {['hiking', 'swimming', 'fishing', 'wildlife watching', 'biking', 'boating', 'climbing', 'snow sports', 'horseback riding', 'surfing', 'wind sports'].map((item, index) => (
+                <div key={index} className="activities-item flex items-center justify-between">
+                  <div className="left flex items-center cursor-pointer">
+                    <div className="block-input">
+                      <input
+                        type="checkbox"
+                        name={item}
+                        id={item}
+                        checked={activities.includes(item)}
+                        onChange={() => handleActivities(item)}
+                      />
+                      <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                    </div>
+                    <label htmlFor={item} className="activities-name capitalize pl-2 cursor-pointer">{item}</label>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="filter-terrain mt-7">
+            <div className="heading6">Terrain</div>
+            <div className="list-terrain flex flex-col gap-3 mt-3">
+              {['lake', 'beach', 'farm', 'forest', 'river', 'hot spring', 'swimming hole', 'desert', 'cave'].map((item, index) => (
+                <div key={index} className="terrain-item flex items-center justify-between">
+                  <div className="left flex items-center cursor-pointer">
+                    <div className="block-input">
+                      <input
+                        type="checkbox"
+                        name={item}
+                        id={item}
+                        checked={terrain.includes(item)}
+                        onChange={() => handleTerrain(item)}
+                      />
+                      <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                    </div>
+                    <label htmlFor={item} className="terrain-name capitalize pl-2 cursor-pointer">{item}</label>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

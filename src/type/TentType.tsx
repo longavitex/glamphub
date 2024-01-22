@@ -16,4 +16,8 @@ export interface TentType {
     price: number;
     listImage: Array<string>;
     description: string;
+    services: Array<string>,
+    amenities: Array<string>,
+    activities: Array<string>,
+    terrain: Array<string>,
 }

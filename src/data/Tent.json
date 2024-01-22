@@ -11,8 +11,8 @@
             "lat": 10.776889,
             "lng": 106.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.6,
+        "price": 124,
         "listImage": [
             "/images/tent/1.png",
             "/images/tent/2.png",
@@ -20,7 +20,27 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "2",
@@ -34,8 +54,8 @@
             "lat": 16.776889,
             "lng": 112.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.8,
+        "price": 145,
         "listImage": [
             "/images/tent/2.png",
             "/images/tent/1.png",
@@ -43,7 +63,25 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire"
+        ],
+        "activities": [
+            "hiking",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "farm",
+            "moutain"
+        ]
     },
     {
         "id": "3",
@@ -57,8 +95,8 @@
             "lat": 18.776889,
             "lng": 90.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.8,
+        "price": 130,
         "listImage": [
             "/images/tent/3.png",
             "/images/tent/1.png",
@@ -66,7 +104,25 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming"
+        ],
+        "terrain": [
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "4",
@@ -80,8 +136,8 @@
             "lat": 24.776889,
             "lng": 125.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.7,
+        "price": 200,
         "listImage": [
             "/images/tent/4.png",
             "/images/tent/2.png",
@@ -89,7 +145,27 @@
             "/images/tent/1.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "5",
@@ -103,8 +179,8 @@
             "lat": 4.776889,
             "lng": 88.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.7,
+        "price": 150,
         "listImage": [
             "/images/tent/5.png",
             "/images/tent/2.png",
@@ -112,7 +188,28 @@
             "/images/tent/4.png",
             "/images/tent/1.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "6",
@@ -126,8 +223,8 @@
             "lat": 35.776889,
             "lng": 118.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.5,
+        "price": 140,
         "listImage": [
             "/images/tent/6.png",
             "/images/tent/2.png",
@@ -135,7 +232,26 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "farm"
+        ]
     },
     {
         "id": "7",
@@ -149,8 +265,8 @@
             "lat": 20.776889,
             "lng": 146.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.6,
+        "price": 220,
         "listImage": [
             "/images/tent/7.png",
             "/images/tent/2.png",
@@ -158,7 +274,28 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "8",
@@ -172,8 +309,8 @@
             "lat": 41.776889,
             "lng": 142.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.9,
+        "price": 180,
         "listImage": [
             "/images/tent/8.png",
             "/images/tent/2.png",
@@ -181,7 +318,27 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "9",
@@ -195,8 +352,8 @@
             "lat": 10.776889,
             "lng": 106.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.4,
+        "price": 185,
         "listImage": [
             "/images/tent/9.png",
             "/images/tent/2.png",
@@ -204,7 +361,28 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "10",
@@ -218,8 +396,8 @@
             "lat": 16.776889,
             "lng": 112.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.3,
+        "price": 150,
         "listImage": [
             "/images/tent/10.png",
             "/images/tent/1.png",
@@ -227,7 +405,28 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "11",
@@ -241,8 +440,8 @@
             "lat": 18.776889,
             "lng": 90.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.3,
+        "price": 160,
         "listImage": [
             "/images/tent/11.png",
             "/images/tent/1.png",
@@ -250,7 +449,27 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "12",
@@ -264,8 +483,8 @@
             "lat": 22.776889,
             "lng": 125.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.1,
+        "price": 149,
         "listImage": [
             "/images/tent/12.png",
             "/images/tent/14.png",
@@ -273,7 +492,28 @@
             "/images/tent/1.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "13",
@@ -288,7 +528,7 @@
             "lng": 88.700867
         },
         "rate": 4.2,
-        "price": 342,
+        "price": 129,
         "listImage": [
             "/images/tent/13.png",
             "/images/tent/12.png",
@@ -296,7 +536,28 @@
             "/images/tent/4.png",
             "/images/tent/1.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "14",
@@ -310,8 +571,8 @@
             "lat": 35.776889,
             "lng": 118.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.4,
+        "price": 249,
         "listImage": [
             "/images/tent/14.png",
             "/images/tent/2.png",
@@ -319,7 +580,28 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "15",
@@ -333,8 +615,8 @@
             "lat": 20.776889,
             "lng": 146.700867
         },
-        "rate": 4.2,
-        "price": 342,
+        "rate": 4.5,
+        "price": 199,
         "listImage": [
             "/images/tent/15.png",
             "/images/tent/2.png",
@@ -342,7 +624,27 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     },
     {
         "id": "16",
@@ -357,7 +659,7 @@
             "lng": 142.700867
         },
         "rate": 4.2,
-        "price": 342,
+        "price": 179,
         "listImage": [
             "/images/tent/16.png",
             "/images/tent/2.png",
@@ -365,6 +667,26 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience."
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "services": [
+            "reception desk",
+            "tour guide"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
+        ]
     }
 ]

@@ -1,0 +1,104 @@
+// Sidebar
+.sidebar-filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh);
+    overflow: hidden;
+    background: rgba($color: #000000, $alpha: 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.4s;
+    transition-delay: 0.1s;
+    z-index: 5;
+
+    .sidebar-main {
+        background-color: var(--white);
+        width: 320px;
+        padding: 20px 30px;
+        margin-left: -100%;
+        transition: all ease 0.5s;
+        overflow-x: auto;
+        max-height: 100vh;
+        height: 100vh;
+
+        @media (max-width:400px) {
+            width: 280px;
+        }
+    }
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+
+        .sidebar-main {
+            margin-left: 0;
+        }
+    }
+}
+
+
+// progress price
+.rc-slider {
+    .rc-slider-rail {
+        background-color: var(--line);
+    }
+
+    .rc-slider-track,
+    .rc-slider-tracks {
+        background-color: var(--primary);
+    }
+
+    .rc-slider-handle,
+    .rc-slider-handle:hover,
+    .rc-slider-handle.active {
+        background-color: var(--white);
+        border-color: var(--primary);
+        border-width: 3px;
+        opacity: 1;
+    }
+
+    .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+        border-color: var(--primary);
+        box-shadow: none;
+    }
+}
+
+
+.block-input {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--variant2);
+    border-radius: 4px;
+    position: relative;
+
+    input {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .icon-checkbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 26px;
+        height: 26px;
+        opacity: 0;
+    }
+
+    input:checked {
+        border: 1px solid var(--primary);
+    }
+
+    input:checked+.icon-checkbox {
+        opacity: 1;
+    }
+}
