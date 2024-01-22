@@ -9,8 +9,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
 import TentItem from '@/components/Tent/TentItem'
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { TentType } from '@/type/TentType';
+
 
 const HomeThree = () => {
+  const mapStyles = {
+    height: '100%',
+    width: '100%',
+  };
+
+  const defaultCenter = { lat: 0, lng: 0 };
   const [activeCategory, setActiveCategory] = useState<string>('cabin')
 
   const handleCategory = (category: string) => {
@@ -182,7 +191,19 @@ const HomeThree = () => {
           </div>
         </div>
         <div className="right basis-5/12 h-full">
-          <iframe className='h-full w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5146725494856!2d81.0526394758883!3d6.8287206931691555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46f60b1db5c65%3A0x443a9d8835153ea7!2sBoody&#39;s%20Camping%20Site!5e0!3m2!1svi!2s!4v1705656455097!5m2!1svi!2s" loading="lazy"></iframe>
+          {/* <iframe className='h-full w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5146725494856!2d81.0526394758883!3d6.8287206931691555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46f60b1db5c65%3A0x443a9d8835153ea7!2sBoody&#39;s%20Camping%20Site!5e0!3m2!1svi!2s!4v1705656455097!5m2!1svi!2s" loading="lazy"></iframe> */}
+          <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+            <GoogleMap mapContainerStyle={mapStyles} center={defaultCenter} zoom={10}>
+              {tentData.map((hotel) => (
+                <Marker
+                  key={hotel.id}
+                  position={hotel.locationMap}
+                  title={hotel.name}
+                  label={hotel.name[0]} // Use the first letter of the hotel name as the label
+                />
+              ))}
+            </GoogleMap>
+          </LoadScript>
         </div>
       </div>
       <Footer />

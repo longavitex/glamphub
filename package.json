@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "next": "14.0.4",
     "phosphor-react": "^1.4.1",
     "react": "^18",

@@ -1,3 +1,8 @@
+interface LocationMap {
+    lat: number
+    lng: number
+}
+
 export interface TentType {
     id: string;
     category: string;
@@ -6,6 +11,7 @@ export interface TentType {
     name: string;
     image: string;
     location: string;
+    locationMap: LocationMap;
     rate: number;
     price: number;
     listImage: Array<string>;

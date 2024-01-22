@@ -13,7 +13,7 @@ const HomeTwo = () => {
   return (
     <>
       <HeaderOne />
-      <SliderTwo />
+      <SliderTwo hotels={tentData} />
       <CategoryTwo />
       <RecommendOne data={tentData} />
       <LocationTwo />

@@ -7,6 +7,10 @@
         "name": "Zenith Dome Panoramic Getaway",
         "image": "/images/tent/1.png",
         "location": "Ahungalla, Southern Province, Sri Lanka",
+        "locationMap": {
+            "lat": 10.776889,
+            "lng": 106.700867
+        },
         "rate": 4.2,
         "price": 342,
         "listImage": [
@@ -26,6 +30,10 @@
         "name": "Koh Rong Island, Preah Sihanouk Province, Cambodia",
         "image": "/images/tent/2.png",
         "location": "Ahungalla, Southern Province, Sri Lanka",
+        "locationMap": {
+            "lat": 16.776889,
+            "lng": 112.700867
+        },
         "rate": 4.2,
         "price": 342,
         "listImage": [
@@ -45,6 +53,10 @@
         "name": "Zenith Dome Panoramic Getaway",
         "image": "/images/tent/3.png",
         "location": "Ahungalla, Southern Province, Sri Lanka",
+        "locationMap": {
+            "lat": 18.776889,
+            "lng": 90.700867
+        },
         "rate": 4.2,
         "price": 342,
         "listImage": [
@@ -64,6 +76,10 @@
         "name": "Zenith Dome Panoramic Getaway",
         "image": "/images/tent/4.png",
         "location": "Ahungalla, Southern Province, Sri Lanka",
+        "locationMap": {
+            "lat": 24.776889,
+            "lng": 125.700867
+        },
         "rate": 4.2,
         "price": 342,
         "listImage": [
@@ -83,6 +99,10 @@
         "name": "Zenith Dome Panoramic Getaway",
         "image": "/images/tent/5.png",
         "location": "Ahungalla, Southern Province, Sri Lanka",
+        "locationMap": {
+            "lat": 4.776889,
+            "lng": 88.700867
+        },
         "rate": 4.2,
         "price": 342,
         "listImage": [
@@ -102,6 +122,10 @@
         "name": "Zenith Dome Panoramic Getaway",
         "image": "/images/tent/6.png",
         "location": "Ahungalla, Southern Province, Sri Lanka",
+        "locationMap": {
+            "lat": 35.776889,
+            "lng": 118.700867
+        },
         "rate": 4.2,
         "price": 342,
         "listImage": [
@@ -121,6 +145,10 @@
         "name": "Zenith Dome Panoramic Getaway",
         "image": "/images/tent/7.png",
         "location": "Ahungalla, Southern Province, Sri Lanka",
+        "locationMap": {
+            "lat": 20.776889,
+            "lng": 146.700867
+        },
         "rate": 4.2,
         "price": 342,
         "listImage": [
@@ -140,6 +168,10 @@
         "name": "Koh Rong Island, Preah Sihanouk Province, Cambodia",
         "image": "/images/tent/8.png",
         "location": "Ahungalla, Southern Province, Sri Lanka",
+        "locationMap": {
+            "lat": 41.776889,
+            "lng": 142.700867
+        },
         "rate": 4.2,
         "price": 342,
         "listImage": [
