@@ -19,7 +19,7 @@ type Amenities = string;
 type Activities = string;
 type Terrain = string;
 
-const TopMapGrid = () => {
+const FilterScroll = () => {
   const params = useSearchParams()
   const categoryParams = params.get('category')
   const continentsParams = params.get('continents')
@@ -427,4 +427,4 @@ const TopMapGrid = () => {
   )
 }
 
-export default TopMapGrid
+export default FilterScroll

@@ -12,13 +12,15 @@ import Footer from '@/components/Footer/Footer'
 const HomeTwo = () => {
   return (
     <>
-      <HeaderOne />
-      <SliderTwo hotels={tentData} />
-      <CategoryTwo />
-      <RecommendOne data={tentData} />
-      <LocationTwo />
-      <div className="lg:pb-20 md:pb-14 pb-10"></div>
-      <Footer />
+      <div className='overflow-hidden'>
+        <HeaderOne />
+        <SliderTwo hotels={tentData} />
+        <CategoryTwo />
+        <RecommendOne data={tentData} />
+        <LocationTwo />
+        <div className="lg:pb-20 md:pb-14 pb-10"></div>
+        <Footer />
+      </div>
     </>
   )
 }

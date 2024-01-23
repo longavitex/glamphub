@@ -19,7 +19,7 @@ type Amenities = string;
 type Activities = string;
 type Terrain = string;
 
-const TopMapGrid = () => {
+const FilterDropdown = () => {
   const params = useSearchParams()
   const categoryParams = params.get('category')
   const continentsParams = params.get('continents')
@@ -32,7 +32,7 @@ const TopMapGrid = () => {
   const [terrain, setTerrain] = useState<Terrain[]>([])
   const [priceRange, setPriceRange] = useState<{ min: number; max: number }>({ min: 0, max: 500 });
   const [currentPage, setCurrentPage] = useState(0);
-  const [tentPerPage, setTentPerPage] = useState<number>(8);
+  const [tentPerPage, setTentPerPage] = useState<number>(4);
   const tentsPerPage = tentPerPage;
   const offset = currentPage * tentsPerPage;
 
@@ -238,10 +238,10 @@ const TopMapGrid = () => {
                     <p>Show Filters</p>
                   </div>
                   <Link href={'/camp/topmap-grid'}>
-                    <Icon.SquaresFour className='text-3xl cursor-pointer text-black duration-300' />
+                    <Icon.SquaresFour className='text-3xl cursor-pointer text-variant2 duration-300 hover:text-black' />
                   </Link>
                   <Link href={'/camp/topmap-list'}>
-                    <Icon.Rows className='text-3xl cursor-pointer text-variant2 duration-300 hover:text-black' />
+                    <Icon.Rows className='text-3xl cursor-pointer text-black duration-300' />
                   </Link>
                 </div>
                 <div className="line w-px h-7 bg-outline max-[400px]:hidden"></div>
@@ -255,9 +255,9 @@ const TopMapGrid = () => {
                     className='py-2.5 pl-4 md:pr-14 pr-10 rounded-lg border border-line'
                     onChange={(e) => { handleTentPerPage(Number(e.target.value)) }}
                   >
+                    <option value="4">4 Per Page</option>
                     <option value="8">8 Per Page</option>
                     <option value="12">12 Per Page</option>
-                    <option value="16">16 Per Page</option>
                   </select>
                   <Icon.CaretDown className='text-xl absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
                 </div>
@@ -279,12 +279,12 @@ const TopMapGrid = () => {
               </div>
             </div>
 
-            <div className="list-tent md:mt-10 mt-6 grid lg:grid-cols-4 md:grid-cols-3 min-[360px]:grid-cols-2 lg:gap-[30px] gap-4 gap-y-7">
+            <div className="list-tent md:mt-10 mt-6 flex flex-col gap-10">
               {currentTents.map((item) => (
                 item.id === 'no-data' ? (
                   <div key={item.id} className="no-data-product">No tents match the selected criteria.</div>
                 ) : (
-                  <TentItem key={item.id} data={item} type='default' />
+                  <TentItem key={item.id} data={item} type='list' />
                 )
               ))}
             </div>
@@ -298,125 +298,129 @@ const TopMapGrid = () => {
         </div>
 
         <div
-          className={`sidebar-filter ${openSidebar ? 'open' : ''}`}
+          className={`sidebar-filter style-top ${openSidebar ? 'open' : ''}`}
           onClick={handleOpenSidebar}
         >
           <div className="sidebar-main" onClick={(e) => { e.stopPropagation() }}>
-            <div className="filter-price">
-              <div className="heading6">Price Range</div>
-              <Slider
-                range
-                defaultValue={[0, 500]}
-                min={0}
-                max={500}
-                onChange={handlePriceChange}
-                className='mt-4'
-              />
-              <div className="price-block flex items-center justify-between flex-wrap mt-3">
-                <div className="min flex items-center gap-1">
-                  <div>Min price:</div>
-                  <div className='price-min text-button'>$
-                    <span>{priceRange.min}</span>
+            <div className="container grid grid-cols-4 justify-between gap-24">
+              <div>
+                <div className="filter-price">
+                  <div className="heading6">Price Range</div>
+                  <Slider
+                    range
+                    defaultValue={[0, 500]}
+                    min={0}
+                    max={500}
+                    onChange={handlePriceChange}
+                    className='mt-4'
+                  />
+                  <div className="price-block flex items-center justify-between flex-wrap mt-3">
+                    <div className="min flex items-center gap-1">
+                      <div>Min price:</div>
+                      <div className='price-min text-button'>$
+                        <span>{priceRange.min}</span>
+                      </div>
+                    </div>
+                    <div className="max flex items-center gap-1">
+                      <div>Max price:</div>
+                      <div className='price-max text-button'>$
+                        <span>{priceRange.max}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="max flex items-center gap-1">
-                  <div>Max price:</div>
-                  <div className='price-max text-button'>$
-                    <span>{priceRange.max}</span>
+
+                <div className="filter-service mt-8">
+                  <div className="heading6">Services</div>
+                  <div className="list-service flex flex-col gap-3 mt-3">
+                    {['reception desk', 'pet allowed', 'tour guide', 'breakfast', 'currency exchange', 'self-service laundry', 'cooking service', 'relaxation service', 'cleaning service'].map((item, index) => (
+                      <div key={index} className="service-item flex items-center justify-between">
+                        <div className="left flex items-center cursor-pointer">
+                          <div className="block-input">
+                            <input
+                              type="checkbox"
+                              name={item}
+                              id={item}
+                              checked={service.includes(item)}
+                              onChange={() => handleService(item)}
+                            />
+                            <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                          </div>
+                          <label htmlFor={item} className="service-name capitalize pl-2 cursor-pointer">{item}</label>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="filter-service mt-7">
-              <div className="heading6">Services</div>
-              <div className="list-service flex flex-col gap-3 mt-3">
-                {['reception desk', 'pet allowed', 'tour guide', 'breakfast', 'currency exchange', 'self-service laundry', 'cooking service', 'relaxation service', 'cleaning service'].map((item, index) => (
-                  <div key={index} className="service-item flex items-center justify-between">
-                    <div className="left flex items-center cursor-pointer">
-                      <div className="block-input">
-                        <input
-                          type="checkbox"
-                          name={item}
-                          id={item}
-                          checked={service.includes(item)}
-                          onChange={() => handleService(item)}
-                        />
-                        <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+              <div className="filter-amenities">
+                <div className="heading6">Amenities</div>
+                <div className="list-amenities flex flex-col gap-3 mt-3">
+                  {['parking', 'wifi', 'tv', 'toilet', 'bathtub', 'campfire', 'picnic table', 'trash', 'cooking equipment', 'refrigerator', 'microwave', 'dishwasher', 'coffee maker'].map((item, index) => (
+                    <div key={index} className="amenities-item flex items-center justify-between">
+                      <div className="left flex items-center cursor-pointer">
+                        <div className="block-input">
+                          <input
+                            type="checkbox"
+                            name={item}
+                            id={item}
+                            checked={amenities.includes(item)}
+                            onChange={() => handleAmenities(item)}
+                          />
+                          <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                        </div>
+                        <label htmlFor={item} className="amenities-name capitalize pl-2 cursor-pointer">{item}</label>
                       </div>
-                      <label htmlFor={item} className="service-name capitalize pl-2 cursor-pointer">{item}</label>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div className="filter-amenities mt-7">
-              <div className="heading6">Amenities</div>
-              <div className="list-amenities flex flex-col gap-3 mt-3">
-                {['parking', 'wifi', 'tv', 'toilet', 'bathtub', 'campfire', 'picnic table', 'trash', 'cooking equipment', 'refrigerator', 'microwave', 'dishwasher', 'coffee maker'].map((item, index) => (
-                  <div key={index} className="amenities-item flex items-center justify-between">
-                    <div className="left flex items-center cursor-pointer">
-                      <div className="block-input">
-                        <input
-                          type="checkbox"
-                          name={item}
-                          id={item}
-                          checked={amenities.includes(item)}
-                          onChange={() => handleAmenities(item)}
-                        />
-                        <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+              <div className="filter-activities">
+                <div className="heading6">Activities</div>
+                <div className="list-activities flex flex-col gap-3 mt-3">
+                  {['hiking', 'swimming', 'fishing', 'wildlife watching', 'biking', 'boating', 'climbing', 'snow sports', 'horseback riding', 'surfing', 'wind sports'].map((item, index) => (
+                    <div key={index} className="activities-item flex items-center justify-between">
+                      <div className="left flex items-center cursor-pointer">
+                        <div className="block-input">
+                          <input
+                            type="checkbox"
+                            name={item}
+                            id={item}
+                            checked={activities.includes(item)}
+                            onChange={() => handleActivities(item)}
+                          />
+                          <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                        </div>
+                        <label htmlFor={item} className="activities-name capitalize pl-2 cursor-pointer">{item}</label>
                       </div>
-                      <label htmlFor={item} className="amenities-name capitalize pl-2 cursor-pointer">{item}</label>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div className="filter-activities mt-7">
-              <div className="heading6">Activities</div>
-              <div className="list-activities flex flex-col gap-3 mt-3">
-                {['hiking', 'swimming', 'fishing', 'wildlife watching', 'biking', 'boating', 'climbing', 'snow sports', 'horseback riding', 'surfing', 'wind sports'].map((item, index) => (
-                  <div key={index} className="activities-item flex items-center justify-between">
-                    <div className="left flex items-center cursor-pointer">
-                      <div className="block-input">
-                        <input
-                          type="checkbox"
-                          name={item}
-                          id={item}
-                          checked={activities.includes(item)}
-                          onChange={() => handleActivities(item)}
-                        />
-                        <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+              <div className="filter-terrain">
+                <div className="heading6">Terrain</div>
+                <div className="list-terrain flex flex-col gap-3 mt-3">
+                  {['lake', 'beach', 'farm', 'forest', 'river', 'hot spring', 'swimming hole', 'desert', 'cave'].map((item, index) => (
+                    <div key={index} className="terrain-item flex items-center justify-between">
+                      <div className="left flex items-center cursor-pointer">
+                        <div className="block-input">
+                          <input
+                            type="checkbox"
+                            name={item}
+                            id={item}
+                            checked={terrain.includes(item)}
+                            onChange={() => handleTerrain(item)}
+                          />
+                          <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                        </div>
+                        <label htmlFor={item} className="terrain-name capitalize pl-2 cursor-pointer">{item}</label>
                       </div>
-                      <label htmlFor={item} className="activities-name capitalize pl-2 cursor-pointer">{item}</label>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="filter-terrain mt-7">
-              <div className="heading6">Terrain</div>
-              <div className="list-terrain flex flex-col gap-3 mt-3">
-                {['lake', 'beach', 'farm', 'forest', 'river', 'hot spring', 'swimming hole', 'desert', 'cave'].map((item, index) => (
-                  <div key={index} className="terrain-item flex items-center justify-between">
-                    <div className="left flex items-center cursor-pointer">
-                      <div className="block-input">
-                        <input
-                          type="checkbox"
-                          name={item}
-                          id={item}
-                          checked={terrain.includes(item)}
-                          onChange={() => handleTerrain(item)}
-                        />
-                        <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
-                      </div>
-                      <label htmlFor={item} className="terrain-name capitalize pl-2 cursor-pointer">{item}</label>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -427,4 +431,4 @@ const TopMapGrid = () => {
   )
 }
 
-export default TopMapGrid
+export default FilterDropdown

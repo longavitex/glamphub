@@ -36,6 +36,24 @@
             margin-left: 0;
         }
     }
+
+    &.style-top {
+        .sidebar-main {
+            width: 100% !important;
+            padding: 40px 0;
+            margin-left: 0;
+            margin-top: -100%;
+            overflow-x: unset;
+            height: auto;
+            max-height: auto;
+        }
+
+        &.open {
+            .sidebar-main {
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 

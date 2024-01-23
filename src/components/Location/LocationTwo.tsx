@@ -3,15 +3,24 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from 'phosphor-react'
 import TextHeading from '../TextHeading/TextHeading'
+import { useRouter } from 'next/navigation'
 
 const LocationTwo = () => {
+    const router = useRouter()
+
+    const handleClickCountry = (country: string) => {
+        router.push(`/camp/topmap-grid?country=${country}`)
+    }
+
     return (
         <>
             <div className="location-block lg:pt-20 md:pt-14 pt-10">
                 <div className="container">
                     <TextHeading title='Locations on Glamping Hub' subTitle='Discover the Most Popular Places to Visit' />
                     <div className="list-location grid xl:grid-cols-3 md:grid-cols-2 lg:gap-[30px] gap-y-7 gap-4 md:mt-10 mt-6">
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('Namibia')}
+                        >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
                                     <Image
@@ -32,7 +41,9 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('Vietnam')}
+                        >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
                                     <Image
@@ -45,7 +56,7 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                             <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">Tanzania</div>
+                                <div className="name heading5">Vietnam</div>
                                 <div className="text-variant1 sm:mt-1">460 accommodations</div>
                                 <div className="flex items-center gap-1 sm:mt-2 mt-1">
                                     <div className="text-button-sm">Explore Now</div>
@@ -53,7 +64,9 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('Singapore')}
+                        >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
                                     <Image
@@ -66,7 +79,7 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                             <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">Kenya</div>
+                                <div className="name heading5">Singapore</div>
                                 <div className="text-variant1 sm:mt-1">460 accommodations</div>
                                 <div className="flex items-center gap-1 sm:mt-2 mt-1">
                                     <div className="text-button-sm">Explore Now</div>
@@ -74,7 +87,9 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('United State')}
+                        >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
                                     <Image
@@ -87,7 +102,7 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                             <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">Canada</div>
+                                <div className="name heading5">United State</div>
                                 <div className="text-variant1 sm:mt-1">460 accommodations</div>
                                 <div className="flex items-center gap-1 sm:mt-2 mt-1">
                                     <div className="text-button-sm">Explore Now</div>
@@ -95,7 +110,9 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('Greece')}
+                        >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
                                     <Image
@@ -108,7 +125,7 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                             <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">United States</div>
+                                <div className="name heading5">Greece</div>
                                 <div className="text-variant1 sm:mt-1">460 accommodations</div>
                                 <div className="flex items-center gap-1 sm:mt-2 mt-1">
                                     <div className="text-button-sm">Explore Now</div>
@@ -116,53 +133,13 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('Brazil')}
+                        >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
                                     <Image
                                         src={'/images/location/6.png'}
-                                        width={3000}
-                                        height={2000}
-                                        alt='1.png'
-                                        className='w-full h-full object-cover'
-                                    />
-                                </div>
-                            </div>
-                            <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">Mexico</div>
-                                <div className="text-variant1 sm:mt-1">460 accommodations</div>
-                                <div className="flex items-center gap-1 sm:mt-2 mt-1">
-                                    <div className="text-button-sm">Explore Now</div>
-                                    <Icon.CaretRight className='text-xs' />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
-                            <div className="left h-full w-1/2 pr-4">
-                                <div className="bg-img w-full h-full overflow-hidden">
-                                    <Image
-                                        src={'/images/location/7.png'}
-                                        width={3000}
-                                        height={2000}
-                                        alt='1.png'
-                                        className='w-full h-full object-cover'
-                                    />
-                                </div>
-                            </div>
-                            <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">New Zealand</div>
-                                <div className="text-variant1 sm:mt-1">460 accommodations</div>
-                                <div className="flex items-center gap-1 sm:mt-2 mt-1">
-                                    <div className="text-button-sm">Explore Now</div>
-                                    <Icon.CaretRight className='text-xs' />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
-                            <div className="left h-full w-1/2 pr-4">
-                                <div className="bg-img w-full h-full overflow-hidden">
-                                    <Image
-                                        src={'/images/location/8.png'}
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
@@ -179,7 +156,55 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item hover-scale flex items-center bg-surface rounded-lg overflow-hidden">
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('Ethiopia')}
+                        >
+                            <div className="left h-full w-1/2 pr-4">
+                                <div className="bg-img w-full h-full overflow-hidden">
+                                    <Image
+                                        src={'/images/location/7.png'}
+                                        width={3000}
+                                        height={2000}
+                                        alt='1.png'
+                                        className='w-full h-full object-cover'
+                                    />
+                                </div>
+                            </div>
+                            <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
+                                <div className="name heading5">Ethiopia</div>
+                                <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                                <div className="flex items-center gap-1 sm:mt-2 mt-1">
+                                    <div className="text-button-sm">Explore Now</div>
+                                    <Icon.CaretRight className='text-xs' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('New Zealand')}
+                        >
+                            <div className="left h-full w-1/2 pr-4">
+                                <div className="bg-img w-full h-full overflow-hidden">
+                                    <Image
+                                        src={'/images/location/8.png'}
+                                        width={3000}
+                                        height={2000}
+                                        alt='1.png'
+                                        className='w-full h-full object-cover'
+                                    />
+                                </div>
+                            </div>
+                            <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
+                                <div className="name heading5">New Zealand</div>
+                                <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                                <div className="flex items-center gap-1 sm:mt-2 mt-1">
+                                    <div className="text-button-sm">Explore Now</div>
+                                    <Icon.CaretRight className='text-xs' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
+                            onClick={() => handleClickCountry('Norway')}
+                        >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
                                     <Image
@@ -192,7 +217,7 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                             <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">Chile</div>
+                                <div className="name heading5">Norway</div>
                                 <div className="text-variant1 sm:mt-1">460 accommodations</div>
                                 <div className="flex items-center gap-1 sm:mt-2 mt-1">
                                     <div className="text-button-sm">Explore Now</div>

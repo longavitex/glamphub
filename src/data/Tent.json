@@ -3,10 +3,10 @@
         "id": "1",
         "category": "cabin",
         "continents": "africa",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "country": "namibia",
+        "name": "Moon Mountain Lodge Cabin, Solitaire, Namibia",
         "image": "/images/tent/1.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Ahungalla, Southern Province, Namibia",
         "locationMap": {
             "lat": 10.776889,
             "lng": 106.700867
@@ -20,42 +20,55 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "tour guide"
+            "pet allowed",
+            "tour guide",
+            "breakfast",
+            "cooking service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "picnic table",
+            "trash",
+            "cooking equipment",
+            "coffee maker"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "biking",
+            "boating",
+            "climbing"
         ],
         "terrain": [
             "lake",
             "beach",
-            "farm"
+            "farm",
+            "forest",
+            "river",
+            "cave"
         ]
     },
     {
         "id": "2",
         "category": "tented cabins",
         "continents": "asia",
-        "country": "campuchia",
-        "name": "Koh Rong Island, Preah Sihanouk Province, Cambodia",
+        "country": "vietnam",
+        "name": "Lak Tented Camp in Tam Dao, Vietnam",
         "image": "/images/tent/2.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Tam Dao Province, Vinh Phuc, Vietnam",
         "locationMap": {
-            "lat": 16.776889,
-            "lng": 112.700867
+            "lat": 21.452,
+            "lng": 105.640
         },
         "rate": 4.8,
-        "price": 145,
+        "price": 105,
         "listImage": [
             "/images/tent/2.png",
             "/images/tent/1.png",
@@ -63,37 +76,63 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "self-service laundry",
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
             "toilet",
-            "campfire"
+            "campfire",
+            "wifi",
+            "tv",
+            "bathtub",
+            "picnic table",
+            "trash",
+            "cooking equipment",
+            "refrigerator",
+            "microwave"
         ],
         "activities": [
             "hiking",
-            "fishing"
+            "fishing",
+            "swimming",
+            "wildlife watching",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
             "farm",
-            "moutain"
+            "moutain",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole",
+            "desert",
+            "cave"
         ]
     },
     {
         "id": "3",
         "category": "safari tents",
         "continents": "europe",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "country": "greece",
+        "name": "safari tents glamping Sikia, Greece",
         "image": "/images/tent/3.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Kato Gatzea, Greece",
         "locationMap": {
-            "lat": 18.776889,
-            "lng": 90.700867
+            "lat": 39.31,
+            "lng": 23.11
         },
         "rate": 4.8,
         "price": 130,
@@ -104,23 +143,41 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "bathtub",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
-            "swimming"
+            "swimming",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "beach",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole",
+            "desert",
+            "cave",
             "farm"
         ]
     },
@@ -128,13 +185,13 @@
         "id": "4",
         "category": "cottages",
         "continents": "north america",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "country": "united state",
+        "name": "Sherwood Cottages Court Eureka Springs, USA",   
         "image": "/images/tent/4.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "248 W Van Buren, Eureka Springs, united state",
         "locationMap": {
-            "lat": 24.776889,
-            "lng": 125.700867
+            "lat": 40.45,
+            "lng": -74.39
         },
         "rate": 4.7,
         "price": 200,
@@ -145,10 +202,13 @@
             "/images/tent/1.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -159,11 +219,17 @@
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "biking",
+            "boating",
+            "snow sports",
+            "horseback riding",
+            "climbing"
         ],
         "terrain": [
             "lake",
             "beach",
+            "hot spring",
             "farm"
         ]
     },
@@ -171,13 +237,13 @@
         "id": "5",
         "category": "tiny houses",
         "continents": "oceania",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "country": "new zealand",
+        "name": "The Tiny House Movement In New Zealand",
         "image": "/images/tent/5.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "120 Foundry Road, Silverdale, Auckland 0932, New Zealand",
         "locationMap": {
-            "lat": 4.776889,
-            "lng": 88.700867
+            "lat": -36.621,
+            "lng": 174.685
         },
         "rate": 4.7,
         "price": 150,
@@ -188,26 +254,43 @@
             "/images/tent/4.png",
             "/images/tent/1.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
-            "reception desk",
             "tour guide",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "bathtub",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
             "beach",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole",
+            "desert",
+            "cave",
             "farm"
         ]
     },
@@ -215,13 +298,13 @@
         "id": "6",
         "category": "caravans",
         "continents": "south america",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "country": "brazil",
+        "name": "The Wanderlust Wagon Caravans Camping, Brazil",
         "image": "/images/tent/6.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Park Home Ibira, Camping para, brazil",
         "locationMap": {
-            "lat": 35.776889,
-            "lng": 118.700867
+            "lat": -28.160,
+            "lng": 48.658
         },
         "rate": 4.5,
         "price": 140,
@@ -232,38 +315,54 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
-            "reception desk",
             "tour guide",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "relaxation service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
-            "fishing"
+            "swimming",
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
-            "farm"
+            "farm",
+            "beach",
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
         ]
     },
     {
         "id": "7",
         "category": "domes",
         "continents": "africa",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "country": "ethiopia",
+        "name": "Shelter dome – Arbaminch Eco campsite Ethiopia",
         "image": "/images/tent/7.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "12, Arba Minch, Ethiopia",
         "locationMap": {
-            "lat": 20.776889,
-            "lng": 146.700867
+            "lat": 5.995,
+            "lng": 37.538
         },
         "rate": 4.6,
         "price": 220,
@@ -274,40 +373,53 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
             "tour guide",
-            "breakfast"
+            "breakfast",
+            "pet allowed"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
             "beach",
-            "farm"
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
         ]
     },
     {
         "id": "8",
         "category": "log cabins",
         "continents": "asia",
-        "country": "campuchia",
-        "name": "Koh Rong Island, Preah Sihanouk Province, Cambodia",
+        "country": "singapore",
+        "name": "Log Cabin Birdhouse Amish - Etsy Singapore",
         "image": "/images/tent/8.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "11 Northshore Dr, Singapore",
         "locationMap": {
-            "lat": 41.776889,
-            "lng": 142.700867
+            "lat": 1.414,
+            "lng": 103.898
         },
         "rate": 4.9,
         "price": 180,
@@ -318,7 +430,7 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
             "tour guide"
@@ -327,30 +439,41 @@
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
             "beach",
-            "farm"
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
         ]
     },
     {
         "id": "9",
-        "category": "cabin",
-        "continents": "africa",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "category": "yurts",
+        "continents": "europe",
+        "country": "norway",
+        "name": "Canvas Telemark, Yurts, Treungen, Norway, Glamping Hub",
         "image": "/images/tent/9.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Heimdal, 3855 Treungen, Norway",
         "locationMap": {
-            "lat": 10.776889,
-            "lng": 106.700867
+            "lat": 58.984,
+            "lng": 8.679
         },
         "rate": 4.4,
         "price": 185,
@@ -361,40 +484,57 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "tour guide",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "currency exchange",
+            "self-service laundry",
+            "relaxation service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "snow sports",
+            "horseback riding",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
             "beach",
-            "farm"
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
         ]
     },
     {
         "id": "10",
-        "category": "tented cabins",
-        "continents": "asia",
-        "country": "campuchia",
-        "name": "Koh Rong Island, Preah Sihanouk Province, Cambodia",
+        "category": "bell tents",
+        "continents": "north america",
+        "country": "united state",
+        "name": "The Bell Tents, Winthrop, United States of America",
         "image": "/images/tent/10.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Winthrop, Washington (United States of America)",
         "locationMap": {
-            "lat": 16.776889,
-            "lng": 112.700867
+            "lat": 48.477,
+            "lng": -120.143
         },
         "rate": 4.3,
         "price": 150,
@@ -405,40 +545,57 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "tour guide",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "currency exchange",
+            "self-service laundry",
+            "relaxation service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "snow sports",
+            "horseback riding",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
             "beach",
-            "farm"
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
         ]
     },
     {
         "id": "11",
-        "category": "safari tents",
-        "continents": "europe",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "category": "tree houses",
+        "continents": "oceania",
+        "country": "new zealand",
+        "name": "New Zealand's Whimsical Yellow Treehouse Towers",
         "image": "/images/tent/11.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "1415 State Highway 1, Warkworth 0983, New Zealand",
         "locationMap": {
-            "lat": 18.776889,
-            "lng": 90.700867
+            "lat": -36.449,
+            "lng": 174.648
         },
         "rate": 4.3,
         "price": 160,
@@ -449,7 +606,7 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
             "breakfast"
@@ -473,15 +630,15 @@
     },
     {
         "id": "12",
-        "category": "cottages",
-        "continents": "north america",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "category": "containers",
+        "continents": "south america",
+        "country": "brazil",
+        "name": "Glamping de luxo com jacuzzi para casais",
         "image": "/images/tent/12.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Estrada Geral Rio do Engano, Águas Brancas, Brazil",
         "locationMap": {
-            "lat": 22.776889,
-            "lng": 125.700867
+            "lat": -27.953,
+            "lng": -49.576
         },
         "rate": 4.1,
         "price": 149,
@@ -492,182 +649,478 @@
             "/images/tent/1.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "tour guide",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "currency exchange",
+            "self-service laundry",
+            "relaxation service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "snow sports",
+            "horseback riding",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
             "beach",
-            "farm"
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
         ]
     },
     {
         "id": "13",
-        "category": "tiny houses",
-        "continents": "oceania",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "category": "cabin",
+        "continents": "africa",
+        "country": "namibia",
+        "name": "Moon Mountain Lodge Cabin, Solitaire, Namibia",
         "image": "/images/tent/13.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Ahungalla, Southern Province, Namibia",
         "locationMap": {
-            "lat": 4.776889,
-            "lng": 88.700867
+            "lat": 10.776889,
+            "lng": 106.700867
         },
-        "rate": 4.2,
-        "price": 129,
+        "rate": 4.6,
+        "price": 124,
         "listImage": [
             "/images/tent/13.png",
-            "/images/tent/12.png",
+            "/images/tent/2.png",
             "/images/tent/3.png",
             "/images/tent/4.png",
-            "/images/tent/1.png"
+            "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
+            "pet allowed",
             "tour guide",
-            "breakfast"
+            "breakfast",
+            "cooking service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "picnic table",
+            "trash",
+            "cooking equipment",
+            "coffee maker"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "fishing",
+            "biking",
+            "boating",
+            "climbing"
         ],
         "terrain": [
             "lake",
             "beach",
-            "farm"
+            "farm",
+            "forest",
+            "river",
+            "cave"
         ]
     },
     {
         "id": "14",
-        "category": "caravans",
-        "continents": "south america",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "category": "tented cabins",
+        "continents": "asia",
+        "country": "vietnam",
+        "name": "Ankoret Lac Camp & Party, Da Lat, Vietnam",
         "image": "/images/tent/14.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "So Lang, Phuong 10, Da Lat, Lam Đong, Vietnam",
         "locationMap": {
-            "lat": 35.776889,
-            "lng": 118.700867
+            "lat": 21.452,
+            "lng": 105.640
         },
-        "rate": 4.4,
-        "price": 249,
+        "rate": 4.8,
+        "price": 105,
         "listImage": [
             "/images/tent/14.png",
-            "/images/tent/2.png",
+            "/images/tent/1.png",
             "/images/tent/3.png",
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "tour guide",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "self-service laundry",
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "bathtub",
+            "picnic table",
+            "trash",
+            "cooking equipment",
+            "refrigerator",
+            "microwave"
         ],
         "activities": [
             "hiking",
+            "fishing",
             "swimming",
-            "fishing"
+            "wildlife watching",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
             "lake",
-            "beach",
-            "farm"
+            "farm",
+            "moutain",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole",
+            "desert",
+            "cave"
         ]
     },
     {
         "id": "15",
-        "category": "domes",
-        "continents": "africa",
-        "country": "sri lanka",
-        "name": "Zenith Dome Panoramic Getaway",
+        "category": "safari tents",
+        "continents": "europe",
+        "country": "greece",
+        "name": "safari tents glamping Sikia, Greece",
         "image": "/images/tent/15.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "Kato Gatzea, Greece",
         "locationMap": {
-            "lat": 20.776889,
-            "lng": 146.700867
+            "lat": 39.31,
+            "lng": 23.11
         },
-        "rate": 4.5,
-        "price": 199,
+        "rate": 4.8,
+        "price": 130,
         "listImage": [
             "/images/tent/15.png",
+            "/images/tent/1.png",
             "/images/tent/2.png",
-            "/images/tent/3.png",
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
-            "breakfast"
+            "breakfast",
+            "pet allowed",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "tv",
+            "bathtub",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
             "swimming",
-            "fishing"
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
         ],
         "terrain": [
-            "lake",
             "beach",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole",
+            "desert",
+            "cave",
             "farm"
         ]
     },
     {
         "id": "16",
-        "category": "log cabins",
-        "continents": "asia",
-        "country": "campuchia",
-        "name": "Koh Rong Island, Preah Sihanouk Province, Cambodia",
+        "category": "cottages",
+        "continents": "north america",
+        "country": "united state",
+        "name": "Sherwood Cottages Court Eureka Springs, USA",
         "image": "/images/tent/16.png",
-        "location": "Ahungalla, Southern Province, Sri Lanka",
+        "location": "248 W Van Buren, Eureka Springs, united state",
         "locationMap": {
-            "lat": 41.776889,
-            "lng": 142.700867
+            "lat": 40.45,
+            "lng": -74.39
         },
-        "rate": 4.2,
-        "price": 179,
+        "rate": 4.7,
+        "price": 200,
         "listImage": [
             "/images/tent/16.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/1.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "services": [
+            "reception desk",
+            "breakfast",
+            "pet allowed",
+            "relaxation service",
+            "cleaning service"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing",
+            "biking",
+            "boating",
+            "snow sports",
+            "horseback riding",
+            "climbing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "hot spring",
+            "farm"
+        ]
+    },
+    {
+        "id": "17",
+        "category": "tiny houses",
+        "continents": "oceania",
+        "country": "new zealand",
+        "name": "The Tiny House Movement In New Zealand",
+        "image": "/images/tent/17.png",
+        "location": "120 Foundry Road, Silverdale, Auckland 0932, New Zealand",
+        "locationMap": {
+            "lat": -36.621,
+            "lng": 174.685
+        },
+        "rate": 4.7,
+        "price": 150,
+        "listImage": [
+            "/images/tent/17.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/1.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "services": [
+            "tour guide",
+            "breakfast",
+            "pet allowed",
+            "relaxation service",
+            "cleaning service"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi",
+            "tv",
+            "bathtub",
+            "trash",
+            "cooking equipment"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole",
+            "desert",
+            "cave",
+            "farm"
+        ]
+    },
+    {
+        "id": "18",
+        "category": "caravans",
+        "continents": "south america",
+        "country": "brazil",
+        "name": "The Wanderlust Wagon Caravans Camping, Brazil",
+        "image": "/images/tent/18.png",
+        "location": "Park Home Ibira, Camping para, brazil",
+        "locationMap": {
+            "lat": -28.160,
+            "lng": 48.658
+        },
+        "rate": 4.5,
+        "price": 140,
+        "listImage": [
+            "/images/tent/18.png",
             "/images/tent/2.png",
             "/images/tent/3.png",
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere, making it perfect for those who value both aesthetics and relaxation during their camping experience.",
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "services": [
+            "tour guide",
+            "breakfast",
+            "pet allowed",
+            "relaxation service"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
+        ],
+        "terrain": [
+            "lake",
+            "farm",
+            "beach",
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
+        ]
+    },
+    {
+        "id": "19",
+        "category": "domes",
+        "continents": "africa",
+        "country": "ethiopia",
+        "name": "Shelter dome – Arbaminch Eco campsite Ethiopia",
+        "image": "/images/tent/19.png",
+        "location": "12, Arba Minch, Ethiopia",
+        "locationMap": {
+            "lat": 5.995,
+            "lng": 37.538
+        },
+        "rate": 4.6,
+        "price": 220,
+        "listImage": [
+            "/images/tent/19.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "breakfast",
+            "pet allowed"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
+        ]
+    },
+    {
+        "id": "20",
+        "category": "log cabins",
+        "continents": "asia",
+        "country": "singapore",
+        "name": "Log Cabin Birdhouse Amish - Etsy Singapore",
+        "image": "/images/tent/20.png",
+        "location": "11 Northshore Dr, Singapore",
+        "locationMap": {
+            "lat": 1.414,
+            "lng": 103.898
+        },
+        "rate": 4.9,
+        "price": 180,
+        "listImage": [
+            "/images/tent/20.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
         "services": [
             "reception desk",
             "tour guide"
@@ -676,6 +1129,182 @@
             "parking",
             "toilet",
             "campfire",
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing",
+            "boating",
+            "climbing",
+            "surfing",
+            "wind sports"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
+        ]
+    },
+    {
+        "id": "21",
+        "category": "yurts",
+        "continents": "europe",
+        "country": "norway",
+        "name": "Canvas Telemark, Yurts, Treungen, Norway, Glamping Hub",
+        "image": "/images/tent/21.png",
+        "location": "Heimdal, 3855 Treungen, Norway",
+        "locationMap": {
+            "lat": 58.984,
+            "lng": 8.679
+        },
+        "rate": 4.4,
+        "price": 185,
+        "listImage": [
+            "/images/tent/21.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "services": [
+            "reception desk",
+            "breakfast",
+            "pet allowed",
+            "currency exchange",
+            "self-service laundry",
+            "relaxation service"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "snow sports",
+            "horseback riding",
+            "surfing",
+            "wind sports"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
+        ]
+    },
+    {
+        "id": "22",
+        "category": "bell tents",
+        "continents": "north america",
+        "country": "united state",
+        "name": "The Bell Tents, Winthrop, United States of America",
+        "image": "/images/tent/22.png",
+        "location": "Winthrop, Washington (United States of America)",
+        "locationMap": {
+            "lat": 48.477,
+            "lng": -120.143
+        },
+        "rate": 4.3,
+        "price": 150,
+        "listImage": [
+            "/images/tent/22.png",
+            "/images/tent/1.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "services": [
+            "reception desk",
+            "breakfast",
+            "pet allowed",
+            "currency exchange",
+            "self-service laundry",
+            "relaxation service"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "snow sports",
+            "horseback riding",
+            "surfing",
+            "wind sports"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
+        ]
+    },
+    {
+        "id": "23",
+        "category": "tree houses",
+        "continents": "oceania",
+        "country": "new zealand",
+        "name": "New Zealand's Whimsical Yellow Treehouse Towers",
+        "image": "/images/tent/23.png",
+        "location": "1415 State Highway 1, Warkworth 0983, New Zealand",
+        "locationMap": {
+            "lat": -36.449,
+            "lng": 174.648
+        },
+        "rate": 4.3,
+        "price": 160,
+        "listImage": [
+            "/images/tent/23.png",
+            "/images/tent/1.png",
+            "/images/tent/2.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "services": [
+            "reception desk",
+            "breakfast"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
             "wifi"
         ],
         "activities": [
@@ -687,6 +1316,67 @@
             "lake",
             "beach",
             "farm"
+        ]
+    },
+    {
+        "id": "24",
+        "category": "containers",
+        "continents": "south america",
+        "country": "brazil",
+        "name": "Glamping de luxo com jacuzzi para casais",
+        "image": "/images/tent/24.png",
+        "location": "Estrada Geral Rio do Engano, Águas Brancas, Brazil",
+        "locationMap": {
+            "lat": -27.953,
+            "lng": -49.576
+        },
+        "rate": 4.1,
+        "price": 149,
+        "listImage": [
+            "/images/tent/24.png",
+            "/images/tent/14.png",
+            "/images/tent/3.png",
+            "/images/tent/1.png",
+            "/images/tent/5.png"
+        ],
+        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "services": [
+            "reception desk",
+            "breakfast",
+            "pet allowed",
+            "currency exchange",
+            "self-service laundry",
+            "relaxation service"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi",
+            "tv",
+            "trash",
+            "cooking equipment"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing",
+            "biking",
+            "boating",
+            "climbing",
+            "snow sports",
+            "horseback riding",
+            "surfing",
+            "wind sports"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm",
+            "forest",
+            "river",
+            "hot spring",
+            "swimming hole"
         ]
     }
 ]

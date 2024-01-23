@@ -7,8 +7,15 @@ import TextHeading from '../TextHeading/TextHeading'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
+import { useRouter } from 'next/navigation'
 
 const CategoryTwo = () => {
+    const router = useRouter()
+
+    const handleClickCate = (cate: string) => {
+        router.push(`/camp/topmap-grid?category=${cate}`)
+    }
+
     return (
         <>
             <div className="category-block overflow-hidden lg:pt-20 md:pt-14 pt-10">
@@ -52,73 +59,109 @@ const CategoryTwo = () => {
                             className='h-full'
                         >
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Cabin')}
+                                >
                                     <span className='icon-cabin text-4xl'></span>
                                     <div className="text-title mt-2">Cabin</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Tented Cabins')}
+                                >
                                     <span className='icon-tented-cabin text-4xl'></span>
                                     <div className="text-title mt-2">Tented Cabins</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Safari Tents')}
+                                >
                                     <span className='icon-safari-tent text-4xl'></span>
                                     <div className="text-title mt-2">Safari Tents</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Cottages')}
+                                >
                                     <span className='icon-cottages text-4xl'></span>
                                     <div className="text-title mt-2">Cottages</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Tiny Houses')}
+                                >
                                     <span className='icon-tiny-house text-4xl'></span>
                                     <div className="text-title mt-2">Tiny Houses</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Caravans')}
+                                >
                                     <span className='icon-cravan text-4xl'></span>
                                     <div className="text-title mt-2">Caravans</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Domes')}
+                                >
                                     <span className='icon-domes text-4xl'></span>
                                     <div className="text-title mt-2">Domes</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Log Cabins')}
+                                >
                                     <span className='icon-log-cabin text-4xl'></span>
                                     <div className="text-title mt-2">Log Cabins</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Yurts')}
+                                >
                                     <span className='icon-yurt text-4xl'></span>
                                     <div className="text-title mt-2">Yurts</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Bell Tents')}
+                                >
                                     <span className='icon-bell-tent text-4xl'></span>
                                     <div className="text-title mt-2">Bell Tents</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Containers')}
+                                >
                                     <span className='icon-container text-4xl'></span>
                                     <div className="text-title mt-2">Containers</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="item bg-surface py-4 px-6 flex flex-col rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white">
+                                <div
+                                    className={`item bg-white py-4 px-6 flex flex-col rounded-xl border border-outline duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                                    onClick={() => handleClickCate('Tree')}
+                                >
                                     <span className='icon-cottages text-4xl'></span>
                                     <div className="text-title mt-2">Tree Houses</div>
                                 </div>
