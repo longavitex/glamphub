@@ -22,17 +22,20 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    background-color: var(--white);
+}
+
 html,
 body {
-    height: 100%;
     font-size: 16px;
     line-height: 26px;
     color: var(--black);
     font-weight: 400;
-    background-color: var(--white);
     user-select: none;
-    scroll-behavior: smooth;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif !important;
 }
 
 div,
@@ -128,7 +131,7 @@ textarea:focus {
     line-height: 88px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .heading2 {
@@ -136,7 +139,7 @@ textarea:focus {
     line-height: 68px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .heading3 {
@@ -144,7 +147,7 @@ textarea:focus {
     line-height: 52px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .heading4 {
@@ -152,7 +155,7 @@ textarea:focus {
     line-height: 40px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .heading5 {
@@ -160,14 +163,14 @@ textarea:focus {
     line-height: 32px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .heading6 {
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .text-title {
@@ -175,7 +178,7 @@ textarea:focus {
     line-height: 28px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .text-button {
@@ -184,14 +187,14 @@ textarea:focus {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.28px;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .text-button-sm {
     font-size: 14px;
     line-height: 22px;
     font-weight: 600;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .body2 {
@@ -218,7 +221,7 @@ textarea:focus {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.96px;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
 }
 
 .button-main {
@@ -226,7 +229,7 @@ textarea:focus {
     line-height: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", '__Jost_f47db6';
     letter-spacing: 1.28px;
     color: var(--white);
     background-color: var(--primary);

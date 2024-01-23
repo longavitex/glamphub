@@ -1,6 +1,14 @@
 .category-block {
     .list-cate {
         &.style-three {
+            @media (min-width: 1600px) {
+
+                .custom-swiper-button-prev,
+                .custom-swiper-button-next {
+                    display: none;
+                }
+            }
+
             .swiper {
                 padding: 24px 0;
 
@@ -17,6 +25,10 @@
                             color: var(--black);
                         }
                     }
+                }
+
+                @media (max-width: 767.98px) {
+                    padding: 16px 0;
                 }
             }
         }

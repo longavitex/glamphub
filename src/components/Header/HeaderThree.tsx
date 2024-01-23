@@ -40,7 +40,7 @@ const HeaderTwo = () => {
                             className='sm:w-[220px] w-[160px]'
                         />
                     </Link>
-                    <div className="menu-main flex items-center justify-center gap-5">
+                    <div className="menu-main flex items-center justify-center gap-5 max-xl:hidden">
                         <div className="item flex items-center gap-2 py-3 px-5 border border-outline rounded-lg">
                             <Icon.MapPin className='text-xl' />
                             <div className="body2">Sri Lanka</div>

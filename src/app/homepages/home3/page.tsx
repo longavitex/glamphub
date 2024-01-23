@@ -33,7 +33,7 @@ const HomeThree = () => {
     <>
       <div className='overflow-hidden'>
         <HeaderThree />
-        <div className="category-block overflow-hidden px-10 border-b border-outline">
+        <div className="category-block overflow-hidden min-[1322px]:px-10 px-4 border-b border-outline">
           <div className="list-cate style-navigation style-three">
             <div className="custom-swiper-button-prev">
               <Icon.CaretLeft className='text-xl' />
@@ -48,23 +48,43 @@ const HomeThree = () => {
               loop={true}
               modules={[Navigation, Autoplay]}
               breakpoints={{
-                576: {
+                340: {
                   slidesPerView: 3,
                   spaceBetween: 12,
                 },
-                768: {
+                576: {
                   slidesPerView: 4,
                   spaceBetween: 12,
                 },
-                992: {
-                  slidesPerView: 4,
+                640: {
+                  slidesPerView: 5,
                   spaceBetween: 12,
+                },
+                768: {
+                  slidesPerView: 6,
+                  spaceBetween: 12,
+                },
+                900: {
+                  slidesPerView: 7,
+                  spaceBetween: 12,
+                },
+                1024: {
+                  slidesPerView: 8,
+                  spaceBetween: 20,
                 },
                 1180: {
-                  slidesPerView: 5,
+                  slidesPerView: 9,
                   spaceBetween: 20,
                 },
                 1290: {
+                  slidesPerView: 10,
+                  spaceBetween: 0,
+                },
+                1400: {
+                  slidesPerView: 11,
+                  spaceBetween: 0,
+                },
+                1600: {
                   slidesPerView: 12,
                   spaceBetween: 0,
                 },
@@ -79,7 +99,7 @@ const HomeThree = () => {
                   <span className='icon-cabin text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Cabin</div>
                   {activeCategory === 'cabin' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -91,7 +111,7 @@ const HomeThree = () => {
                   <span className='icon-tented-cabin text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Tented Cabins</div>
                   {activeCategory === 'tented cabins' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -103,7 +123,7 @@ const HomeThree = () => {
                   <span className='icon-safari-tent text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Safari Tents</div>
                   {activeCategory === 'safari tents' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -115,7 +135,7 @@ const HomeThree = () => {
                   <span className='icon-cottages text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Cottages</div>
                   {activeCategory === 'cottages' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -127,7 +147,7 @@ const HomeThree = () => {
                   <span className='icon-tiny-house text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Tiny Houses</div>
                   {activeCategory === 'tiny houses' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -139,7 +159,7 @@ const HomeThree = () => {
                   <span className='icon-cravan text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Caravans</div>
                   {activeCategory === 'caravans' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -151,7 +171,7 @@ const HomeThree = () => {
                   <span className='icon-domes text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Domes</div>
                   {activeCategory === 'domes' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -163,7 +183,7 @@ const HomeThree = () => {
                   <span className='icon-log-cabin text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Log Cabins</div>
                   {activeCategory === 'log cabins' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -175,7 +195,7 @@ const HomeThree = () => {
                   <span className='icon-yurt text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Yurts</div>
                   {activeCategory === 'yurts' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -187,7 +207,7 @@ const HomeThree = () => {
                   <span className='icon-bell-tent text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Bell Tents</div>
                   {activeCategory === 'bell tents' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -199,7 +219,7 @@ const HomeThree = () => {
                   <span className='icon-cottages text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Tree Houses</div>
                   {activeCategory === 'tree houses' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -211,7 +231,7 @@ const HomeThree = () => {
                   <span className='icon-container text-4xl text-variant1 duration-300'></span>
                   <div className="text-title text-variant1 whitespace-nowrap duration-300 mt-2">Containers</div>
                   {activeCategory === 'containers' && (
-                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 -bottom-6 w-full h-0.5 inset-0 bg-primary'></motion.div>
+                    <motion.div layoutId='active-pill' className='absolute top-auto left-0 md:-bottom-6 bottom-[-16px] w-full h-0.5 inset-0 bg-primary'></motion.div>
                   )}
                 </div>
               </SwiperSlide>
@@ -221,16 +241,16 @@ const HomeThree = () => {
             </div>
           </div>
         </div>
-        <div className="list-tent-block flex h-[720px] overflow-hidden">
-          <div className="left basis-7/12 px-10 py-6 max-h-[720px] overflow-x-auto">
+        <div className="list-tent-block flex md:h-[716px] h-auto max-md:flex-wrap max-md:flex-col-reverse overflow-hidden max-md:pb-10">
+          <div className="left md:basis-7/12 min-[1322px]:px-10 px-4 py-6 max-h-[716px] overflow-x-auto">
             <div className="heading4">Discovery Luxury Camping Near You</div>
-            <div className="list-tent grid grid-cols-3 gap-[30px] mt-5">
+            <div className="list-tent grid xl:grid-cols-3 grid-cols-2 lg:gap-[30px] gap-4 mt-5">
               {filterData.map(item => (
                 <TentItem key={item.id} data={item} type='default' />
               ))}
             </div>
           </div>
-          <div className="right basis-5/12 h-full">
+          <div className="right md:basis-5/12 md:h-full sm:h-[500px] h-[380px]">
             {/* <iframe className='h-full w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5146725494856!2d81.0526394758883!3d6.8287206931691555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46f60b1db5c65%3A0x443a9d8835153ea7!2sBoody&#39;s%20Camping%20Site!5e0!3m2!1svi!2s!4v1705656455097!5m2!1svi!2s" loading="lazy"></iframe> */}
             <LoadScript googleMapsApiKey="AIzaSyAlqPjtwBIJDycOHLBIu7GV9SnkOATwbDs">
               <GoogleMap mapContainerStyle={mapStyles} center={defaultCenter} zoom={10}>
