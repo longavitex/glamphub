@@ -256,7 +256,9 @@ const TopMapGrid = () => {
                     onChange={(e) => { handleTentPerPage(Number(e.target.value)) }}
                   >
                     <option value="8">8 Per Page</option>
+                    <option value="9">9 Per Page</option>
                     <option value="12">12 Per Page</option>
+                    <option value="15">15 Per Page</option>
                     <option value="16">16 Per Page</option>
                   </select>
                   <Icon.CaretDown className='text-xl absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />

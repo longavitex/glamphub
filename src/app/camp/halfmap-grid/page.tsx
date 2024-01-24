@@ -33,7 +33,7 @@ const HalfMapGrid = () => {
   const [terrain, setTerrain] = useState<Terrain[]>([])
   const [priceRange, setPriceRange] = useState<{ min: number; max: number }>({ min: 0, max: 500 });
   const [currentPage, setCurrentPage] = useState(0);
-  const [tentPerPage, setTentPerPage] = useState<number>(9);
+  const [tentPerPage, setTentPerPage] = useState<number>(12);
   const tentsPerPage = tentPerPage;
   const offset = currentPage * tentsPerPage;
 
@@ -268,9 +268,12 @@ const HalfMapGrid = () => {
                       name="select-filter"
                       className='py-2.5 pl-4 md:pr-14 pr-10 rounded-lg border border-line'
                       onChange={(e) => { handleTentPerPage(Number(e.target.value)) }}
+                      defaultValue={'12'}
                     >
                       <option value="8">8 Per Page</option>
+                      <option value="9">9 Per Page</option>
                       <option value="12">12 Per Page</option>
+                      <option value="15">15 Per Page</option>
                       <option value="16">16 Per Page</option>
                     </select>
                     <Icon.CaretDown className='text-xl absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
@@ -293,7 +296,7 @@ const HalfMapGrid = () => {
                 </div>
               </div>
 
-              <div className="list-tent lg:mt-10 md:mt-8 mt-6 grid 2xl:grid-cols-3 md:grid-cols-2 min-[360px]:grid-cols-2 lg:gap-[30px] gap-4 gap-y-7">
+              <div className="list-tent lg:mt-10 md:mt-8 mt-6 grid min-[2200px]:grid-cols-4 2xl:grid-cols-3 md:grid-cols-2 min-[360px]:grid-cols-2 lg:gap-[30px] gap-4 gap-y-7">
                 {currentTents.map((item) => (
                   item.id === 'no-data' ? (
                     <div key={item.id} className="no-data-product">No tents match the selected criteria.</div>

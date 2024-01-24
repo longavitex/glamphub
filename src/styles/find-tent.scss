@@ -169,7 +169,7 @@
                 }
 
                 @media (min-width: 1536px) {
-                    margin-left: 25%;
+                    margin-left: 30%;   
                 }
             }
         }
@@ -200,6 +200,7 @@
                 position: fixed;
                 bottom: 0;
                 left: 0;
+                z-index: 1;
             }
         }
     }

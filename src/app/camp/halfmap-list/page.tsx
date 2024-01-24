@@ -252,10 +252,10 @@ const HalfMapList = () => {
                       <p>Show Filters</p>
                     </div>
                     <Link href={'/camp/halfmap-grid'}>
-                      <Icon.SquaresFour className='text-3xl cursor-pointer text-black duration-300' />
+                      <Icon.SquaresFour className='text-3xl cursor-pointer text-variant2 duration-300 hover:text-black' />
                     </Link>
                     <Link href={'/camp/halfmap-list'}>
-                      <Icon.Rows className='text-3xl cursor-pointer text-variant2 duration-300 hover:text-black' />
+                      <Icon.Rows className='text-3xl cursor-pointer text-black duration-300' />
                     </Link>
                   </div>
                   <div className="line w-px h-7 bg-outline max-lg:hidden"></div>
@@ -269,9 +269,9 @@ const HalfMapList = () => {
                       className='py-2.5 pl-4 md:pr-14 pr-10 rounded-lg border border-line'
                       onChange={(e) => { handleTentPerPage(Number(e.target.value)) }}
                     >
+                      <option value="4">4 Per Page</option>
                       <option value="8">8 Per Page</option>
                       <option value="12">12 Per Page</option>
-                      <option value="16">16 Per Page</option>
                     </select>
                     <Icon.CaretDown className='text-xl absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
                   </div>

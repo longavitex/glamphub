@@ -1,7 +1,16 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import * as Icon from 'phosphor-react'
 import { TentType } from '@/type/TentType'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
+import { useWishlist } from '@/context/WishlistContext'
+import { useRouter } from 'next/navigation'
 
 interface Props {
     data: TentType;
@@ -9,18 +18,71 @@ interface Props {
 }
 
 const TentItem: React.FC<Props> = ({ data, type }) => {
+    const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist()
+    const router = useRouter()
+
+    const handleClickItem = (id: string) => {
+        router.push(`/camp/tent-detail?id=${id}`)
+    }
+
+    const handleAddToWishlist = () => {
+        // if product existed in wishlit, remove from wishlist and set state to false
+        if (wishlistState.wishlistArray.some(item => item.id === data.id)) {
+            removeFromWishlist(data.id);
+        } else {
+            // else, add to wishlist and set state to true
+            addToWishlist(data);
+        }
+    };
+
     return (
         <>
             {type === "default" ? (
-                <div className="tent-item hover-scale">
-                    <div className="bg-img w-full aspect-square rounded-xl overflow-hidden">
-                        <Image
-                            src={data.image}
-                            width={2000}
-                            height={2000}
-                            alt={data.image}
-                            className='w-full h-full'
-                        />
+                <div
+                    className="tent-item hover-scale"
+                    onClick={() => { handleClickItem(data.id) }}
+                >
+                    <div className="thumb-img relative">
+                        <Swiper
+                            pagination={{
+                                type: "fraction",
+                            }}
+                            loop={true}
+                            modules={[Pagination]}
+                            className="mySwiper rounded-xl"
+                        >
+                            {data.listImage.map((img, index) => (
+                                <SwiperSlide key={index} className='overflow-hidden'>
+                                    <div className="bg-img w-full aspect-square">
+                                        <Image
+                                            src={img}
+                                            width={2000}
+                                            height={2000}
+                                            alt={img}
+                                            className='w-full h-full object-cover'
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        <div
+                            className={`wishlist-icon absolute top-3 right-3 z-[1] flex items-center justify-center w-8 h-8 text-white rounded-full duration-300 ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                            onClick={(e) => {
+                                e.stopPropagation()
+                                handleAddToWishlist()
+                            }}
+                        >
+
+                            {wishlistState.wishlistArray.some(item => item.id === data.id) ? (
+                                <>
+                                    <Icon.Heart weight='fill' className='body2 text-white duration-500' />
+                                </>
+                            ) : (
+                                <>
+                                    <Icon.Heart className='body2 duration-500' />
+                                </>
+                            )}
+                        </div>
                     </div>
                     <div className="infor mt-4">
                         <div className="flex items-center justify-between flex-wrap gap-2">
@@ -46,16 +108,52 @@ const TentItem: React.FC<Props> = ({ data, type }) => {
                 <>
                     {type === 'list' ? (
                         <>
-                            <div className="tent-item hover-scale style-list">
+                            <div
+                                className="tent-item hover-scale style-list"
+                                onClick={() => { handleClickItem(data.id) }}
+                            >
                                 <div className="tent-main relative flex max-sm:flex-wrap items-center justify-between rounded-2xl overflow-hidden box-shadow-sm border border-outline">
-                                    <div className="bg-img sm:absolute top-0 left-0 h-full xl:w-1/4 lg:w-1/3 md:w-[36%] sm:w-1/2 w-full overflow-hidden">
-                                        <Image
-                                            src={data.image}
-                                            width={2000}
-                                            height={2000}
-                                            alt={data.image}
-                                            className='w-full h-full object-cover'
-                                        />
+                                    <div className="thumb-img sm:absolute top-0 left-0 h-full xl:w-1/4 lg:w-1/3 md:w-[36%] sm:w-1/2 w-full overflow-hidden">
+                                        <Swiper
+                                            pagination={{
+                                                type: "fraction",
+                                            }}
+                                            loop={true}
+                                            modules={[Pagination]}
+                                            className="mySwiper w-full h-full -left-[0.5px]"
+                                        >
+                                            {data.listImage.map((img, index) => (
+                                                <SwiperSlide key={index} className='overflow-hidden'>
+                                                    <div className="bg-img w-full h-full">
+                                                        <Image
+                                                            src={img}
+                                                            width={2000}
+                                                            height={2000}
+                                                            alt={img}
+                                                            className='w-full h-full object-cover'
+                                                        />
+                                                    </div>
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
+                                        <div
+                                            className={`wishlist-icon absolute top-3 right-3 z-[1] flex items-center justify-center w-8 h-8 text-white rounded-full duration-300 ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                handleAddToWishlist()
+                                            }}
+                                        >
+
+                                            {wishlistState.wishlistArray.some(item => item.id === data.id) ? (
+                                                <>
+                                                    <Icon.Heart weight='fill' className='body2 text-white duration-500' />
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <Icon.Heart className='body2 duration-500' />
+                                                </>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="infor xl:p-10 sm:p-8 p-6 flex items-center justify-between xl:gap-10 lg:gap-8 gap-4 w-full max-md:flex-wrap">
                                         <div className="xl:w-2/3 md:w-1/2 w-full flex-shrink-0 ">
@@ -93,16 +191,52 @@ const TentItem: React.FC<Props> = ({ data, type }) => {
                         </>
                     ) : (
                         <>
-                            <div className="tent-item hover-scale style-list">
+                            <div
+                                className="tent-item hover-scale style-list"
+                                onClick={() => { handleClickItem(data.id) }}
+                            >
                                 <div className="tent-main relative flex max-sm:flex-wrap items-center justify-between rounded-2xl overflow-hidden box-shadow-sm border border-outline">
-                                    <div className="bg-img sm:absolute top-0 left-0 h-full 2xl:w-1/4 lg:w-1/3 md:w-[36%] sm:w-1/2 w-full overflow-hidden">
-                                        <Image
-                                            src={data.image}
-                                            width={2000}
-                                            height={2000}
-                                            alt={data.image}
-                                            className='w-full h-full object-cover'
-                                        />
+                                    <div className="thumb-img sm:absolute top-0 left-0 h-full 2xl:w-[30%] lg:w-1/3 md:w-[36%] sm:w-1/2 w-full overflow-hidden">
+                                        <Swiper
+                                            pagination={{
+                                                type: "fraction",
+                                            }}
+                                            loop={true}
+                                            modules={[Pagination]}
+                                            className="mySwiper w-full h-full -left-[0.5px]"
+                                        >
+                                            {data.listImage.map((img, index) => (
+                                                <SwiperSlide key={index} className='overflow-hidden'>
+                                                    <div className="bg-img w-full h-full">
+                                                        <Image
+                                                            src={img}
+                                                            width={2000}
+                                                            height={2000}
+                                                            alt={img}
+                                                            className='w-full h-full object-cover'
+                                                        />
+                                                    </div>
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
+                                        <div
+                                            className={`wishlist-icon absolute top-3 right-3 z-[1] flex items-center justify-center w-8 h-8 text-white rounded-full duration-300 ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                handleAddToWishlist()
+                                            }}
+                                        >
+
+                                            {wishlistState.wishlistArray.some(item => item.id === data.id) ? (
+                                                <>
+                                                    <Icon.Heart weight='fill' className='body2 text-white duration-500' />
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <Icon.Heart className='body2 duration-500' />
+                                                </>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="infor 2xl:p-9 sm:p-8 p-6 flex items-center justify-between xl:gap-7 lg:gap-5 gap-3 w-full max-md:flex-wrap">
                                         <div className="2xl:w-3/5 md:w-1/2 w-full flex-shrink-0">
