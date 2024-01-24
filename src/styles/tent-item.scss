@@ -1,0 +1,23 @@
+.tent-item {
+    &.style-list {
+        .tent-main {
+            .infor {
+                @media (min-width: 640px) {
+                    margin-left: 50%;
+                }
+
+                @media (min-width: 768px) {
+                    margin-left: 36%;
+                }
+
+                @media (min-width: 1024px) {
+                    margin-left: 33.33333333%;
+                }
+
+                @media (min-width: 1280px) {
+                    margin-left: 25%;
+                }
+            }
+        }
+    }
+}
