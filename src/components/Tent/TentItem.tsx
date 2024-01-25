@@ -168,7 +168,7 @@ const TentItem: React.FC<Props> = ({ data, type }) => {
                                                 <div className="text-variant1">(18 Review)</div>
                                             </div>
                                             <div className="text-title sm:mt-4 mt-3 max-xl:hidden max-sm:block">Description:</div>
-                                            <div className="text-variant1 sm:mt-2 max-xl:hidden max-sm:block">{data.description}</div>
+                                            <div className="text-variant1 sm:mt-2 max-xl:hidden max-sm:block">{data.shortDesc}</div>
                                         </div>
                                         <div className="w-px h-full bg-outline max-md:hidden"></div>
                                         <div className="flex flex-col md:items-center justify-between h-full">
@@ -252,7 +252,7 @@ const TentItem: React.FC<Props> = ({ data, type }) => {
                                             </div>
                                             <div className="name heading6 capitalize mt-2">{data.name}</div>
                                             <div className="text-title sm:mt-3 mt-2 max-2xl:hidden max-sm:block">Description:</div>
-                                            <div className="text-variant1 sm:mt-1 max-2xl:hidden max-sm:block">{data.description}</div>
+                                            <div className="text-variant1 sm:mt-1 max-2xl:hidden max-sm:block">{data.shortDesc}</div>
                                         </div>
                                         <div className="w-px h-[200px] bg-outline flex-shrink-0 max-2xl:hidden"></div>
                                         <div className="flex flex-col md:items-center justify-between h-full">

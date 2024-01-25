@@ -23,7 +23,7 @@ const Term = () => {
             <div className='term-block lg:py-20 md:py-14 py-10'>
                 <div className="container">
                     <div className="content-main flex items-start justify-between max-lg:flex-col gap-y-10">
-                        <StickyBox offsetTop={20} className='menu-tab lg:basis-1/3'>
+                        <StickyBox offsetTop={100} className='menu-tab lg:basis-1/3'>
                             <div>
                                 <ul className="tab-term text-content border-l border-outline overflow-hidden">
                                     <li className={`ct-tab pl-4 ${activeTab === '1' ? 'active' : ''}`} onClick={() => handleActiveTab('1')}>
@@ -46,14 +46,14 @@ const Term = () => {
                         </StickyBox>
                         <div className="right lg:basis-7/12">
                             <div className="content">
-                                <div className="heading4 sm:pb-2">Terms of use</div>
-                                <div id='terms' className='md:pt-8 pt-5'>
+                                <div id='terms' className="heading4 sm:pb-2">Terms of use</div>
+                                <div className='md:pt-8 pt-5'>
                                     <div className="heading5">1. Terms</div>
                                     <div className="body2 text-variant1 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed euismod justo, sit amet efficitur dui. Aliquam sodales vestibulum velit, eget sollicitudin quam. Donec non aliquam eros. Etiam sit amet lectus vel justo dignissim condimentum.</div>
                                     <div className="body2 text-variant1 mt-3">In malesuada neque quis libero laoreet posuere. In consequat vitae ligula quis rutrum. Morbi dolor orci, maximus a pulvinar sed, bibendum ac lacus. Suspendisse in consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam elementum, est sed interdum cursus, felis ex pharetra nisi, ut elementum tortor urna eu nulla. Donec rhoncus in purus quis blandit.</div>
-                                    <div className="body2 text-variant1 mt-3">Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie</div>
+                                    <div id='limitations' className="body2 text-variant1 mt-3">Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie</div>
                                 </div>
-                                <div id='limitations' className='md:pt-8 pt-5'>
+                                <div className='md:pt-8 pt-5'>
                                     <div className="heading5">2. Limitations</div>
                                     <div className="body2 text-variant1 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed euismod justo, sit amet efficitur dui. Aliquam sodales vestibulum velit, eget sollicitudin quam. Donec non aliquam eros. Etiam sit amet lectus vel justo dignissim condimentum.</div>
                                     <ul className='ml-6'>
@@ -61,15 +61,15 @@ const Term = () => {
                                         <li className='body2 list-disc mt-3'>Etiam eleifend metus at nunc ultricies facilisis.</li>
                                         <li className='body2 list-disc mt-3'>Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie a, finibus nec ex.</li>
                                     </ul>
-                                    <div className="body2 text-variant1 mt-3">Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie</div>
+                                    <div id='revisions' className="body2 text-variant1 mt-3">Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie</div>
                                 </div>
-                                <div id='revisions' className='md:pt-8 pt-5'>
+                                <div className='md:pt-8 pt-5'>
                                     <div className="heading5">3. Revisions and errata</div>
                                     <div className="body2 text-variant1 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed euismod justo, sit amet efficitur dui. Aliquam sodales vestibulum velit, eget sollicitudin quam. Donec non aliquam eros. Etiam sit amet lectus vel justo dignissim condimentum.</div>
                                     <div className="body2 text-variant1 mt-3">In malesuada neque quis libero laoreet posuere. In consequat vitae ligula quis rutrum. Morbi dolor orci, maximus a pulvinar sed, bibendum ac lacus. Suspendisse in consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam elementum, est sed interdum cursus, felis ex pharetra nisi, ut elementum tortor urna eu nulla. Donec rhoncus in purus quis blandit.</div>
-                                    <div className="body2 text-variant1 mt-3">Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie</div>
+                                    <div id='modifications' className="body2 text-variant1 mt-3">Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie</div>
                                 </div>
-                                <div id='modifications' className='md:pt-8 pt-5'>
+                                <div className='md:pt-8 pt-5'>
                                     <div className="heading5">4. Site terms of use modifications</div>
                                     <div className="body2 text-variant1 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed euismod justo, sit amet efficitur dui. Aliquam sodales vestibulum velit, eget sollicitudin quam. Donec non aliquam eros. Etiam sit amet lectus vel justo dignissim condimentum.</div>
                                     <ul className='ml-6'>
@@ -77,9 +77,9 @@ const Term = () => {
                                         <li className='body2 list-disc mt-3'>Etiam eleifend metus at nunc ultricies facilisis.</li>
                                         <li className='body2 list-disc mt-3'>Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie a, finibus nec ex.</li>
                                     </ul>
-                                    <div className="body2 text-variant1 mt-3">Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie</div>
+                                    <div id='risks' className="body2 text-variant1 mt-3">Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie</div>
                                 </div>
-                                <div id='risks' className='md:pt-8 pt-5'>
+                                <div className='md:pt-8 pt-5'>
                                     <div className="heading5">5. Risks</div>
                                     <div className="body2 text-variant1 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed euismod justo, sit amet efficitur dui. Aliquam sodales vestibulum velit, eget sollicitudin quam. Donec non aliquam eros. Etiam sit amet lectus vel justo dignissim condimentum.</div>
                                     <div className="body2 text-variant1 mt-3">In malesuada neque quis libero laoreet posuere. In consequat vitae ligula quis rutrum. Morbi dolor orci, maximus a pulvinar sed, bibendum ac lacus. Suspendisse in consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam elementum, est sed interdum cursus, felis ex pharetra nisi, ut elementum tortor urna eu nulla. Donec rhoncus in purus quis blandit.</div>

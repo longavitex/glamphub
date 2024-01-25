@@ -89,3 +89,45 @@
         }
     }
 }
+
+// Detail
+.ten-detail {
+    @media (max-width: 1023.98px) {
+        overflow-x: hidden;
+    }
+}
+
+.list-review {
+    .item {
+        &:last-child {
+            .review {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .list-img {
+                max-width: 100%;
+                overflow-x: auto;
+                // img {
+                //     &:last-child {
+                //         display: none;
+                //     }
+                // }
+            }
+        }
+    }
+}
+
+.date-sidebar-detail {
+    .rdrDateRangePickerWrapper {
+        top: 100%;
+        left: unset;
+        right: -1px;
+        width: 700px;
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+}

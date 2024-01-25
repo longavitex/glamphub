@@ -8,8 +8,10 @@
         "address": "Tokyo, Japan",
         "description": "Our GlampHub experience was nothing short of amazing. It offered a tranquil escape from the daily grind, and we were impressed by the sustainable practices and the sense of community.",
         "images": [
-            "/images/product/fashion/1-3.png",
-            "/images/product/fashion/1-4.png"
+            "/images/tent/1.png",
+            "/images/tent/2.png",
+            "/images/tent/3.png",
+            "/images/tent/4.png"
         ],
         "star": 5
     },
@@ -22,8 +24,9 @@
         "address": "Madrid, Spain",
         "description": "Choosing GlampHub for our glamping retreat was an excellent decision. It provided a serene environment away from the hustle of the city, and we loved the eco-friendly approach and the camaraderie.",
         "images": [
-            "/images/product/fashion/20-3.png",
-            "/images/product/fashion/20-4.png"
+            "/images/tent/5.png",
+            "/images/tent/6.png",
+            "/images/tent/7.png"
         ],
         "star": 5
     },
@@ -35,10 +38,7 @@
         "date": "November 13, 2023",
         "address": "Manchester, UK",
         "description": "GlampHub exceeded our expectations! It was an oasis of calm amidst nature, and we appreciated the eco-conscious mindset and the friendly ambiance.",
-        "images": [
-            "/images/product/fashion/23-3.png",
-            "/images/product/fashion/23-4.png"
-        ],
+        "images": [],
         "star": 4
     },
     {
@@ -50,8 +50,10 @@
         "address": "California, USA",
         "description": "Our stay at GlampHub was fantastic. It allowed us to unwind from our busy lives, and we admired the commitment to sustainability and the welcoming vibe of the place.",
         "images": [
-            "/images/product/fashion/7-3.png",
-            "/images/product/fashion/7-4.png"
+            "/images/tent/8.png",
+            "/images/tent/9.png",
+            "/images/tent/10.png",
+            "/images/tent/11.png"
         ],
         "star": 5
     },
@@ -64,8 +66,8 @@
         "address": "Paris, France",
         "description": "GlampHub was a perfect getaway! It offered a peaceful respite, and we were delighted by the eco-friendly initiatives and the inclusive atmosphere.",
         "images": [
-            "/images/product/fashion/11-3.png",
-            "/images/product/fashion/11-4.png"
+            "/images/tent/3.png",
+            "/images/tent/4.png"
         ],
         "star": 4
     },
@@ -78,8 +80,8 @@
         "address": "London, UK",
         "description": "We had a wonderful time at GlampHub. It provided a much-needed escape, and we were pleased with the focus on sustainability and the communal spirit.",
         "images": [
-            "/images/product/fashion/4-1.png",
-            "/images/product/fashion/4-4.png"
+            "/images/tent/1.png",
+            "/images/tent/4.png"
         ],
         "star": 5
     },
@@ -92,8 +94,8 @@
         "address": "California, USA",
         "description": "Choosing GlampHub for our glamping adventure was a brilliant choice. It provided a serene retreat, and we were impressed by the eco-conscious values and the sense of togetherness.",
         "images": [
-            "/images/product/yoga/1-2.png",
-            "/images/product/yoga/1-3.png"
+            "/images/tent/2.png",
+            "/images/tent/3.png"
         ],
         "star": 5
     },
@@ -106,8 +108,8 @@
         "address": "Paris, France",
         "description": "Our experience with GlampHub was incredible. It offered tranquility in nature's lap, and we valued the eco-friendly mindset and the warmth of the community.",
         "images": [
-            "/images/product/yoga/2-3.png",
-            "/images/product/yoga/2-4.png"
+            "/images/tent/3.png",
+            "/images/tent/4.png"
         ],
         "star": 5
     },
@@ -120,8 +122,8 @@
         "address": "London, UK",
         "description": "GlampHub was an exceptional choice for our glamping trip. It offered a peaceful haven, and we admired the commitment to sustainability and the friendly atmosphere.",
         "images": [
-            "/images/product/yoga/3-4.png",
-            "/images/product/yoga/3-3.png"
+            "/images/tent/4.png",
+            "/images/tent/3.png"
         ],
         "star": 4
     },
@@ -134,8 +136,8 @@
         "address": "Tokyo, Japan",
         "description": "Our time at GlampHub was delightful. It offered a much-needed break, and we appreciated the focus on sustainability and the inclusive environment.",
         "images": [
-            "/images/product/yoga/7-3.png",
-            "/images/product/yoga/7-4.png"
+            "/images/tent/3.png",
+            "/images/tent/4.png"
         ],
         "star": 4
     },
@@ -148,8 +150,8 @@
         "address": "Madrid, Spain",
         "description": "Choosing GlampHub for our glamping getaway was a fantastic decision. It provided a serene escape, and we loved the eco-friendly approach and the sense of belonging.",
         "images": [
-            "/images/product/yoga/4-1.png",
-            "/images/product/yoga/4-4.png"
+            "/images/tent/1.png",
+            "/images/tent/4.png"
         ],
         "star": 5
     },
@@ -162,8 +164,8 @@
         "address": "Manchester, UK",
         "description": "GlampHub provided an outstanding glamping experience. It offered serenity amidst nature, and we cherished the eco-conscious values and the camaraderie among guests.",
         "images": [
-            "/images/product/yoga/10-3.png",
-            "/images/product/yoga/10-4.png"
+            "/images/tent/3.png",
+            "/images/tent/4.png"
         ],
         "star": 5
     }

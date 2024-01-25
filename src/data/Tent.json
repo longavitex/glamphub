@@ -8,8 +8,8 @@
         "image": "/images/tent/1.png",
         "location": "Ahungalla, Southern Province, Namibia",
         "locationMap": {
-            "lat": 10.776889,
-            "lng": 106.700867
+            "lat": -24.101,
+            "lng": 15.976
         },
         "rate": 4.6,
         "price": 124,
@@ -20,13 +20,17 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "pet allowed",
             "tour guide",
+            "pet allowed",
             "breakfast",
-            "cooking service"
+            "self-service laundry",
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -76,11 +80,13 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
             "pet allowed",
+            "breakfast",
+            "currency exchange",
             "self-service laundry",
             "cooking service",
             "relaxation service",
@@ -127,9 +133,9 @@
         "category": "safari tents",
         "continents": "europe",
         "country": "greece",
-        "name": "safari tents glamping in Sikia island, Greece",
+        "name": "safari tents glamping Sikia Apartments, Greece",
         "image": "/images/tent/3.png",
-        "location": "Kato Gatzea, Greece",
+        "location": "EO Volou Neochoriou, Kato Gatzea, Greece",
         "locationMap": {
             "lat": 39.31,
             "lng": 23.11
@@ -143,11 +149,14 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
-            "reception desk",
-            "breakfast",
             "pet allowed",
+            "breakfast",
+            "currency exchange",
+            "self-service laundry",
+            "cooking service",
             "relaxation service",
             "cleaning service"
         ],
@@ -186,12 +195,12 @@
         "category": "cottages",
         "continents": "north america",
         "country": "united state",
-        "name": "Sherwood Cottages Court Eureka Springs, USA",   
+        "name": "Sherwood Cottages Court Eureka Springs, USA",
         "image": "/images/tent/4.png",
         "location": "248 W Van Buren, Eureka Springs, united state",
         "locationMap": {
-            "lat": 40.45,
-            "lng": -74.39
+            "lat": 36.401885,
+            "lng": -93.737528
         },
         "rate": 4.7,
         "price": 200,
@@ -202,19 +211,25 @@
             "/images/tent/1.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
+            "tour guide",
             "pet allowed",
-            "relaxation service",
+            "breakfast",
+            "currency exchange",
+            "self-service laundry",
             "cleaning service"
         ],
         "amenities": [
             "parking",
             "toilet",
             "campfire",
-            "wifi"
+            "wifi",
+            "bathtub",
+            "trash",
+            "cooking equipment"
         ],
         "activities": [
             "hiking",
@@ -230,7 +245,9 @@
             "lake",
             "beach",
             "hot spring",
-            "farm"
+            "farm",
+            "forest",
+            "river"
         ]
     },
     {
@@ -242,8 +259,8 @@
         "image": "/images/tent/5.png",
         "location": "120 Foundry Road, Silverdale, Auckland 0932, New Zealand",
         "locationMap": {
-            "lat": -36.621,
-            "lng": 174.685
+            "lat": -36.798711,
+            "lng": 174.646801
         },
         "rate": 4.7,
         "price": 150,
@@ -254,11 +271,14 @@
             "/images/tent/4.png",
             "/images/tent/1.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
+            "reception desk",
             "tour guide",
-            "breakfast",
             "pet allowed",
+            "breakfast",
+            "cooking service",
             "relaxation service",
             "cleaning service"
         ],
@@ -299,12 +319,12 @@
         "category": "caravans",
         "continents": "south america",
         "country": "brazil",
-        "name": "The Wanderlust Wagon Caravans Camping, Brazil",
+        "name": "The Caravans by pousada aguas de ibiria, Brazil",
         "image": "/images/tent/6.png",
-        "location": "Park Home Ibira, Camping para, brazil",
+        "location": "pousada aguas de ibiria, Sao paulo, brazil",
         "locationMap": {
-            "lat": -28.160,
-            "lng": 48.658
+            "lat": -21.107014,
+            "lng": -49.185141
         },
         "rate": 4.5,
         "price": 140,
@@ -315,11 +335,15 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
+            "reception desk",
             "tour guide",
-            "breakfast",
             "pet allowed",
+            "breakfast",
+            "currency exchange",
+            "cooking service",
             "relaxation service"
         ],
         "amenities": [
@@ -373,12 +397,16 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
             "tour guide",
+            "pet allowed",
             "breakfast",
-            "pet allowed"
+            "self-service laundry",
+            "cooking service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -416,10 +444,10 @@
         "country": "singapore",
         "name": "Log Cabin Birdhouse Amish - Etsy Singapore",
         "image": "/images/tent/8.png",
-        "location": "11 Northshore Dr, Singapore",
+        "location": "1390 E Coast Park Service Rd, Singapore",
         "locationMap": {
-            "lat": 1.414,
-            "lng": 103.898
+            "lat": 1.311984,
+            "lng": 103.952152
         },
         "rate": 4.9,
         "price": 180,
@@ -430,10 +458,16 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "tour guide"
+            "tour guide",
+            "pet allowed",
+            "breakfast",
+            "currency exchange",
+            "self-service laundry",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -484,14 +518,16 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
+            "tour guide",
             "pet allowed",
-            "currency exchange",
+            "breakfast",
             "self-service laundry",
-            "relaxation service"
+            "cooking service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -545,14 +581,16 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
             "pet allowed",
-            "currency exchange",
+            "breakfast",
             "self-service laundry",
-            "relaxation service"
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -606,7 +644,8 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
             "breakfast"
@@ -649,14 +688,16 @@
             "/images/tent/1.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
-            "reception desk",
-            "breakfast",
             "pet allowed",
+            "breakfast",
             "currency exchange",
             "self-service laundry",
-            "relaxation service"
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -710,13 +751,16 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "pet allowed",
             "tour guide",
+            "pet allowed",
             "breakfast",
-            "cooking service"
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -766,11 +810,13 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
             "pet allowed",
+            "breakfast",
+            "currency exchange",
             "self-service laundry",
             "cooking service",
             "relaxation service",
@@ -833,11 +879,15 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
+            "tour guide",
             "pet allowed",
+            "breakfast",
+            "self-service laundry",
+            "cooking service",
             "relaxation service",
             "cleaning service"
         ],
@@ -892,12 +942,16 @@
             "/images/tent/1.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
+            "tour guide",
             "pet allowed",
-            "relaxation service",
+            "breakfast",
+            "currency exchange",
+            "self-service laundry",
+            "cooking service",
             "cleaning service"
         ],
         "amenities": [
@@ -944,11 +998,14 @@
             "/images/tent/4.png",
             "/images/tent/1.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
+            "reception desk",
             "tour guide",
-            "breakfast",
             "pet allowed",
+            "currency exchange",
+            "self-service laundry",
             "relaxation service",
             "cleaning service"
         ],
@@ -1005,12 +1062,16 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
+            "reception desk",
             "tour guide",
-            "breakfast",
             "pet allowed",
-            "relaxation service"
+            "breakfast",
+            "currency exchange",
+            "self-service laundry",
+            "cooking service"
         ],
         "amenities": [
             "parking",
@@ -1063,12 +1124,17 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
             "tour guide",
+            "pet allowed",
             "breakfast",
-            "pet allowed"
+            "currency exchange",
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -1120,10 +1186,17 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "tour guide"
+            "tour guide",
+            "pet allowed",
+            "breakfast",
+            "currency exchange",
+            "self-service laundry",
+            "cooking service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -1174,14 +1247,17 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
             "pet allowed",
+            "breakfast",
             "currency exchange",
             "self-service laundry",
-            "relaxation service"
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -1235,14 +1311,16 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
-            "reception desk",
-            "breakfast",
             "pet allowed",
+            "breakfast",
             "currency exchange",
             "self-service laundry",
-            "relaxation service"
+            "cooking service",
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -1296,10 +1374,17 @@
             "/images/tent/4.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast"
+            "tour guide",
+            "pet allowed",
+            "breakfast",
+            "currency exchange",
+            "self-service laundry",
+            "cooking service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",
@@ -1339,14 +1424,16 @@
             "/images/tent/1.png",
             "/images/tent/5.png"
         ],
-        "description": "The ZenithDome Panoramic Getaway is the embodiment of comfort and style. Its panoramic windows and spacious interior create a welcoming atmosphere.",
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
         "services": [
             "reception desk",
-            "breakfast",
+            "tour guide",
             "pet allowed",
             "currency exchange",
             "self-service laundry",
-            "relaxation service"
+            "relaxation service",
+            "cleaning service"
         ],
         "amenities": [
             "parking",

@@ -198,6 +198,7 @@ const HalfMapGrid = () => {
       price: 0,
       listImage: [],
       image: 'no-data',
+      shortDesc: 'no-data',
       description: 'no-data',
       services: [],
       amenities: [],
