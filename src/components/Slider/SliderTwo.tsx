@@ -13,6 +13,13 @@ interface HotelMapProps {
     hotels: Array<TentType>;
 }
 
+interface GuestType {
+    adult: number;
+    children: number;
+    infant: number;
+    pet: number;
+}
+
 const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
     const mapStyles = {
         height: '100%',
@@ -29,6 +36,15 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
             key: 'selection'
         }
     ]);
+
+    const [guest, setGuest] = useState<GuestType>(
+        {
+            adult: 0,
+            children: 0,
+            infant: 0,
+            pet: 0
+        }
+    );
 
     const handleOpenDate = () => {
         setOpenDate(!openDate)
@@ -71,6 +87,24 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
             document.removeEventListener('click', handleClickOutsideGuestPopup);
         };
     }, [openDate, openGuest])
+
+    // Increase number
+    const increaseGuest = (type: keyof GuestType) => {
+        setGuest((prevGuest) => ({
+            ...prevGuest,
+            [type]: prevGuest[type] + 1
+        }));
+    };
+
+    // Decrease number
+    const decreaseGuest = (type: keyof GuestType) => {
+        if (guest[type] > 0) {
+            setGuest((prevGuest) => ({
+                ...prevGuest,
+                [type]: prevGuest[type] - 1
+            }));
+        }
+    };
 
     return (
         <>
@@ -123,7 +157,12 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                                 <div className="relative lg:w-full md:w-[48%] w-full">
                                     <div className="select-block w-full" onClick={handleOpenGuest}>
                                         <Icon.Users className='icon text-xl left-5' />
-                                        <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Add Guest' />
+                                        <input
+                                            className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
+                                            type="text"
+                                            value={`${guest.adult > 0 ? (guest.adult === 1 ? (guest.adult + ' adult') : (guest.adult + ' adults')) : ('')}${guest.children > 0 ? (guest.children === 1 ? (', ' + guest.children + ' children') : (', ' + guest.children + ' childrens')) : ('')}${guest.infant > 0 ? (guest.infant === 1 ? (', ' + guest.infant + ' infant') : (', ' + guest.infant + ' infants')) : ('')}${guest.pet > 0 ? (guest.pet === 1 ? (', ' + guest.pet + ' pet') : (', ' + guest.pet + ' pets')) : ('')}`}
+                                            placeholder='Add Guest'
+                                        />
                                     </div>
                                     <div className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full md:mt-5 mt-3 left-0 w-full box-shadow md:border-t border-outline ${openGuest ? 'open' : ''}`}>
                                         <div className="item flex items-center justify-between pb-4 border-b border-outline">
@@ -132,11 +171,17 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                                                 <div className="caption1 text-variant1">(12 Years+)</div>
                                             </div>
                                             <div className="right flex items-center gap-5">
-                                                <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                <div
+                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.adult === 0 ? 'opacity-[0.4] cursor-default' : 'cursor-pointer hover:bg-black hover:text-white'}`}
+                                                    onClick={() => decreaseGuest('adult')}
+                                                >
                                                     <Icon.Minus weight='bold' />
                                                 </div>
-                                                <div className="text-title">2</div>
-                                                <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                <div className="text-title">{guest.adult}</div>
+                                                <div
+                                                    className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
+                                                    onClick={() => increaseGuest('adult')}
+                                                >
                                                     <Icon.Plus weight='bold' />
                                                 </div>
                                             </div>
@@ -147,11 +192,17 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                                                 <div className="caption1 text-variant1">(2-12 Years)</div>
                                             </div>
                                             <div className="right flex items-center gap-5">
-                                                <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                <div
+                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.children === 0 ? 'opacity-[0.4] cursor-default' : 'cursor-pointer hover:bg-black hover:text-white'}`}
+                                                    onClick={() => decreaseGuest('children')}
+                                                >
                                                     <Icon.Minus weight='bold' />
                                                 </div>
-                                                <div className="text-title">2</div>
-                                                <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                <div className="text-title">{guest.children}</div>
+                                                <div
+                                                    className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
+                                                    onClick={() => increaseGuest('children')}
+                                                >
                                                     <Icon.Plus weight='bold' />
                                                 </div>
                                             </div>
@@ -162,11 +213,17 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                                                 <div className="caption1 text-variant1">(0-2 Years)</div>
                                             </div>
                                             <div className="right flex items-center gap-5">
-                                                <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                <div
+                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.infant === 0 ? 'opacity-[0.4] cursor-default' : 'cursor-pointer hover:bg-black hover:text-white'}`}
+                                                    onClick={() => decreaseGuest('infant')}
+                                                >
                                                     <Icon.Minus weight='bold' />
                                                 </div>
-                                                <div className="text-title">1</div>
-                                                <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                <div className="text-title">{guest.infant}</div>
+                                                <div
+                                                    className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
+                                                    onClick={() => increaseGuest('infant')}
+                                                >
                                                     <Icon.Plus weight='bold' />
                                                 </div>
                                             </div>
@@ -176,11 +233,17 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                                                 <p>Pets</p>
                                             </div>
                                             <div className="right flex items-center gap-5">
-                                                <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                <div
+                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.pet === 0 ? 'opacity-[0.4] cursor-default' : 'cursor-pointer hover:bg-black hover:text-white'}`}
+                                                    onClick={() => decreaseGuest('pet')}
+                                                >
                                                     <Icon.Minus weight='bold' />
                                                 </div>
-                                                <div className="text-title">0</div>
-                                                <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                <div className="text-title">{guest.pet}</div>
+                                                <div
+                                                    className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
+                                                    onClick={() => increaseGuest('pet')}
+                                                >
                                                     <Icon.Plus weight='bold' />
                                                 </div>
                                             </div>

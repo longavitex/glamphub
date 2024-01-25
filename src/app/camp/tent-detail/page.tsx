@@ -48,7 +48,7 @@ const TentDetail = () => {
         arrows: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         touchThreshold: 100,
         swipe: true,
@@ -78,6 +78,13 @@ const TentDetail = () => {
                 breakpoint: 1340,
                 settings: {
                     slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 2000,
+                settings: {
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
@@ -130,7 +137,7 @@ const TentDetail = () => {
         <>
             <div className='ten-detail'>
                 <HeaderOne />
-                <div className="list-img-detail">
+                <div className="list-img-detail overflow-hidden">
                     <Slider {...settings} className="h-full">
                         {tentMain.listImage.map((img, index) => (
                             <div className="bg-img w-full aspect-[4/3]" key={index}>
@@ -230,7 +237,7 @@ const TentDetail = () => {
                                                 ))}
                                             </div>
                                         </div>
-                                        <div className='w-fit'>
+                                        <div className='w-fit max-sm:hidden'>
                                             <div className="text-title">Activities:</div>
                                             <div className="list flex flex-col gap-2 mt-3">
                                                 {tentMain.activities.map((item, index) => (
@@ -398,14 +405,14 @@ const TentDetail = () => {
                                                             <Icon.CalendarBlank className='text-xl' />
                                                             <div className="text-button">Check In</div>
                                                         </div>
-                                                        <div className="body2 mt-1">12/27/2023</div>
+                                                        <div className="body2 mt-1">{state[0].startDate.toLocaleDateString()}</div>
                                                     </div>
                                                     <div className="left pr-5 py-4">
                                                         <div className="flex items-center justify-end gap-1">
                                                             <Icon.CalendarBlank className='text-xl' />
                                                             <div className="text-button">Check Out</div>
                                                         </div>
-                                                        <div className="body2 mt-1 text-end">12/27/2023</div>
+                                                        <div className="body2 mt-1 text-end">{state[0].endDate.toLocaleDateString()}</div>
                                                     </div>
                                                 </div>
                                                 <DateRangePicker

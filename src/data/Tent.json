@@ -1355,61 +1355,11 @@
     },
     {
         "id": "23",
-        "category": "tree houses",
-        "continents": "oceania",
-        "country": "new zealand",
-        "name": "New Zealand's Whimsical Yellow Treehouse Towers",
-        "image": "/images/tent/23.png",
-        "location": "1415 State Highway 1, Warkworth 0983, New Zealand",
-        "locationMap": {
-            "lat": -36.449,
-            "lng": 174.648
-        },
-        "rate": 4.3,
-        "price": 160,
-        "listImage": [
-            "/images/tent/23.png",
-            "/images/tent/1.png",
-            "/images/tent/2.png",
-            "/images/tent/4.png",
-            "/images/tent/5.png"
-        ],
-        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
-        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
-        "services": [
-            "reception desk",
-            "tour guide",
-            "pet allowed",
-            "breakfast",
-            "currency exchange",
-            "self-service laundry",
-            "cooking service",
-            "cleaning service"
-        ],
-        "amenities": [
-            "parking",
-            "toilet",
-            "campfire",
-            "wifi"
-        ],
-        "activities": [
-            "hiking",
-            "swimming",
-            "fishing"
-        ],
-        "terrain": [
-            "lake",
-            "beach",
-            "farm"
-        ]
-    },
-    {
-        "id": "24",
         "category": "containers",
         "continents": "south america",
         "country": "brazil",
         "name": "Glamping de luxo com jacuzzi para casais, Brazil",
-        "image": "/images/tent/24.png",
+        "image": "/images/tent/23.png",
         "location": "Estrada Geral Rio do Engano, Águas Brancas, Brazil",
         "locationMap": {
             "lat": -27.953,
@@ -1418,7 +1368,7 @@
         "rate": 4.1,
         "price": 149,
         "listImage": [
-            "/images/tent/24.png",
+            "/images/tent/23.png",
             "/images/tent/14.png",
             "/images/tent/3.png",
             "/images/tent/1.png",
@@ -1464,6 +1414,56 @@
             "river",
             "hot spring",
             "swimming hole"
+        ]
+    },
+    {
+        "id": "24",
+        "category": "tree houses",
+        "continents": "oceania",
+        "country": "new zealand",
+        "name": "New Zealand's Whimsical Yellow Treehouse Towers",
+        "image": "/images/tent/24.png",
+        "location": "1415 State Highway 1, Warkworth 0983, New Zealand",
+        "locationMap": {
+            "lat": -36.449,
+            "lng": 174.648
+        },
+        "rate": 4.3,
+        "price": 160,
+        "listImage": [
+            "/images/tent/24.png",
+            "/images/tent/1.png",
+            "/images/tent/2.png",
+            "/images/tent/4.png",
+            "/images/tent/5.png"
+        ],
+        "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+        "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+        "services": [
+            "reception desk",
+            "tour guide",
+            "pet allowed",
+            "breakfast",
+            "currency exchange",
+            "self-service laundry",
+            "cooking service",
+            "cleaning service"
+        ],
+        "amenities": [
+            "parking",
+            "toilet",
+            "campfire",
+            "wifi"
+        ],
+        "activities": [
+            "hiking",
+            "swimming",
+            "fishing"
+        ],
+        "terrain": [
+            "lake",
+            "beach",
+            "farm"
         ]
     }
 ]

@@ -54,3 +54,11 @@
         }
     }
 }
+
+.style-three {
+    .rdrDateRangePickerWrapper {
+        top: calc(100% + 1px);
+        left: 0;
+        width: 100%;
+    }
+}

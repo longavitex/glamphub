@@ -14,7 +14,7 @@ const HeaderOne = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            setFixedHeader(scrollPosition > 300);
+            setFixedHeader(scrollPosition > 100);
             setLastScrollPosition(scrollPosition);
         };
 
