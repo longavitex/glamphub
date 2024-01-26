@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from 'phosphor-react'
@@ -102,24 +102,24 @@ const TentDetail = () => {
     }
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideDatePopup: EventListener = (event) => {
+    const handleClickOutsideDatePopup: EventListener = useCallback((event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openDate && !targetElement.closest('.form-date-picker')) {
             setOpenDate(false)
         }
-    }
+    }, [openDate]);
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideGuestPopup: EventListener = (event) => {
+    const handleClickOutsideGuestPopup: EventListener = useCallback((event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openGuest && !targetElement.closest('.sub-menu-guest')) {
             setOpenGuest(false)
         }
-    }
+    }, [openGuest]);
 
     useEffect(() => {
         // Add a global click event to track clicks outside the popup.
@@ -131,7 +131,7 @@ const TentDetail = () => {
             document.removeEventListener('click', handleClickOutsideDatePopup);
             document.removeEventListener('click', handleClickOutsideGuestPopup);
         };
-    }, [openDate, openGuest])
+    }, [handleClickOutsideDatePopup, handleClickOutsideGuestPopup])
 
     return (
         <>

@@ -1,8 +1,8 @@
 'use client'
 
-import React from 'react'
-import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
+import Image from 'next/image';
 import * as Icon from "phosphor-react";
 import HeaderOne from '@/components/Header/HeaderOne'
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
@@ -12,11 +12,36 @@ import testimonialData from '@/data/Testimonial.json'
 import Testimonial from '@/components/Testimonial/Testimonial';
 import TextHeading from '@/components/TextHeading/TextHeading';
 import Footer from '@/components/Footer/Footer'
+import { icon } from "leaflet"
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css';
 
 const About = () => {
+    const position = { lat: 21.505, lng: 105.09 }
+
+    const ICON = icon({
+        iconUrl: "/images/marker-icon.png",
+        iconSize: [32, 32],
+    })
+
     return (
         <>
             <HeaderOne />
+            {/* /images/other/location.png */}
+            {/* <OpenLayersMap lat={lat} lng={lng} markers={markers} /> */}
+            <div className='w-full h-[400px] overflow-hidden relative'>
+                <MapContainer center={position} zoom={12} scrollWheelZoom={true} style={{ height: '400px' }}>
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={position} icon={ICON}>
+                        <Popup>
+                            A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+            </div>
             <Breadcrumb img='/images/breadcrumb/about.png' heading='About The GlampHub' subHeading='Unveiling the Heart of GlampHub. Where Nature and Luxury Coexist' />
             <div className="video-greeting lg:pt-20 md:pt-14 pt-10">
                 <div className="container">

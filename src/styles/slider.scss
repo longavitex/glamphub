@@ -24,6 +24,11 @@
     }
 }
 
+.leaflet-container {
+    width: 100vw !important;
+    height: 200vh !important;
+}
+
 .list-img-detail {
     .slick-list {
         margin-left: -5px;

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from 'phosphor-react'
@@ -27,8 +28,10 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
     };
 
     const defaultCenter = { lat: 0, lng: 0 };
+    const router = useRouter()
     const [openDate, setOpenDate] = useState(false)
     const [openGuest, setOpenGuest] = useState(false)
+    const [location, setLocation] = useState('')
     const [state, setState] = useState([
         {
             startDate: new Date(),
@@ -57,24 +60,24 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
     }
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideDatePopup: EventListener = (event) => {
+    const handleClickOutsideDatePopup: EventListener = useCallback((event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openDate && !targetElement.closest('.form-date-picker')) {
             setOpenDate(false)
         }
-    }
+    }, [openDate]);
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideGuestPopup: EventListener = (event) => {
+    const handleClickOutsideGuestPopup: EventListener = useCallback((event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openGuest && !targetElement.closest('.sub-menu-guest')) {
             setOpenGuest(false)
         }
-    }
+    }, [openGuest]);
 
     useEffect(() => {
         // Add a global click event to track clicks outside the popup.
@@ -86,7 +89,8 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
             document.removeEventListener('click', handleClickOutsideDatePopup);
             document.removeEventListener('click', handleClickOutsideGuestPopup);
         };
-    }, [openDate, openGuest])
+    }, [handleClickOutsideDatePopup, handleClickOutsideGuestPopup])
+
 
     // Increase number
     const increaseGuest = (type: keyof GuestType) => {
@@ -106,12 +110,17 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
         }
     };
 
+    const handleSearch = () => {
+        router.push(`/camp/topmap-grid?location=${location}&startDate=${state[0].startDate.toLocaleDateString()}&endDate=${state[0].endDate.toLocaleDateString()}&adult=${guest.adult}&children=${guest.children}&infant=${guest.infant}&pet=${guest.pet}`)
+    }
+
+
     return (
         <>
             <div className="slider-block style-one relative h-[508px] pb-12">
                 <div className="bg-img w-full h-full">
                     {/* <iframe className='h-full w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5146725494856!2d81.0526394758883!3d6.8287206931691555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46f60b1db5c65%3A0x443a9d8835153ea7!2sBoody&#39;s%20Camping%20Site!5e0!3m2!1svi!2s!4v1705656455097!5m2!1svi!2s" loading="lazy"></iframe> */}
-                    <LoadScript googleMapsApiKey="AIzaSyAlqPjtwBIJDycOHLBIu7GV9SnkOATwbDs">
+                    <LoadScript googleMapsApiKey="AIzaSyDiKc4HxX5G7EfneIZBN_Hlk2_luoT_yvo">
                         <GoogleMap mapContainerStyle={mapStyles} center={defaultCenter} zoom={10}>
                             {hotels.map((hotel) => (
                                 <Marker
@@ -130,7 +139,13 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                             <form className='bg-white rounded-lg p-5 flex max-lg:flex-wrap items-center justify-between gap-5 relative box-shadow'>
                                 <div className="select-block lg:w-full md:w-[48%] w-full">
                                     <Icon.MapPin className='icon text-xl left-5' />
-                                    <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Search destination' />
+                                    <input
+                                        className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
+                                        type="text"
+                                        placeholder='Search destination'
+                                        value={location}
+                                        onChange={(e) => setLocation(e.target.value)}
+                                    />
                                 </div>
                                 <div className="relative lg:w-full md:w-[48%] w-full">
                                     <div className='select-block w-full' onClick={handleOpenDate}>
@@ -140,7 +155,7 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
                                             placeholder='Add Dates'
-                                            value={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
+                                            defaultValue={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
                                             readOnly // prevent user edit value
                                         />
                                     </div>
@@ -160,8 +175,9 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                                         <input
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
-                                            value={`${guest.adult > 0 ? (guest.adult === 1 ? (guest.adult + ' adult') : (guest.adult + ' adults')) : ('')}${guest.children > 0 ? (guest.children === 1 ? (', ' + guest.children + ' children') : (', ' + guest.children + ' childrens')) : ('')}${guest.infant > 0 ? (guest.infant === 1 ? (', ' + guest.infant + ' infant') : (', ' + guest.infant + ' infants')) : ('')}${guest.pet > 0 ? (guest.pet === 1 ? (', ' + guest.pet + ' pet') : (', ' + guest.pet + ' pets')) : ('')}`}
                                             placeholder='Add Guest'
+                                            defaultValue={`${guest.adult > 0 ? (guest.adult === 1 ? (guest.adult + ' adult') : (guest.adult + ' adults')) : ('')}${guest.children > 0 ? (guest.children === 1 ? (', ' + guest.children + ' children') : (', ' + guest.children + ' childrens')) : ('')}${guest.infant > 0 ? (guest.infant === 1 ? (', ' + guest.infant + ' infant') : (', ' + guest.infant + ' infants')) : ('')}${guest.pet > 0 ? (guest.pet === 1 ? (', ' + guest.pet + ' pet') : (', ' + guest.pet + ' pets')) : ('')}`}
+                                            readOnly
                                         />
                                     </div>
                                     <div className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full md:mt-5 mt-3 left-0 w-full box-shadow md:border-t border-outline ${openGuest ? 'open' : ''}`}>
@@ -252,7 +268,7 @@ const SliderTwo: React.FC<HotelMapProps> = ({ hotels }) => {
                                     </div>
                                 </div>
                                 <div className="button-block flex-shrink-0 max-lg:w-[48%] max-md:w-full">
-                                    <button className='button-main max-lg:w-full'>Searching</button>
+                                    <div className='button-main max-lg:w-full' onClick={handleSearch}>Searching</div>
                                 </div>
                             </form>
                         </div>

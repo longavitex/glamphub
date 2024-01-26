@@ -18,7 +18,7 @@ const Review = () => {
             <Breadcrumb img='/images/breadcrumb/review.png' heading='Our Testimonials' subHeading='Stories That Speak. Echoes of Experiences at GlampHub.' />
             <div className='review lg:py-20 md:py-14 py-10'>
                 <div className="container">
-                    <div className="grid grid-cols-3 gap-[30px]">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-[30px] gap-5">
                         {testimonialData.map(item => (
                             <TestimonialItem data={item} key={item.id} />
                         ))}

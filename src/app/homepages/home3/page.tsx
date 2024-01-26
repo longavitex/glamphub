@@ -250,7 +250,7 @@ const HomeThree = () => {
               ))}
             </div>
           </div>
-          <div className="right md:basis-5/12 md:h-full sm:h-[500px] h-[380px]">
+          <div className="right md:basis-5/12 md:h-full sm:h-[500px] h-[350px]">
             {/* <iframe className='h-full w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5146725494856!2d81.0526394758883!3d6.8287206931691555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae46f60b1db5c65%3A0x443a9d8835153ea7!2sBoody&#39;s%20Camping%20Site!5e0!3m2!1svi!2s!4v1705656455097!5m2!1svi!2s" loading="lazy"></iframe> */}
             <LoadScript googleMapsApiKey="AIzaSyAlqPjtwBIJDycOHLBIu7GV9SnkOATwbDs">
               <GoogleMap mapContainerStyle={mapStyles} center={defaultCenter} zoom={10}>

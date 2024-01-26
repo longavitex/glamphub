@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
@@ -17,6 +18,7 @@ interface GuestType {
 
 const HeaderThree = () => {
     const pathname = usePathname()
+    const router = useRouter()
     const [fixedHeader, setFixedHeader] = useState(false)
     const [lastScrollPosition, setLastScrollPosition] = useState(0);
 
@@ -38,6 +40,7 @@ const HeaderThree = () => {
 
     const [openDate, setOpenDate] = useState(false)
     const [openGuest, setOpenGuest] = useState(false)
+    const [location, setLocation] = useState('namibia')
     const [state, setState] = useState([
         {
             startDate: new Date(),
@@ -64,24 +67,24 @@ const HeaderThree = () => {
     }
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideDatePopup: EventListener = (event) => {
+    const handleClickOutsideDatePopup: EventListener = useCallback((event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openDate && !targetElement.closest('.form-date-picker')) {
             setOpenDate(false)
         }
-    }
+    }, [openDate]);
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideGuestPopup: EventListener = (event) => {
+    const handleClickOutsideGuestPopup: EventListener = useCallback((event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openGuest && !targetElement.closest('.sub-menu-guest')) {
             setOpenGuest(false)
         }
-    }
+    }, [openGuest]);
 
     useEffect(() => {
         // Add a global click event to track clicks outside the popup.
@@ -93,7 +96,7 @@ const HeaderThree = () => {
             document.removeEventListener('click', handleClickOutsideDatePopup);
             document.removeEventListener('click', handleClickOutsideGuestPopup);
         };
-    }, [openDate, openGuest])
+    }, [handleClickOutsideDatePopup, handleClickOutsideGuestPopup])
 
     // Increase number
     const increaseGuest = (type: keyof GuestType) => {
@@ -113,6 +116,10 @@ const HeaderThree = () => {
         }
     };
 
+    const handleSearch = () => {
+        router.push(`/camp/topmap-grid?location=${location}&startDate=${state[0].startDate.toLocaleDateString()}&endDate=${state[0].endDate.toLocaleDateString()}&adult=${guest.adult}&children=${guest.children}`)
+    }
+
     return (
         <>
             <div id="header" className='header'>
@@ -127,11 +134,21 @@ const HeaderThree = () => {
                         />
                     </Link>
                     <div className="menu-main style-three relative flex items-center justify-center gap-5 max-xl:hidden">
-                        <div className="item flex items-center gap-2 py-3 px-5 border border-outline rounded-lg">
+                        {/* <div className="item flex items-center gap-2 py-3 px-5 border border-outline rounded-lg">
                             <Icon.MapPin className='text-xl' />
-                            <div className="body2">Sri Lanka</div>
+                            <div className="body2">Namibia</div>
+                        </div> */}
+                        <div className="select-block item flex items-center gap-2 py-2.5 border border-outline rounded-lg">
+                            <Icon.MapPin className='icon text-xl left-5' />
+                            <input
+                                className='body2 pl-12 pr-5 border-0 max-w-[160px]'
+                                type="text"
+                                placeholder='Search'
+                                value={location}
+                                onChange={(e) => setLocation(e.target.value)}
+                            />
                         </div>
-                        <div className="item py-3 px-5 border border-outline rounded-lg cursor-pointer">
+                        <div className="item py-2.5 px-5 border border-outline rounded-lg cursor-pointer">
                             <div className='flex items-center gap-2' onClick={handleOpenDate}>
                                 <Icon.MapPin className='text-xl' />
                                 <div className="body2">{state[0].startDate.toLocaleDateString()} - {state[0].endDate.toLocaleDateString()}</div>
@@ -145,7 +162,7 @@ const HeaderThree = () => {
                                 direction="horizontal"
                             />
                         </div>
-                        <div className="item py-3 px-5 border border-outline rounded-lg">
+                        <div className="item py-2.5 px-5 border border-outline rounded-lg">
                             <div className='flex items-center gap-2 cursor-pointer' onClick={handleOpenGuest}>
                                 <Icon.MapPin className='text-xl' />
                                 <div className="body2">
@@ -202,7 +219,7 @@ const HeaderThree = () => {
                             </div>
                         </div>
                         <div className="item">
-                            <div className="button-main">Search</div>
+                            <div className="button-main" onClick={handleSearch}>Search</div>
                         </div>
                     </div>
                     <div className="right flex items-center gap-3">

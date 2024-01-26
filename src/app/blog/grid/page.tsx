@@ -35,25 +35,27 @@ const BlogGrid = () => {
 
     return (
         <>
-            <HeaderOne />
-            <Breadcrumb img='/images/breadcrumb/blog.png' heading='Blog Grid' subHeading="Dive Into Nature's Chronicle. GlampHub's Grid Blog Experience." />
-            <div className='blog-default lg:py-20 md:py-14 py-10'>
-                <div className="container">
-                    <div className="">
-                        <div className="list-blog grid grid-cols-3 md:gap-[30px] gap-6">
-                            {currentBlogs.map(item => (
-                                <BlogItem key={item.id} data={item} type='style-grid' />
-                            ))}
-                        </div>
-                        {pageCount > 1 && (
-                            <div className="list-pagination w-full flex items-center justify-center md:mt-10 mt-6">
-                                <HandlePagination pageCount={pageCount} onPageChange={handlePageChange} />
+            <div className='overflow-hidden'>
+                <HeaderOne />
+                <Breadcrumb img='/images/breadcrumb/blog.png' heading='Blog Grid' subHeading="Dive Into Nature's Chronicle. GlampHub's Grid Blog Experience." />
+                <div className='blog-default lg:py-20 md:py-14 py-10'>
+                    <div className="container">
+                        <div className="">
+                            <div className="list-blog grid lg:grid-cols-3 sm:grid-cols-2 md:gap-[30px] gap-6">
+                                {currentBlogs.map(item => (
+                                    <BlogItem key={item.id} data={item} type='style-grid' />
+                                ))}
                             </div>
-                        )}
+                            {pageCount > 1 && (
+                                <div className="list-pagination w-full flex items-center justify-center md:mt-10 mt-6">
+                                    <HandlePagination pageCount={pageCount} onPageChange={handlePageChange} />
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
+                <Footer />
             </div>
-            <Footer />
         </>
     )
 }

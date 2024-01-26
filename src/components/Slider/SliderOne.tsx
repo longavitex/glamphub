@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from 'phosphor-react'
@@ -15,8 +16,10 @@ interface GuestType {
 }
 
 const SliderOne = () => {
+    const router = useRouter()
     const [openDate, setOpenDate] = useState(false)
     const [openGuest, setOpenGuest] = useState(false)
+    const [location, setLocation] = useState('')
     const [state, setState] = useState([
         {
             startDate: new Date(),
@@ -45,24 +48,24 @@ const SliderOne = () => {
     }
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideDatePopup: EventListener = (event) => {
+    const handleClickOutsideDatePopup: EventListener = useCallback((event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openDate && !targetElement.closest('.form-date-picker')) {
             setOpenDate(false)
         }
-    }
+    }, [openDate]);
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideGuestPopup: EventListener = (event) => {
+    const handleClickOutsideGuestPopup: EventListener = useCallback((event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openGuest && !targetElement.closest('.sub-menu-guest')) {
             setOpenGuest(false)
         }
-    }
+    }, [openGuest]);
 
     useEffect(() => {
         // Add a global click event to track clicks outside the popup.
@@ -74,7 +77,8 @@ const SliderOne = () => {
             document.removeEventListener('click', handleClickOutsideDatePopup);
             document.removeEventListener('click', handleClickOutsideGuestPopup);
         };
-    }, [openDate, openGuest])
+    }, [handleClickOutsideDatePopup, handleClickOutsideGuestPopup])
+
 
     // Increase number
     const increaseGuest = (type: keyof GuestType) => {
@@ -93,6 +97,10 @@ const SliderOne = () => {
             }));
         }
     };
+
+    const handleSearch = () => {
+        router.push(`/camp/topmap-grid?location=${location}&startDate=${state[0].startDate.toLocaleDateString()}&endDate=${state[0].endDate.toLocaleDateString()}&adult=${guest.adult}&children=${guest.children}&infant=${guest.infant}&pet=${guest.pet}`)
+    }
 
     return (
         <>
@@ -117,7 +125,13 @@ const SliderOne = () => {
                             <form className='bg-white rounded-lg p-5 flex max-lg:flex-wrap items-center justify-between gap-5 relative'>
                                 <div className="select-block lg:w-full md:w-[48%] w-full">
                                     <Icon.MapPin className='icon text-xl left-5' />
-                                    <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Search destination' />
+                                    <input
+                                        className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
+                                        type="text"
+                                        placeholder='Search destination'
+                                        value={location}
+                                        onChange={(e) => setLocation(e.target.value)}
+                                    />
                                 </div>
                                 <div className="relative lg:w-full md:w-[48%] w-full">
                                     <div className='select-block w-full' onClick={handleOpenDate}>
@@ -127,7 +141,7 @@ const SliderOne = () => {
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
                                             placeholder='Add Dates'
-                                            value={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
+                                            defaultValue={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
                                             readOnly // prevent user edit value
                                         />
                                     </div>
@@ -147,8 +161,9 @@ const SliderOne = () => {
                                         <input
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
-                                            value={`${guest.adult > 0 ? (guest.adult === 1 ? (guest.adult + ' adult') : (guest.adult + ' adults')) : ('')}${guest.children > 0 ? (guest.children === 1 ? (', ' + guest.children + ' children') : (', ' + guest.children + ' childrens')) : ('')}${guest.infant > 0 ? (guest.infant === 1 ? (', ' + guest.infant + ' infant') : (', ' + guest.infant + ' infants')) : ('')}${guest.pet > 0 ? (guest.pet === 1 ? (', ' + guest.pet + ' pet') : (', ' + guest.pet + ' pets')) : ('')}`}
                                             placeholder='Add Guest'
+                                            defaultValue={`${guest.adult > 0 ? (guest.adult === 1 ? (guest.adult + ' adult') : (guest.adult + ' adults')) : ('')}${guest.children > 0 ? (guest.children === 1 ? (', ' + guest.children + ' children') : (', ' + guest.children + ' childrens')) : ('')}${guest.infant > 0 ? (guest.infant === 1 ? (', ' + guest.infant + ' infant') : (', ' + guest.infant + ' infants')) : ('')}${guest.pet > 0 ? (guest.pet === 1 ? (', ' + guest.pet + ' pet') : (', ' + guest.pet + ' pets')) : ('')}`}
+                                            readOnly
                                         />
                                     </div>
                                     <div className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full md:mt-5 mt-3 left-0 w-full box-shadow md:border-t border-outline ${openGuest ? 'open' : ''}`}>
@@ -239,7 +254,7 @@ const SliderOne = () => {
                                     </div>
                                 </div>
                                 <div className="button-block flex-shrink-0 max-lg:w-[48%] max-md:w-full">
-                                    <button className='button-main max-lg:w-full'>Searching</button>
+                                    <div className='button-main max-lg:w-full' onClick={handleSearch}>Searching</div>
                                 </div>
                             </form>
                         </div>
