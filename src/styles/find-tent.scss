@@ -11,12 +11,12 @@
     visibility: hidden;
     transition: all ease 0.4s;
     transition-delay: 0.1s;
-    z-index: 5;
+    z-index: 1000;
 
     .sidebar-main {
         background-color: var(--white);
         width: 320px;
-        padding: 20px 30px;
+        padding: 100px 30px 20px;
         margin-left: -100%;
         transition: all ease 0.5s;
         overflow-x: auto;
@@ -25,6 +25,7 @@
 
         @media (max-width:400px) {
             width: 280px;
+
         }
     }
 
@@ -147,6 +148,7 @@
                 position: fixed;
                 bottom: 0;
                 left: 0;
+                z-index: 2;
             }
         }
     }
@@ -200,7 +202,7 @@
                 position: fixed;
                 bottom: 0;
                 left: 0;
-                z-index: 1;
+                z-index: 2;
             }
         }
     }

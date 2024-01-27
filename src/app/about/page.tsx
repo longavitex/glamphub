@@ -12,16 +12,13 @@ import testimonialData from '@/data/Testimonial.json'
 import Testimonial from '@/components/Testimonial/Testimonial';
 import TextHeading from '@/components/TextHeading/TextHeading';
 import Footer from '@/components/Footer/Footer'
-import dynamic from "next/dynamic"
-const MapComponent = dynamic(() => import("@/components/MapContainer"), { ssr: false })
-
 
 const About = () => {
+    const [openVideo, setOpenVideo] = useState<boolean>(false)
 
     return (
         <>
             <HeaderOne />
-            <MapComponent />
             <Breadcrumb img='/images/breadcrumb/about.png' heading='About The GlampHub' subHeading='Unveiling the Heart of GlampHub. Where Nature and Luxury Coexist' />
             <div className="video-greeting lg:pt-20 md:pt-14 pt-10">
                 <div className="container">
@@ -39,12 +36,23 @@ const About = () => {
                                 className='w-full max-md:h-[300px] object-cover'
                             />
                         </div>
-                        <div className="play-btn bg-primary duration-300 hover:bg-primary-hover lg:w-[100px] sm:w-[80px] w-[60px] lg:h-[100px] sm:h-[80px] h-[60px] rounded-full cursor-pointer flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div
+                            className="play-btn bg-primary duration-300 hover:bg-primary-hover lg:w-[100px] sm:w-[80px] w-[60px] lg:h-[100px] sm:h-[80px] h-[60px] rounded-full cursor-pointer flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                            onClick={() => setOpenVideo(true)}
+                        >
                             <Icon.Play className='lg:text-5xl sm:text-4xl text-3xl text-white' weight='fill' />
                         </div>
                     </div>
                 </div>
             </div>
+            <div className={`modal-video-block`} onClick={() => setOpenVideo(false)}>
+                    <div
+                        className={`modal-video-main ${openVideo ? 'open' : ''}`}
+                        onClick={(e) => { e.stopPropagation() }}
+                    >
+                    <iframe src="https://www.youtube.com/embed/ilY3WAUTXaE?si=ryu4TuMisTtYqW3L"></iframe>
+                    </div>
+                </div>
             <Amenities />
             <Benefit />
             <Testimonial data={testimonialData} />

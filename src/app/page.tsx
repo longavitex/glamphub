@@ -22,7 +22,7 @@ const Home = () => {
         <SliderOne />
         <LocationOne />
         <CategoryOne />
-        <RecommendOne data={tentData} />
+        <RecommendOne data={tentData} start={10} end={18} />
         <BecomeHost />
         <Amenities />
         <Testimonial data={dataTestimonial} />

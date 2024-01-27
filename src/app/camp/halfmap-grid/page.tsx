@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import HeaderOne from '@/components/Header/HeaderOne'
-import SliderTwo from '@/components/Slider/SliderTwo'
-import Footer from '@/components/Footer/Footer'
 import tentData from '@/data/Tent.json'
 import { TentType } from '@/type/TentType'
 import TentItem from '@/components/Tent/TentItem'
@@ -13,7 +11,8 @@ import * as Icon from 'phosphor-react'
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
 import { useSearchParams } from 'next/navigation'
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import dynamic from "next/dynamic"
+const MapComponent = dynamic(() => import("@/components/MapComponent"), { ssr: false })
 
 type Service = string;
 type Amenities = string;
@@ -36,13 +35,6 @@ const HalfMapGrid = () => {
   const [tentPerPage, setTentPerPage] = useState<number>(12);
   const tentsPerPage = tentPerPage;
   const offset = currentPage * tentsPerPage;
-
-  const mapStyles = {
-    height: '100%',
-    width: '100%',
-  };
-
-  const defaultCenter = { lat: 0, lng: 0 };
 
   const handleOpenSidebar = () => {
     setOpenSidebar(!openSidebar)
@@ -314,18 +306,7 @@ const HalfMapGrid = () => {
               )}
             </div>
             <div className="right md:w-5/12 max-md:h-[380px]">
-              <LoadScript googleMapsApiKey="AIzaSyAlqPjtwBIJDycOHLBIu7GV9SnkOATwbDs">
-                <GoogleMap mapContainerStyle={mapStyles} center={defaultCenter} zoom={10}>
-                  {tentData.map((hotel) => (
-                    <Marker
-                      key={hotel.id}
-                      position={hotel.locationMap}
-                      title={hotel.name}
-                      label={hotel.name[0]} // Use the first letter of the hotel name as the label
-                    />
-                  ))}
-                </GoogleMap>
-              </LoadScript>
+              <MapComponent />
             </div>
           </div>
         </div>

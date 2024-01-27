@@ -111,7 +111,7 @@ const LocationTwo = () => {
                             </div>
                         </div>
                         <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
-                            onClick={() => handleClickCountry('Greece')}
+                            onClick={() => handleClickCountry('Switzerland')}
                         >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
@@ -125,7 +125,7 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                             <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">Greece</div>
+                                <div className="name heading5">Switzerland</div>
                                 <div className="text-variant1 sm:mt-1">460 accommodations</div>
                                 <div className="flex items-center gap-1 sm:mt-2 mt-1">
                                     <div className="text-button-sm">Explore Now</div>
@@ -157,7 +157,7 @@ const LocationTwo = () => {
                             </div>
                         </div>
                         <div className={`item hover-scale flex items-center bg-surface rounded-lg overflow-hidden box-shadow-sm`}
-                            onClick={() => handleClickCountry('Ethiopia')}
+                            onClick={() => handleClickCountry('Australia')}
                         >
                             <div className="left h-full w-1/2 pr-4">
                                 <div className="bg-img w-full h-full overflow-hidden">
@@ -171,7 +171,7 @@ const LocationTwo = () => {
                                 </div>
                             </div>
                             <div className="right lg:pl-1.5 max-md:pl-1.5 lg:pr-6 md:pr-2 max-md:pr-3 py-6">
-                                <div className="name heading5">Ethiopia</div>
+                                <div className="name heading5">Australia</div>
                                 <div className="text-variant1 sm:mt-1">460 accommodations</div>
                                 <div className="flex items-center gap-1 sm:mt-2 mt-1">
                                     <div className="text-button-sm">Explore Now</div>

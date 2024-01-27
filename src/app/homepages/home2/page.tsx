@@ -14,9 +14,9 @@ const HomeTwo = () => {
     <>
       <div className='overflow-hidden'>
         <HeaderOne />
-        <SliderTwo hotels={tentData} />
+        <SliderTwo />
         <CategoryTwo />
-        <RecommendOne data={tentData} />
+        <RecommendOne data={tentData} start={18} end={26} />
         <LocationTwo />
         <div className="lg:pb-20 md:pb-14 pb-10"></div>
         <Footer />
