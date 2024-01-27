@@ -225,7 +225,7 @@ const FilterScroll = () => {
     <>
       <div className='overflow-hidden'>
         <HeaderOne />
-        <SliderTwo hotels={tentData} />
+        <SliderTwo />
         <div className="lg:py-20 md:py-14 max-lg:mt-10 max-md:mt-40 py-10">
           <div className="container">
             <div className="heading flex items-center justify-between gap-6 flex-wrap">
