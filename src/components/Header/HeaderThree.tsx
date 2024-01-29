@@ -216,7 +216,12 @@ const HeaderThree = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="button-main w-full text-center">Done</div>
+                                <div
+                                    className="button-main w-full text-center"
+                                    onClick={() => setOpenGuest(false)}
+                                >
+                                    Done
+                                </div>
                             </div>
                         </div>
                         <div className="item">
