@@ -287,7 +287,7 @@ const TentDetail = () => {
                                 <div className="explore-block lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
                                     <div className="heading5">Explore Camp</div>
                                     <div className="bg-img rounded-2xl max-sm:h-[240px] relative overflow-hidden sm:aspect-[2/1] mt-4">
-                                        {/* <ExploreCamp /> */}
+                                        <ExploreCamp />
                                         <div className="icon-block bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 duration-300">
                                             <Image
                                                 src={'/images/other/icon-360.png'}
