@@ -135,7 +135,7 @@ const SliderTwo = () => {
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
                                             placeholder='Add Dates'
-                                            defaultValue={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
+                                            value={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
                                             readOnly // prevent user edit value
                                         />
                                     </div>
@@ -156,7 +156,7 @@ const SliderTwo = () => {
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
                                             placeholder='Add Guest'
-                                            defaultValue={`${guest.adult > 0 ? (guest.adult === 1 ? (guest.adult + ' adult') : (guest.adult + ' adults')) : ('')}${guest.children > 0 ? (guest.children === 1 ? (', ' + guest.children + ' children') : (', ' + guest.children + ' childrens')) : ('')}${guest.infant > 0 ? (guest.infant === 1 ? (', ' + guest.infant + ' infant') : (', ' + guest.infant + ' infants')) : ('')}${guest.pet > 0 ? (guest.pet === 1 ? (', ' + guest.pet + ' pet') : (', ' + guest.pet + ' pets')) : ('')}`}
+                                            value={`${guest.adult > 0 ? (guest.adult === 1 ? (guest.adult + ' adult') : (guest.adult + ' adults')) : ('')}${guest.children > 0 ? (guest.children === 1 ? (', ' + guest.children + ' children') : (', ' + guest.children + ' childrens')) : ('')}${guest.infant > 0 ? (guest.infant === 1 ? (', ' + guest.infant + ' infant') : (', ' + guest.infant + ' infants')) : ('')}${guest.pet > 0 ? (guest.pet === 1 ? (', ' + guest.pet + ' pet') : (', ' + guest.pet + ' pets')) : ('')}`}
                                             readOnly
                                         />
                                     </div>
@@ -244,7 +244,12 @@ const SliderTwo = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="button-main w-full text-center">Done</div>
+                                        <div
+                                            className="button-main w-full text-center"
+                                            onClick={() => setOpenGuest(false)}
+                                        >
+                                            Done
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="button-block flex-shrink-0 max-lg:w-[48%] max-md:w-full">
