@@ -33,6 +33,7 @@ const About = () => {
                                 width={2000}
                                 height={1000}
                                 alt='bg-img'
+                                priority={true}
                                 className='w-full max-md:h-[300px] object-cover'
                             />
                         </div>
@@ -46,13 +47,13 @@ const About = () => {
                 </div>
             </div>
             <div className={`modal-video-block`} onClick={() => setOpenVideo(false)}>
-                    <div
-                        className={`modal-video-main ${openVideo ? 'open' : ''}`}
-                        onClick={(e) => { e.stopPropagation() }}
-                    >
+                <div
+                    className={`modal-video-main ${openVideo ? 'open' : ''}`}
+                    onClick={(e) => { e.stopPropagation() }}
+                >
                     <iframe src="https://www.youtube.com/embed/ilY3WAUTXaE?si=ryu4TuMisTtYqW3L"></iframe>
-                    </div>
                 </div>
+            </div>
             <Amenities />
             <Benefit />
             <Testimonial data={testimonialData} />
@@ -67,6 +68,7 @@ const About = () => {
                                     width={1000}
                                     height={800}
                                     alt='team1'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>
@@ -89,6 +91,7 @@ const About = () => {
                                     width={1000}
                                     height={800}
                                     alt='team1'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>
@@ -111,6 +114,7 @@ const About = () => {
                                     width={1000}
                                     height={800}
                                     alt='team1'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>

@@ -28,6 +28,7 @@ const Benefit = () => {
                                     width={2000}
                                     height={1200}
                                     alt='bg-img'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>

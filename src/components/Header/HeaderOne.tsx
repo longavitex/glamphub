@@ -43,6 +43,7 @@ const HeaderOne = () => {
                             width={2000}
                             height={1000}
                             alt='logo'
+                            priority={true}
                             className='sm:w-[220px] w-[160px]'
                         />
                     </Link>
@@ -231,6 +232,7 @@ const HeaderOne = () => {
                                         width={3000}
                                         height={2000}
                                         alt='logo'
+                                        priority={true}
                                         className='md:w-[220px] w-[180px]'
                                     />
                                 </Link>
@@ -318,7 +320,7 @@ const HeaderOne = () => {
                                                         <Link href="/camp/topmap-sidebar" className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname === '/camp/topmap-sidebar' ? 'active' : ''}`}>
                                                             Find Topmap Sidebar
                                                         </Link>
-                                                    </li>   
+                                                    </li>
                                                     <li>
                                                         <Link href="/camp/halfmap-grid" className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname === '/camp/halfmap-grid' ? 'active' : ''}`}>
                                                             Find Halfmap Grid

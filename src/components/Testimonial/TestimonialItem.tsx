@@ -22,6 +22,7 @@ const TestimonialItem: React.FC<Props> = ({ data }) => {
                             width={600}
                             height={600}
                             alt={data.name}
+                            priority={true}
                             className='md:w-[60px] w-[52px] md:h-[60px] h-[52px] rounded-full flex-shrink-0'
                         />
                         <div>

@@ -181,6 +181,7 @@ const TentDetail = () => {
                                     width={3000}
                                     height={3000}
                                     alt={img}
+                                    priority={true}
                                     className='w-full h-full object-cover'
                                 />
                             </div>
@@ -294,6 +295,7 @@ const TentDetail = () => {
                                                 width={400}
                                                 height={400}
                                                 alt='icon'
+                                                priority={true}
                                                 className='sm:w-12 w-10 sm:h-12 h-10'
                                             />
                                         </div>
@@ -336,6 +338,7 @@ const TentDetail = () => {
                                                         width={400}
                                                         height={400}
                                                         alt={item.name}
+                                                        priority={true}
                                                         className='w-full h-full object-cover'
                                                     />
                                                 </div>
@@ -355,6 +358,7 @@ const TentDetail = () => {
                                                                     src={img}
                                                                     width={400}
                                                                     height={400}
+                                                                    priority={true}
                                                                     alt={item.name}
                                                                     className='w-[60px] h-[60px] object-cover'
                                                                 />

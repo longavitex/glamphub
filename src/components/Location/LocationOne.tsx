@@ -27,6 +27,7 @@ const LocationOne = () => {
                                     width={3000}
                                     height={2000}
                                     alt='1.png'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>
@@ -43,6 +44,7 @@ const LocationOne = () => {
                                     width={3000}
                                     height={2000}
                                     alt='2.png'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>
@@ -59,6 +61,7 @@ const LocationOne = () => {
                                     width={3000}
                                     height={2000}
                                     alt='3.png'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>
@@ -75,6 +78,7 @@ const LocationOne = () => {
                                     width={3000}
                                     height={2000}
                                     alt='4.png'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>
@@ -91,6 +95,7 @@ const LocationOne = () => {
                                     width={3000}
                                     height={2000}
                                     alt='5.png'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>
@@ -107,6 +112,7 @@ const LocationOne = () => {
                                     width={3000}
                                     height={2000}
                                     alt='6.png'
+                                    priority={true}
                                     className='w-full'
                                 />
                             </div>

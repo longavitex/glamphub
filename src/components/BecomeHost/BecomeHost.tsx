@@ -13,6 +13,7 @@ const BecomeHost = () => {
                             width={4000}
                             height={3000}
                             alt='bg-becomehost'
+                            priority={true}
                             className='w-full xl:h-auto h-full object-cover'
                         />
                         <div className="text-content bg-white rounded-[20px] xl:w-[40%] lg:w-[50%] md:w-[60%] py-6 md:px-8 px-6 absolute max-md:right-6 left-6 bottom-10">

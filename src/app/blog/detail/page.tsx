@@ -43,6 +43,7 @@ const BlogDetail = () => {
                         width={4000}
                         height={3000}
                         alt={blogMain.title}
+                        priority={true}
                         className='w-full h-full object-cover'
                     />
                 </div>
@@ -58,6 +59,7 @@ const BlogDetail = () => {
                                         width={200}
                                         height={200}
                                         alt='avatar'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -86,6 +88,7 @@ const BlogDetail = () => {
                                             src={item}
                                             width={3000}
                                             height={2000}
+                                            priority={true}
                                             alt={item}
                                             className='w-full rounded-3xl'
                                         />
@@ -216,6 +219,7 @@ const BlogDetail = () => {
                                                         width={200}
                                                         height={200}
                                                         alt='img'
+                                                        priority={true}
                                                         className='w-full h-full object-cover'
                                                     />
                                                 </div>

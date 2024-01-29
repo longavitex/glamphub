@@ -18,6 +18,7 @@ const Footer = () => {
                                     width={2000}
                                     height={1000}
                                     alt='logo'
+                                    priority={true}
                                     className='w-[220px]'
                                 />
                             </Link>
@@ -119,6 +120,7 @@ const Footer = () => {
                                             width={2000}
                                             height={1000}
                                             alt='chplay'
+                                            priority={true}
                                             className='w-[135px]'
                                         />
                                     </Link>
@@ -128,6 +130,7 @@ const Footer = () => {
                                             width={2000}
                                             height={1000}
                                             alt='appstore'
+                                            priority={true}
                                             className='w-[135px] mt-2'
                                         />
                                     </Link>

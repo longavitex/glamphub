@@ -109,6 +109,7 @@ const BlogDefault = () => {
                                                     width={500}
                                                     height={400}
                                                     alt={item.thumbnail}
+                                                    priority={true}
                                                     className='w-[120px] h-[90px] object-cover rounded-lg flex-shrink-0'
                                                 />
                                                 <div>

@@ -111,6 +111,7 @@ const SliderOne = () => {
                         width={4000}
                         height={3000}
                         alt='slider'
+                        priority={true}
                         className='w-full h-full object-cover'
                     />
                 </div>

@@ -34,6 +34,7 @@ const BlogItem: React.FC<BlogProps> = ({ data, type }) => {
                                 width={2000}
                                 height={1500}
                                 alt='blog-img'
+                                priority={true}
                                 className='w-full duration-500'
                             />
                             <div className="tag absolute bottom-0 left-0 text-label bg-primary text-white py-1.5 px-2.5">{data.date}</div>
@@ -62,7 +63,8 @@ const BlogItem: React.FC<BlogProps> = ({ data, type }) => {
                                         src={data.thumbnail}
                                         width={2000}
                                         height={1500}
-                                        alt='blog-img'
+                                            alt='blog-img'
+                                            priority={true}
                                         className='w-full duration-500'
                                     />
                                     <div className="tag absolute bottom-4 left-4 text-label bg-primary text-white py-1.5 px-2.5">{data.date}</div>

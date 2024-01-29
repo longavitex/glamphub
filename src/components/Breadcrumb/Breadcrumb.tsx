@@ -17,6 +17,7 @@ const Breadcrumb: React.FC<Props> = ({ img, heading, subHeading }) => {
                         width={4000}
                         height={2000}
                         alt='bg-img'
+                        priority={true}
                         className='w-full h-full object-cover'
                     />
                 </div>

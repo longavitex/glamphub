@@ -28,6 +28,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -51,6 +52,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -74,6 +76,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -97,6 +100,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -120,6 +124,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -143,6 +148,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -166,6 +172,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -189,6 +196,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
@@ -212,6 +220,7 @@ const LocationTwo = () => {
                                         width={3000}
                                         height={2000}
                                         alt='1.png'
+                                        priority={true}
                                         className='w-full h-full object-cover'
                                     />
                                 </div>
