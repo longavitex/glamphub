@@ -9,7 +9,7 @@ import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { TentType } from '@/type/TentType';
 import dynamic from "next/dynamic"
-const MapComponent = dynamic(() => import("@/components/MapComponent"), { ssr: false })
+const MapComponent = dynamic(() => import("@/components/Other/MapComponent"), { ssr: false })
 
 
 interface GuestType {

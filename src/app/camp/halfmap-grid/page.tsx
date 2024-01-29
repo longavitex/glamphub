@@ -12,7 +12,7 @@ import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
 import { useSearchParams } from 'next/navigation'
 import dynamic from "next/dynamic"
-const MapComponent = dynamic(() => import("@/components/MapComponent"), { ssr: false })
+const MapComponent = dynamic(() => import("@/components/Other/MapComponent"), { ssr: false })
 
 type Service = string;
 type Amenities = string;

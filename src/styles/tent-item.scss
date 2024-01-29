@@ -131,3 +131,17 @@
         }
     }
 }
+
+.explore-block {
+    .bg-img {
+
+        &:focus,
+        &:active,
+        &:hover {
+            .icon-block {
+                background-color: transparent;
+                opacity: 0.2;
+            }
+        }
+    }
+}

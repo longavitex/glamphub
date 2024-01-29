@@ -11,7 +11,7 @@ import tentData from '@/data/Tent.json'
 import TentItem from '@/components/Tent/TentItem'
 import { motion } from 'framer-motion'
 import dynamic from "next/dynamic"
-const MapComponent = dynamic(() => import("@/components/MapComponent"), { ssr: false })
+const MapComponent = dynamic(() => import("@/components/Other/MapComponent"), { ssr: false })
 
 const HomeThree = () => {
   const [activeCategory, setActiveCategory] = useState<string>('cabin')

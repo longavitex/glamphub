@@ -5,13 +5,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from 'phosphor-react'
 import HeaderOne from '@/components/Header/HeaderOne'
-import SliderTwo from '@/components/Slider/SliderTwo'
 import Footer from '@/components/Footer/Footer'
 import tentData from '@/data/Tent.json'
 import testimonialData from '@/data/Testimonial.json'
 import { TentType } from '@/type/TentType'
-import TentItem from '@/components/Tent/TentItem'
 import { useSearchParams } from 'next/navigation'
+import dynamic from "next/dynamic"
+const ExploreCamp = dynamic(() => import("@/components/Other/ExploreCamp"), { ssr: false })
 
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
@@ -23,6 +23,13 @@ import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import Rate from '@/components/Other/Rate'
 import StickyBox from 'react-sticky-box';
+
+interface GuestType {
+    adult: number;
+    children: number;
+    infant: number;
+    pet: number;
+}
 
 const TentDetail = () => {
     const params = useSearchParams()
@@ -43,6 +50,15 @@ const TentDetail = () => {
     }
 
     const tentMain = tentData.find(tent => tent.id === tentId) as TentType
+
+    const [guest, setGuest] = useState<GuestType>(
+        {
+            adult: 0,
+            children: 0,
+            infant: 0,
+            pet: 0
+        }
+    );
 
     const settings = {
         arrows: true,
@@ -132,6 +148,25 @@ const TentDetail = () => {
             document.removeEventListener('click', handleClickOutsideGuestPopup);
         };
     }, [handleClickOutsideDatePopup, handleClickOutsideGuestPopup])
+
+    // Increase number
+    const increaseGuest = (type: keyof GuestType) => {
+        setGuest((prevGuest) => ({
+            ...prevGuest,
+            [type]: prevGuest[type] + 1
+        }));
+    };
+
+    // Decrease number
+    const decreaseGuest = (type: keyof GuestType) => {
+        if (guest[type] > 0) {
+            setGuest((prevGuest) => ({
+                ...prevGuest,
+                [type]: prevGuest[type] - 1
+            }));
+        }
+    };
+
 
     return (
         <>
@@ -249,16 +284,19 @@ const TentDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="explore lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
+                                <div className="explore-block lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
                                     <div className="heading5">Explore Camp</div>
-                                    <div className="bg-img rounded-2xl overflow-hidden aspect-[2/1] mt-4">
-                                        <Image
-                                            src={tentMain.image}
-                                            width={4000}
-                                            height={3000}
-                                            alt={tentMain.image}
-                                            className='w-full h-full object-cover'
-                                        />
+                                    <div className="bg-img rounded-2xl max-sm:h-[240px] relative overflow-hidden sm:aspect-[2/1] mt-4">
+                                        <ExploreCamp />
+                                        <div className="icon-block bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 duration-300">
+                                            <Image
+                                                src={'/images/other/icon-360.png'}
+                                                width={400}
+                                                height={400}
+                                                alt='icon'
+                                                className='sm:w-12 w-10 sm:h-12 h-10'
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="date lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
@@ -431,7 +469,7 @@ const TentDetail = () => {
                                                             <Icon.Users className='text-xl' />
                                                             <div className="text-button">Guest</div>
                                                         </div>
-                                                        <div className="body2 mt-1">5 Adults - 2 children</div>
+                                                        <div className="body2 mt-1">{guest.adult} adults - {guest.children} childrens</div>
                                                     </div>
                                                     <Icon.CaretDown className='text-2xl' />
                                                 </div>
@@ -442,11 +480,17 @@ const TentDetail = () => {
                                                             <div className="caption1 text-variant1">(12 Years+)</div>
                                                         </div>
                                                         <div className="right flex items-center gap-5">
-                                                            <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                            <div
+                                                                className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.adult === 0 ? 'opacity-[0.4] cursor-default' : 'cursor-pointer hover:bg-black hover:text-white'}`}
+                                                                onClick={() => decreaseGuest('adult')}
+                                                            >
                                                                 <Icon.Minus weight='bold' />
                                                             </div>
-                                                            <div className="text-title">2</div>
-                                                            <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                            <div className="text-title">{guest.adult}</div>
+                                                            <div
+                                                                className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
+                                                                onClick={() => increaseGuest('adult')}
+                                                            >
                                                                 <Icon.Plus weight='bold' />
                                                             </div>
                                                         </div>
@@ -457,11 +501,17 @@ const TentDetail = () => {
                                                             <div className="caption1 text-variant1">(2-12 Years)</div>
                                                         </div>
                                                         <div className="right flex items-center gap-5">
-                                                            <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                            <div
+                                                                className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.children === 0 ? 'opacity-[0.4] cursor-default' : 'cursor-pointer hover:bg-black hover:text-white'}`}
+                                                                onClick={() => decreaseGuest('children')}
+                                                            >
                                                                 <Icon.Minus weight='bold' />
                                                             </div>
-                                                            <div className="text-title">2</div>
-                                                            <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                            <div className="text-title">{guest.children}</div>
+                                                            <div
+                                                                className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
+                                                                onClick={() => increaseGuest('children')}
+                                                            >
                                                                 <Icon.Plus weight='bold' />
                                                             </div>
                                                         </div>
@@ -472,11 +522,17 @@ const TentDetail = () => {
                                                             <div className="caption1 text-variant1">(0-2 Years)</div>
                                                         </div>
                                                         <div className="right flex items-center gap-5">
-                                                            <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                            <div
+                                                                className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.infant === 0 ? 'opacity-[0.4] cursor-default' : 'cursor-pointer hover:bg-black hover:text-white'}`}
+                                                                onClick={() => decreaseGuest('infant')}
+                                                            >
                                                                 <Icon.Minus weight='bold' />
                                                             </div>
-                                                            <div className="text-title">1</div>
-                                                            <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                            <div className="text-title">{guest.infant}</div>
+                                                            <div
+                                                                className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
+                                                                onClick={() => increaseGuest('infant')}
+                                                            >
                                                                 <Icon.Plus weight='bold' />
                                                             </div>
                                                         </div>
@@ -486,16 +542,27 @@ const TentDetail = () => {
                                                             <p>Pets</p>
                                                         </div>
                                                         <div className="right flex items-center gap-5">
-                                                            <div className="minus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                            <div
+                                                                className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.pet === 0 ? 'opacity-[0.4] cursor-default' : 'cursor-pointer hover:bg-black hover:text-white'}`}
+                                                                onClick={() => decreaseGuest('pet')}
+                                                            >
                                                                 <Icon.Minus weight='bold' />
                                                             </div>
-                                                            <div className="text-title">0</div>
-                                                            <div className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white">
+                                                            <div className="text-title">{guest.pet}</div>
+                                                            <div
+                                                                className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
+                                                                onClick={() => increaseGuest('pet')}
+                                                            >
                                                                 <Icon.Plus weight='bold' />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="button-main w-full text-center">Done</div>
+                                                    <div
+                                                        className="button-main w-full text-center"
+                                                        onClick={() => setOpenGuest(false)}
+                                                    >
+                                                        Done
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
