@@ -26,7 +26,6 @@
     "react-slider": "^2.0.6",
     "react-sticky-box": "^2.0.5",
     "sass": "^1.69.7",
-    "sharp": "^0.33.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.5"
   },
