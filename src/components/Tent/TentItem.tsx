@@ -59,6 +59,7 @@ const TentItem: React.FC<Props> = ({ data, type }) => {
                                             width={2000}
                                             height={2000}
                                             alt={img}
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
