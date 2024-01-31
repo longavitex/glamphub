@@ -51,7 +51,7 @@ const HeaderOne = () => {
                         <ul className='flex items-center xl:gap-[50px] gap-10 h-full'>
                             <li className='h-full relative'>
                                 <Link
-                                    href="##"
+                                    href="#!"
                                     className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/' || pathname.includes('/homepages/') ? 'active' : ''}`}
                                 >
                                     Home
@@ -78,7 +78,7 @@ const HeaderOne = () => {
                             </li>
                             <li className='h-full relative'>
                                 <Link
-                                    href="##"
+                                    href="#!"
                                     className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/camp/') ? 'active' : ''}`}
                                 >
                                     Camps
@@ -138,7 +138,7 @@ const HeaderOne = () => {
                             </li>
                             <li className='h-full relative'>
                                 <Link
-                                    href="##"
+                                    href="#!"
                                     className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/blog/') ? 'active' : ''}`}
                                 >
                                     Blog
@@ -165,7 +165,7 @@ const HeaderOne = () => {
                             </li>
                             <li className='h-full relative'>
                                 <Link
-                                    href="##"
+                                    href="#!"
                                     className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/pages/') ? 'active' : ''}`}
                                 >
                                     Pages

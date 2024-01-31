@@ -130,7 +130,7 @@ const SliderOne = () => {
                                         className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                         type="text"
                                         placeholder='Search destination'
-                                        value={location}
+                                        value={location || ''}
                                         onChange={(e) => setLocation(e.target.value)}
                                     />
                                 </div>
@@ -150,6 +150,8 @@ const SliderOne = () => {
                                         className={`form-date-picker box-shadow md:border-t border-outline ${openDate ? 'open' : ''}`}
                                         onChange={item => setState([item.selection] as any)}
                                         // showSelectionPreview={true}
+                                        staticRanges={[]}
+                                        inputRanges={[]}
                                         moveRangeOnFirstSelection={false}
                                         months={2}
                                         ranges={state}

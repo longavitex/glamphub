@@ -100,21 +100,21 @@ const Footer = () => {
                                     <div className="text-title pb-3">About Us</div>
                                     <Link href={'/about'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">About Us</Link>
                                     <Link href={'/about'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Our Story</Link>
-                                    <Link href={'##'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Journal</Link>
+                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Journal</Link>
                                     <Link href={'/blog/blog-default'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Late News</Link>
-                                    <Link href={'##'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Site Map</Link>
-                                    <Link href={'##'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Partnerships</Link>
+                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Site Map</Link>
+                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Partnerships</Link>
                                 </div>
                                 <div className="item">
                                     <div className="text-title pb-3">Hosting</div>
-                                    <Link href={'##'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Become A Host</Link>
-                                    <Link href={'##'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Insurance</Link>
-                                    <Link href={'##'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Standards</Link>
-                                    <Link href={'##'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Hosting FAQ</Link>
+                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Become A Host</Link>
+                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Insurance</Link>
+                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Standards</Link>
+                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Hosting FAQ</Link>
                                 </div>
                                 <div className="item">
                                     <div className="text-title pb-4">Download App</div>
-                                    <Link href={'##'}>
+                                    <Link href={'#!'}>
                                         <Image
                                             src={'/images/footer/chplay.png'}
                                             width={2000}
@@ -124,7 +124,7 @@ const Footer = () => {
                                             className='w-[135px]'
                                         />
                                     </Link>
-                                    <Link href={'##'}>
+                                    <Link href={'#!'}>
                                         <Image
                                             src={'/images/footer/appstore.png'}
                                             width={2000}

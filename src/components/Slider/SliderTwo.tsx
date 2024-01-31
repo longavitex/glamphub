@@ -143,6 +143,8 @@ const SliderTwo = () => {
                                         className={`form-date-picker box-shadow md:border-t border-outline ${openDate ? 'open' : ''}`}
                                         onChange={item => setState([item.selection] as any)}
                                         // showSelectionPreview={true}
+                                        staticRanges={[]}
+                                        inputRanges={[]}
                                         moveRangeOnFirstSelection={false}
                                         months={2}
                                         ranges={state}

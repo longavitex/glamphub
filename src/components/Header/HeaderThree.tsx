@@ -158,6 +158,8 @@ const HeaderThree = () => {
                             <DateRangePicker
                                 className={`form-date-picker box-shadow ${openDate ? 'open' : ''}`}
                                 onChange={item => setState([item.selection] as any)}
+                                staticRanges={[]}
+                                inputRanges={[]}
                                 moveRangeOnFirstSelection={false}
                                 months={2}
                                 ranges={state}
